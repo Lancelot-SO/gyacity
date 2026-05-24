@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { V2 } from '@/tokens';
 import { HCaps, Eyebrow, StarField, FloatingOrbs, MotionSection } from '@/components/ui';
 import { fadeLeft, fadeRight, fadeUp } from '@/animations/variants';
@@ -20,6 +21,7 @@ function FormFieldLine({ label, value, onChange, placeholder }) {
 }
 
 export function SecVisionCTA({ accent }) {
+  const { t } = useTranslation();
   const [name, setName]   = useState('');
   const [phone, setPhone] = useState('');
 
@@ -30,22 +32,22 @@ export function SecVisionCTA({ accent }) {
 
       <div style={{ position: 'relative', display: 'grid', gridTemplateColumns: '0.5fr 2fr 1.4fr', gap: 60, alignItems: 'flex-start' }}>
         <MotionSection variants={fadeUp} delay={0.1}>
-          <Eyebrow color={accent || V2.coral}>Inspire</Eyebrow>
+          <Eyebrow color={accent || V2.coral}>{t('vision.eyebrow')}</Eyebrow>
         </MotionSection>
 
         <MotionSection variants={fadeLeft}>
           <HCaps size={88} line={0.95} weight={800} tracking="-0.028em">
-            Let&rsquo;s bring your vision to <span style={{ color: accent || V2.coral }}>life</span>
+            {t('vision.title_1')} <span style={{ color: accent || V2.coral }}>{t('vision.title_accent')}</span>
           </HCaps>
         </MotionSection>
 
         <MotionSection variants={fadeRight}>
           <p style={{ margin: 0, fontSize: 13.5, lineHeight: 1.6, color: V2.mute, maxWidth: 280 }}>
-            Our experts will be happy to help you create a harmonious space that suits your needs and style.
+            {t('vision.desc')}
           </p>
           <div style={{ marginTop: 40, display: 'flex', flexDirection: 'column', gap: 18 }}>
-            <FormFieldLine label="Your name" value={name} onChange={setName} placeholder="Adwoa Mensah" />
-            <FormFieldLine label="Your phone" value={phone} onChange={setPhone} placeholder="+233 24 905 1184" />
+            <FormFieldLine label={t('vision.name_label')} value={name} onChange={setName} placeholder="Adwoa Mensah" />
+            <FormFieldLine label={t('vision.phone_label')} value={phone} onChange={setPhone} placeholder="+233 24 905 1184" />
             <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: 10 }}>
               <motion.button
                 whileHover={{ background: accent || V2.coral, borderColor: accent || V2.coral, color: V2.bg, scale: 1.08 }}

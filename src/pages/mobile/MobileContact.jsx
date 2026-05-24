@@ -1,28 +1,33 @@
+import { useTranslation } from 'react-i18next';
 import { V2 } from '@/tokens';
 import { HCaps, Eyebrow, ArrowUR, StarField } from '@/components/ui';
 import { OFFICES } from '@/data';
 import { MobileFooter } from './MobileFooter';
 
 export function MobileContact({ accent }) {
+  const { t } = useTranslation();
+
+  const QUICK_ROWS = [
+    { href: 'https://wa.me/233249051184', label: t('contact.wa_label'),   value: '+233 24 905 1184',   badge: t('contact.wa_badge') },
+    { href: 'mailto:studio@gyacity.com',  label: t('contact.email_label'), value: 'studio@gyacity.com' },
+  ];
+
   return (
     <div style={{ padding: '0 16px 24px' }}>
       <div style={{ border: `1px solid ${V2.line}`, padding: 24, marginBottom: 12, position: 'relative', overflow: 'hidden' }}>
         <StarField density={0.5} />
         <div style={{ position: 'relative' }}>
-          <Eyebrow color={accent || V2.coral}>Get in touch</Eyebrow>
+          <Eyebrow color={accent || V2.coral}>{t('contact.eyebrow')}</Eyebrow>
           <HCaps size={56} line={0.9} weight={800} tracking="-0.03em" style={{ marginTop: 12 }}>
-            Let&rsquo;s build something <span style={{ color: accent || V2.coral }}>quiet.</span>
+            {t('contact.title_1')}<br /><span style={{ color: accent || V2.coral }}>{t('contact.title_accent')}</span>
           </HCaps>
         </div>
       </div>
 
       <div style={{ border: `1px solid ${V2.line}`, padding: 24, marginBottom: 12 }}>
-        <Eyebrow color={accent || V2.coral}>Quick contact</Eyebrow>
+        <Eyebrow color={accent || V2.coral}>{t('contact.quick_contact')}</Eyebrow>
         <div style={{ marginTop: 18, display: 'flex', flexDirection: 'column', gap: 12 }}>
-          {[
-            { href: 'https://wa.me/233249051184', label: 'WhatsApp', value: '+233 24 905 1184', badge: 'Replies ~4 min' },
-            { href: 'mailto:studio@gyacity.com',  label: 'Email',    value: 'studio@gyacity.com' },
-          ].map(row => (
+          {QUICK_ROWS.map(row => (
             <a key={row.label} href={row.href} style={{ padding: '16px 20px', border: `1px solid ${V2.line}`, background: V2.bg2, display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderRadius: 4 }}>
               <div>
                 <Eyebrow color={V2.mute} style={{ marginBottom: 6 }}>{row.label}</Eyebrow>

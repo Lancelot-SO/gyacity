@@ -1,10 +1,13 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { V2 } from '@/tokens';
 import { HCaps, Eyebrow, CTA, GhostCTA, MotionSection } from '@/components/ui';
 import { OFFICES } from '@/data';
 import { fadeUp, fadeLeft, stagger } from '@/animations/variants';
 
 export function SecContactBand({ accent, onNavigate }) {
+  const { t } = useTranslation();
+
   return (
     <section style={{ padding: '40px 40px 60px', borderTop: `1px solid ${V2.line}` }}>
       <motion.div
@@ -13,7 +16,7 @@ export function SecContactBand({ accent, onNavigate }) {
         style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr 1fr 1fr', gap: 40, alignItems: 'flex-start' }}
       >
         <motion.div variants={fadeLeft}>
-          <HCaps size={80} line={0.95} weight={800} tracking="-0.025em">Get in touch</HCaps>
+          <HCaps size={80} line={0.95} weight={800} tracking="-0.025em">{t('contact_band.title')}</HCaps>
         </motion.div>
         {OFFICES.map(o => (
           <motion.div key={o.city} variants={fadeUp}>
@@ -26,8 +29,8 @@ export function SecContactBand({ accent, onNavigate }) {
         ))}
       </motion.div>
       <MotionSection variants={fadeUp} style={{ marginTop: 36, display: 'flex', gap: 16 }}>
-        <CTA accent={accent} onClick={() => onNavigate?.('contact')}>Send Inquiry</CTA>
-        <GhostCTA onClick={() => onNavigate?.('contact')}>Book Consultation</GhostCTA>
+        <CTA accent={accent} onClick={() => onNavigate?.('contact')}>{t('contact_band.send')}</CTA>
+        <GhostCTA onClick={() => onNavigate?.('contact')}>{t('contact_band.book')}</GhostCTA>
       </MotionSection>
     </section>
   );

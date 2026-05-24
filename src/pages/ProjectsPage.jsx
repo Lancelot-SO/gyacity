@@ -1,17 +1,24 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { V2 } from '@/tokens';
 import { HCaps, Eyebrow, Pill, MoreLink, Img, StarField, CTA, NavArrows, TiltCard, MotionSection, FloatingOrbs } from '@/components/ui';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { PROJECTS } from '@/data';
 import { fadeUp, fadeLeft, fadeRight, stagger } from '@/animations/variants';
 
-const FILTERS = ['All 124', 'Residential 68', 'Hospitality 24', 'Corporate 18', 'Exterior 14'];
-const CAT_MAP  = { 'All 124': 'All', 'Residential 68': 'Residential', 'Hospitality 24': 'Hospitality', 'Corporate 18': 'Corporate', 'Exterior 14': 'Exterior' };
+const FILTER_DEFS = [
+  { key: 'All',          labelKey: 'projects.filter_all' },
+  { key: 'Residential',  labelKey: 'projects.filter_residential' },
+  { key: 'Hospitality',  labelKey: 'projects.filter_hospitality' },
+  { key: 'Corporate',    labelKey: 'projects.filter_corporate' },
+  { key: 'Exterior',     labelKey: 'projects.filter_exterior' },
+];
 
 export function ProjectsPage({ accent, onNavigate }) {
-  const [filter, setFilter] = useState('All 124');
-  const shown = CAT_MAP[filter] === 'All' ? PROJECTS : PROJECTS.filter(p => p.cat === CAT_MAP[filter]);
+  const { t } = useTranslation();
+  const [filterKey, setFilterKey] = useState('All');
+  const shown = filterKey === 'All' ? PROJECTS : PROJECTS.filter(p => p.cat === filterKey);
 
   return (
     <div style={{ background: V2.bg, color: V2.cream, fontFamily: V2.font }}>
@@ -20,13 +27,13 @@ export function ProjectsPage({ accent, onNavigate }) {
       <section style={{ padding: '80px 40px 40px' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: 80, alignItems: 'flex-end' }}>
           <MotionSection variants={fadeLeft}>
-            <Eyebrow color={accent || V2.coral}>Archive</Eyebrow>
+            <Eyebrow color={accent || V2.coral}>{t('projects.eyebrow')}</Eyebrow>
             <div style={{ marginTop: 18, fontFamily: V2.font, fontSize: 13.5, color: V2.mute, lineHeight: 1.6, maxWidth: 320 }}>
-              One hundred and twenty-four commissions, filtered. Use the categories to focus on a discipline.
+              {t('projects.desc')}
             </div>
           </MotionSection>
           <MotionSection variants={fadeRight}>
-            <HCaps size={132} line={0.9} weight={800} tracking="-0.035em">Projects.</HCaps>
+            <HCaps size={132} line={0.9} weight={800} tracking="-0.035em">{t('projects.title')}</HCaps>
           </MotionSection>
         </div>
       </section>
@@ -39,16 +46,16 @@ export function ProjectsPage({ accent, onNavigate }) {
             variants={stagger(0.07)}
             style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}
           >
-            {FILTERS.map(f => (
-              <motion.div key={f} variants={fadeUp}>
-                <Pill active={f === filter} accent={accent} onClick={() => setFilter(f)}>{f}</Pill>
+            {FILTER_DEFS.map(f => (
+              <motion.div key={f.key} variants={fadeUp}>
+                <Pill active={f.key === filterKey} accent={accent} onClick={() => setFilterKey(f.key)}>{t(f.labelKey)}</Pill>
               </motion.div>
             ))}
           </motion.div>
           <MotionSection variants={fadeUp} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-            <span style={{ fontFamily: V2.font, fontSize: 11, color: V2.mute, letterSpacing: '0.16em', textTransform: 'uppercase' }}>Sort</span>
+            <span style={{ fontFamily: V2.font, fontSize: 11, color: V2.mute, letterSpacing: '0.16em', textTransform: 'uppercase' }}>{t('projects.sort')}</span>
             <div style={{ padding: '8px 14px', borderRadius: 999, border: `1px solid ${V2.line}`, fontFamily: V2.font, fontSize: 12, fontWeight: 500, color: V2.cream, display: 'inline-flex', alignItems: 'center', gap: 8, cursor: 'none' }}>
-              Most recent
+              {t('projects.most_recent')}
               <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 4l3 3 3-3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" /></svg>
             </div>
           </MotionSection>
@@ -59,7 +66,7 @@ export function ProjectsPage({ accent, onNavigate }) {
       <section style={{ padding: '40px 40px 80px' }}>
         <AnimatePresence mode="wait">
           <motion.div
-            key={filter}
+            key={filterKey}
             initial="hidden" animate="visible"
             variants={stagger(0.07)}
             style={{ display: 'grid', gridTemplateColumns: 'repeat(6,1fr)', gridAutoRows: 'minmax(0,auto)', gap: 24 }}
@@ -84,7 +91,7 @@ export function ProjectsPage({ accent, onNavigate }) {
                           <HCaps size={isHero ? 36 : 22} line={1.1} weight={700} tracking="-0.005em">{p.title}</HCaps>
                           <div style={{ marginTop: 6, fontFamily: V2.font, fontSize: 11, color: V2.mute, letterSpacing: '0.14em', textTransform: 'uppercase' }}>{p.cat} · {p.place}</div>
                         </div>
-                        <MoreLink>View</MoreLink>
+                        <MoreLink>{t('projects.view')}</MoreLink>
                       </div>
                     </article>
                   </TiltCard>
@@ -97,7 +104,7 @@ export function ProjectsPage({ accent, onNavigate }) {
         {/* Pagination */}
         <MotionSection variants={fadeUp} style={{ marginTop: 56, display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTop: `1px solid ${V2.line}`, paddingTop: 24 }}>
           <span style={{ fontFamily: V2.font, fontSize: 11, color: V2.mute, letterSpacing: '0.14em', textTransform: 'uppercase' }}>
-            Showing {shown.length} of 124 — page 1 / 14
+            {t('projects.showing', { count: shown.length })}
           </span>
           <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
             {['1', '2', '3', '…', '14'].map((n, i) => (
@@ -118,9 +125,9 @@ export function ProjectsPage({ accent, onNavigate }) {
         <FloatingOrbs opacity={0.06} />
         <MotionSection style={{ position: 'relative', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 40, flexWrap: 'wrap' }}>
           <HCaps size={64} line={0.95} weight={800} tracking="-0.025em">
-            Ready to start <span style={{ color: accent || V2.coral }}>your project?</span>
+            {t('projects.cta_title_1')} <span style={{ color: accent || V2.coral }}>{t('projects.cta_title_accent')}</span>
           </HCaps>
-          <CTA big accent={accent} onClick={() => onNavigate?.('contact')}>Begin a conversation</CTA>
+          <CTA big accent={accent} onClick={() => onNavigate?.('contact')}>{t('projects.cta_btn')}</CTA>
         </MotionSection>
       </section>
 

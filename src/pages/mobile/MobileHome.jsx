@@ -1,42 +1,45 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { V2 } from '@/tokens';
 import { HCaps, Eyebrow, Pill, GhostCTA, CTA, Img, MoreLink, StarField } from '@/components/ui';
 import { PROJECTS, TESTIMONIALS, IMGS } from '@/data';
 import { MobileFooter } from './MobileFooter';
 
-const FILTERS = ['Houses', 'Apartments', 'Commercial spaces', 'Offices'];
-
-const SERVICES = [
-  { name: 'Private house design', img: PROJECTS[0].img },
-  { name: 'Apartment design',     img: PROJECTS[1].img },
-  { name: 'Commercial spaces',    img: PROJECTS[5].img },
-];
-
-const STATS = [
-  { n: '124', l: 'Completed projects worldwide.' },
-  { n: '32',  l: 'Skilled professionals on our team.' },
-  { n: '8',   l: 'Countries our clients come from.' },
-];
-
 export function MobileHome({ accent, onNavigate }) {
-  const [activeFilter, setActiveFilter] = useState('Apartments');
+  const { t } = useTranslation();
+  const filters = t('interiors.filters', { returnObjects: true });
+  const quotes  = t('clients.testimonials', { returnObjects: true });
+  const serviceNames = t('services.items', { returnObjects: true });
+
+  const [activeFilter, setActiveFilter] = useState(filters[1]);
   const [tIdx, setTIdx] = useState(0);
+
+  const SERVICES = serviceNames.slice(0, 3).map((name, i) => ({
+    name,
+    img: [PROJECTS[0].img, PROJECTS[1].img, PROJECTS[5].img][i],
+  }));
+
+  const STATS = [
+    { n: '124', l: t('stats.stat1_mobile') },
+    { n: '32',  l: t('stats.stat2_mobile') },
+    { n: '8',   l: t('stats.stat3_mobile') },
+  ];
 
   return (
     <div style={{ padding: '0 16px 24px' }}>
       {/* Hero */}
       <div style={{ border: `1px solid ${V2.line}`, padding: 20, marginBottom: 12 }}>
         <HCaps size={36} line={0.95} weight={800} tracking="-0.02em">
-          Interiors<br />with soul<br />and style
+          {t('interiors.title')}
         </HCaps>
         <div style={{ marginTop: 16, display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-          {FILTERS.map(f => (
+          {filters.map(f => (
             <Pill key={f} active={f === activeFilter} accent={accent} onClick={() => setActiveFilter(f)}>{f}</Pill>
           ))}
         </div>
         <div style={{ marginTop: 20 }}>
-          <Eyebrow>Where luxury meets innovation</Eyebrow>
-          <div style={{ marginTop: 14 }}><GhostCTA onClick={() => onNavigate('contact')}>Consultation</GhostCTA></div>
+          <Eyebrow>{t('interiors.tagline')}</Eyebrow>
+          <div style={{ marginTop: 14 }}><GhostCTA onClick={() => onNavigate('contact')}>{t('interiors.consultation')}</GhostCTA></div>
         </div>
         <div style={{ marginTop: 20 }}>
           <Img src={IMGS.arch} ratio="4/5" dark={0.05} />
@@ -46,10 +49,10 @@ export function MobileHome({ accent, onNavigate }) {
       {/* Stats */}
       <div style={{ border: `1px solid ${V2.line}`, padding: 22, marginBottom: 12 }}>
         <HCaps size={28} line={1} weight={800} tracking="-0.02em">
-          People trust us<br />with their homes
+          {t('stats.title')}
         </HCaps>
         <p style={{ marginTop: 16, fontSize: 12.5, lineHeight: 1.6, color: V2.mute }}>
-          Gyacity is a team of highly qualified interior designers with twelve years of experience.
+          {t('stats.desc_mobile')}
         </p>
         {STATS.map(s => (
           <div key={s.n} style={{ marginTop: 28 }}>
@@ -64,8 +67,8 @@ export function MobileHome({ accent, onNavigate }) {
       {/* Services */}
       <div style={{ border: `1px solid ${V2.line}`, padding: 22, marginBottom: 12 }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
-          <HCaps size={26} weight={800} tracking="-0.02em">Services</HCaps>
-          <GhostCTA onClick={() => onNavigate('contact')}>Consult</GhostCTA>
+          <HCaps size={26} weight={800} tracking="-0.02em">{t('services.title')}</HCaps>
+          <GhostCTA onClick={() => onNavigate('contact')}>{t('services.consult')}</GhostCTA>
         </div>
         <div style={{ marginTop: 20, display: 'flex', flexDirection: 'column', gap: 18 }}>
           {SERVICES.map(s => (
@@ -73,7 +76,7 @@ export function MobileHome({ accent, onNavigate }) {
               <Img src={s.img} ratio="3/2" dark={0.05} />
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', paddingTop: 12 }}>
                 <HCaps size={16} line={1.15} weight={700} tracking="0">{s.name}</HCaps>
-                <MoreLink>More</MoreLink>
+                <MoreLink>{t('services.more_short')}</MoreLink>
               </div>
             </div>
           ))}
@@ -84,22 +87,22 @@ export function MobileHome({ accent, onNavigate }) {
       <div style={{ border: `1px solid ${V2.line}`, padding: 22, marginBottom: 12, position: 'relative', overflow: 'hidden' }}>
         <StarField density={0.6} />
         <div style={{ position: 'relative' }}>
-          <Eyebrow color={accent || V2.coral}>Inspire</Eyebrow>
+          <Eyebrow color={accent || V2.coral}>{t('vision.eyebrow')}</Eyebrow>
           <HCaps size={40} line={0.95} weight={800} tracking="-0.025em" style={{ marginTop: 12 }}>
-            Let&rsquo;s bring your vision to <span style={{ color: accent || V2.coral }}>life</span>
+            {t('vision.title_1')} <span style={{ color: accent || V2.coral }}>{t('vision.title_accent')}</span>
           </HCaps>
           <div style={{ marginTop: 20 }}>
-            <CTA accent={accent} onClick={() => onNavigate('contact')}>Book Consultation</CTA>
+            <CTA accent={accent} onClick={() => onNavigate('contact')}>{t('vision.book')}</CTA>
           </div>
         </div>
       </div>
 
       {/* Testimonial */}
       <div style={{ border: `1px solid ${V2.line}`, padding: 22, marginBottom: 12 }}>
-        <HCaps size={22} weight={800} tracking="-0.02em">Clients<br />about our work</HCaps>
+        <HCaps size={22} weight={800} tracking="-0.02em">{t('clients.title')}</HCaps>
         <div style={{ marginTop: 20, fontFamily: V2.font, fontWeight: 800, fontSize: 64, lineHeight: 0.6, color: accent || V2.coral }}>&ldquo;</div>
         <blockquote style={{ margin: '12px 0 0', fontSize: 13.5, lineHeight: 1.6, color: V2.cream }}>
-          {TESTIMONIALS[tIdx].quote}
+          {quotes[tIdx]}
         </blockquote>
         <div style={{ marginTop: 20 }}>
           <div style={{ fontSize: 12, fontWeight: 600, color: V2.cream }}>{TESTIMONIALS[tIdx].name}</div>

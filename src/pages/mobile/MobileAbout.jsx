@@ -1,22 +1,21 @@
+import { useTranslation } from 'react-i18next';
 import { V2 } from '@/tokens';
 import { HCaps, Eyebrow, CTA, Img, StarField } from '@/components/ui';
 import { IMGS } from '@/data';
 import { MobileFooter } from './MobileFooter';
 
-const NUMBERS = [
-  { n: '124', l: 'Commissions delivered.' },
-  { n: '32',  l: 'Team members.' },
-  { n: '12',  l: 'Years in practice.' },
-  { n: '8',   l: 'Countries served.' },
-];
+const STAT_NUMS = ['124', '32', '12', '8'];
 
 export function MobileAbout({ accent, onNavigate }) {
+  const { t } = useTranslation();
+  const stats = t('about.stats_mobile', { returnObjects: true });
+
   return (
     <div style={{ padding: '0 16px 24px' }}>
       <div style={{ border: `1px solid ${V2.line}`, padding: 24, marginBottom: 12 }}>
-        <Eyebrow color={accent || V2.coral}>The studio</Eyebrow>
+        <Eyebrow color={accent || V2.coral}>{t('about.eyebrow')}</Eyebrow>
         <HCaps size={56} line={0.92} weight={800} tracking="-0.03em" style={{ marginTop: 16 }}>
-          We build <span style={{ color: accent || V2.coral }}>quiet,</span> considered places
+          {t('about.title_1')} <span style={{ color: accent || V2.coral }}>{t('about.title_accent')}</span> {t('about.title_2')}
         </HCaps>
         <div style={{ marginTop: 20 }}>
           <Img src={IMGS.kitchen} ratio="4/3" dark={0.08} />
@@ -24,13 +23,13 @@ export function MobileAbout({ accent, onNavigate }) {
       </div>
 
       <div style={{ border: `1px solid ${V2.line}`, padding: 24, marginBottom: 12 }}>
-        <HCaps size={28} weight={800} tracking="-0.02em" style={{ marginBottom: 32 }}>By the numbers</HCaps>
-        {NUMBERS.map(s => (
-          <div key={s.n} style={{ marginBottom: 28 }}>
+        <HCaps size={28} weight={800} tracking="-0.02em" style={{ marginBottom: 32 }}>{t('about.stats_title')}</HCaps>
+        {STAT_NUMS.map((n, i) => (
+          <div key={n} style={{ marginBottom: 28 }}>
             <HCaps size={80} line={0.85} weight={500} tracking="-0.03em" color={V2.cream2}>
-              {s.n}<span style={{ color: accent || V2.coral }}>+</span>
+              {n}<span style={{ color: accent || V2.coral }}>+</span>
             </HCaps>
-            <div style={{ marginTop: 8, fontSize: 12, color: V2.mute }}>{s.l}</div>
+            <div style={{ marginTop: 8, fontSize: 12, color: V2.mute }}>{stats[i]}</div>
           </div>
         ))}
       </div>
@@ -39,9 +38,9 @@ export function MobileAbout({ accent, onNavigate }) {
         <StarField density={0.6} />
         <div style={{ position: 'relative', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 16 }}>
           <HCaps size={40} line={0.95} weight={800} tracking="-0.025em">
-            Begin a <span style={{ color: accent || V2.coral }}>conversation</span>
+            {t('about.cta_title_1')} <span style={{ color: accent || V2.coral }}>{t('about.cta_title_accent')}</span>
           </HCaps>
-          <CTA accent={accent} onClick={() => onNavigate('contact')}>Book consultation</CTA>
+          <CTA accent={accent} onClick={() => onNavigate('contact')}>{t('about.cta_btn_mobile')}</CTA>
         </div>
       </div>
 

@@ -1,19 +1,25 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { V2 } from '@/tokens';
 import { V2Mark } from '@/components/Logo';
 import { ArrowUR } from '@/components/ui';
 
-const LINKS = ['Home', 'About', 'Projects', 'Contact'];
+const LINK_KEYS = ['home', 'about', 'projects', 'contact'];
 
 export function SiteNav({ active, accent, navigate, mobile }) {
+  const { t, i18n } = useTranslation();
   const a = accent || V2.coral;
   const [menuOpen, setMenuOpen] = useState(false);
-  const [lang, setLang] = useState('EN');
+  const currentLang = i18n.language.toUpperCase();
 
-  const go = (page) => {
-    navigate(page.toLowerCase());
+  const LINKS = LINK_KEYS.map(key => ({ key, label: t(`nav.${key}`) }));
+
+  const go = (key) => {
+    navigate(key);
     setMenuOpen(false);
   };
+
+  const switchLang = (code) => i18n.changeLanguage(code.toLowerCase());
 
   if (mobile) {
     return (
@@ -35,7 +41,7 @@ export function SiteNav({ active, accent, navigate, mobile }) {
             fontFamily: V2.font, fontSize: 12, letterSpacing: '0.14em',
             textTransform: 'uppercase', color: V2.cream,
           }}>
-            {menuOpen ? 'Close' : 'Menu'}
+            {menuOpen ? t('nav.close') : t('nav.menu')}
             <span style={{ display: 'inline-flex', flexDirection: 'column', gap: 3 }}>
               <span style={{ width: 16, height: 1, background: V2.cream }} />
               <span style={{ width: menuOpen ? 16 : 12, height: 1, background: V2.cream, alignSelf: 'flex-end', transition: 'width 0.2s' }} />
@@ -55,26 +61,26 @@ export function SiteNav({ active, accent, navigate, mobile }) {
               background: 'none', border: 'none', color: V2.cream,
               fontFamily: V2.font, fontSize: 12, letterSpacing: '0.14em',
               textTransform: 'uppercase', cursor: 'pointer',
-            }}>Close ×</button>
+            }}>{t('nav.close')} ×</button>
             <nav style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
               {LINKS.map(l => (
-                <button key={l} onClick={() => go(l)} style={{
+                <button key={l.key} onClick={() => go(l.key)} style={{
                   background: 'none', border: 'none', padding: '16px 0',
                   borderBottom: `1px solid ${V2.line}`,
                   fontFamily: V2.font, fontWeight: 800,
                   fontSize: 48, letterSpacing: '-0.02em',
                   textTransform: 'uppercase',
-                  color: l === active ? a : V2.cream,
+                  color: l.key === active.toLowerCase() ? a : V2.cream,
                   cursor: 'pointer', textAlign: 'left',
-                }}>{l}</button>
+                }}>{l.label}</button>
               ))}
             </nav>
             <div style={{ marginTop: 40, display: 'flex', gap: 8 }}>
               {['EN', 'DE', 'FR'].map(l => (
-                <button key={l} onClick={() => setLang(l)} style={{
+                <button key={l} onClick={() => switchLang(l)} style={{
                   padding: '6px 12px', borderRadius: 6,
-                  background: l === lang ? V2.cream : 'transparent',
-                  color: l === lang ? V2.bg : V2.mute,
+                  background: l === currentLang ? V2.cream : 'transparent',
+                  color: l === currentLang ? V2.bg : V2.mute,
                   fontFamily: V2.font, fontSize: 12, fontWeight: 700,
                   letterSpacing: '0.12em', border: 'none', cursor: 'pointer',
                 }}>{l}</button>
@@ -102,19 +108,19 @@ export function SiteNav({ active, accent, navigate, mobile }) {
 
       <nav style={{ display: 'flex', gap: 32 }}>
         {LINKS.map(l => (
-          <button key={l} onClick={() => go(l)} style={{
+          <button key={l.key} onClick={() => go(l.key)} style={{
             background: 'none', border: 'none', padding: '4px 0',
             fontFamily: V2.font, fontSize: 12, fontWeight: 600,
             letterSpacing: '0.18em', textTransform: 'uppercase',
-            color: l === active ? a : V2.cream,
+            color: l.key === active.toLowerCase() ? a : V2.cream,
             cursor: 'pointer', position: 'relative',
             transition: 'color 0.2s',
           }}>
-            {l}
+            {l.label}
             <span style={{
               position: 'absolute', left: 0, right: 0, bottom: -4,
               height: 1, background: a,
-              opacity: l === active ? 1 : 0,
+              opacity: l.key === active.toLowerCase() ? 1 : 0,
               transition: 'opacity 0.2s',
             }} />
           </button>
@@ -128,11 +134,11 @@ export function SiteNav({ active, accent, navigate, mobile }) {
         <span style={{ width: 1, height: 14, background: V2.line }} />
         <div style={{ display: 'flex', gap: 3 }}>
           {['EN', 'DE', 'FR'].map(l => (
-            <button key={l} onClick={() => setLang(l)} style={{
+            <button key={l} onClick={() => switchLang(l)} style={{
               padding: '4px 7px', borderRadius: 5,
-              background: l === lang ? V2.cream : 'transparent',
-              color: l === lang ? V2.bg : V2.mute,
-              fontFamily: V2.font, fontSize: 11, fontWeight: l === lang ? 700 : 500,
+              background: l === currentLang ? V2.cream : 'transparent',
+              color: l === currentLang ? V2.bg : V2.mute,
+              fontFamily: V2.font, fontSize: 11, fontWeight: l === currentLang ? 700 : 500,
               letterSpacing: '0.12em', textTransform: 'uppercase',
               border: 'none', cursor: 'pointer',
             }}>{l}</button>

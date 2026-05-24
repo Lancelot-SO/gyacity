@@ -1,0 +1,194 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "contact": "Contact",
+    "close": "Fermer",
+    "menu": "Menu"
+  },
+  "hero": {
+    "studio_title": "Studio de Design d'Intérieur",
+    "service1": "Design d'Intérieur",
+    "service2": "Architecture & Construction",
+    "headline": "L'objectif principal du studio est de présenter le travail impressionnant et innovant de notre agence",
+    "headline_accent": "et d'attirer de nouveaux clients.",
+    "task_tag": "Objectif.",
+    "task_text": "Créer un site web attrayant qui véhicule l'esthétique et le style de l'agence de design d'intérieur et attire de nouveaux clients pour des consultations sur la conception de leur espace.",
+    "solution_tag": "Solution.",
+    "solution_text": "Après avoir analysé la niche, les concurrents et le public cible de l'agence, nous avons créé un site web minimaliste et intuitif qui permet aux visiteurs d'en savoir plus sur l'entreprise et de passer à l'action souhaitée."
+  },
+  "interiors": {
+    "title": "Intérieurs avec âme et style",
+    "filters": ["Maisons", "Appartements", "Espaces commerciaux", "Bureaux"],
+    "tagline": "Là où le luxe rencontre l'innovation",
+    "consultation": "Consultation"
+  },
+  "stats": {
+    "title": "Des personnes nous font confiance pour leurs maisons",
+    "desc": "Gyacity est une équipe d'architectes et de designers d'intérieur hautement qualifiés avec douze ans de pratique. Nous comprenons que chaque espace est unique — tout comme les personnes qui y vivent. C'est pourquoi votre vision, votre style de vie et votre style personnel sont toujours au cœur de notre travail.",
+    "stat1": "Projets achevés — des appartements privés aux espaces commerciaux dans différents pays.",
+    "stat2": "Professionnels qualifiés dans notre équipe, chacun apportant expertise en design, architecture et visualisation.",
+    "stat3": "Pays d'où viennent nos clients — nous travaillons en toute confiance sur des projets internationaux.",
+    "desc_mobile": "Gyacity est une équipe de designers d'intérieur hautement qualifiés avec douze ans d'expérience.",
+    "stat1_mobile": "Projets achevés dans le monde.",
+    "stat2_mobile": "Professionnels qualifiés dans notre équipe.",
+    "stat3_mobile": "Pays d'où viennent nos clients."
+  },
+  "services": {
+    "title": "Services",
+    "book": "Réserver une consultation",
+    "consult": "Consulter",
+    "items": ["Design de maison individuelle", "Design d'appartement", "Espaces commerciaux", "Design de bureau"],
+    "more": "Plus de détails",
+    "more_short": "Plus"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "view_all": "Voir tout"
+  },
+  "clients": {
+    "title": "Les clients parlent de notre travail",
+    "testimonials": [
+      "Travailler avec Gyacity a été un vrai plaisir. Leurs designers ont fait preuve de créativité, d'attention aux détails et de la capacité à donner vie à nos souhaits. Notre maison est devenue un endroit vraiment merveilleux.",
+      "Gyacity est vraiment professionnel en matière de design d'intérieur. Ils ont transformé notre ancienne cuisine en un espace où nous aimons maintenant passer du temps. Merci pour votre travail et votre dévouement.",
+      "Gyacity a fait ce que nous pensions ne pouvoir faire que les grandes maisons européennes. Sobre, calme, profondément réfléchi — et incontestablement ancré dans cet endroit.",
+      "Douze mois plus tard, l'hôtel se photographie encore mieux qu'au jour de l'ouverture. Les clients demandent qui l'a conçu. Nous ne nous lassons jamais de répondre."
+    ]
+  },
+  "belief": {
+    "eyebrow": "Nous croyons en",
+    "text": "Créer avec vous, pas pour vous. Chaque espace est le reflet d'une vision partagée et d'un dialogue ouvert — apportant profondeur, harmonie et caractère au design final."
+  },
+  "vision": {
+    "eyebrow": "Inspirer",
+    "title_1": "Donnons vie à",
+    "title_accent": "votre vision",
+    "desc": "Nos experts seront heureux de vous aider à créer un espace harmonieux qui correspond à vos besoins et à votre style.",
+    "name_label": "Votre nom",
+    "phone_label": "Votre téléphone",
+    "book": "Réserver une consultation"
+  },
+  "contact_band": {
+    "title": "Prenez contact",
+    "send": "Envoyer une demande",
+    "book": "Réserver une consultation"
+  },
+  "about": {
+    "eyebrow": "Le studio",
+    "title_1": "Nous construisons des endroits",
+    "title_accent": "calmes",
+    "title_2": "et réfléchis",
+    "belief_eyebrow": "Nous croyons en",
+    "belief_text": "Créer avec vous, pas pour vous. Chaque espace est le reflet d'une vision partagée et d'un dialogue ouvert — apportant profondeur, harmonie et caractère au design final.",
+    "beliefs": [
+      { "label": "Sobriété",  "text": "Nous travaillons avec la soustraction. Moins de matériaux, une réflexion plus approfondie sur chacun. Le meilleur détail est souvent celui que l'on ne remarque pas." },
+      { "label": "Lieu",      "text": "L'architecture appartient à un climat, une culture, une chute de lumière particulière. Nous concevons avec le site — et non malgré lui." },
+      { "label": "Artisanat", "text": "Notre atelier interne tient la ligne du croquis à l'installation. Meubles, portes, menuiserie — fabriqués au sein du studio." },
+      { "label": "Patience",  "text": "Nous acceptons un nombre limité de commandes chaque saison. Le travail prend le temps qu'il faut." }
+    ],
+    "stats_title": "En chiffres",
+    "stats": [
+      "Commandes réalisées depuis 2014.",
+      "Architectes, designers et artisans dans trois studios.",
+      "Années de pratique. Mêmes principes, affinés chaque année.",
+      "Pays d'où nos clients appellent chez eux."
+    ],
+    "stats_mobile": [
+      "Commandes réalisées.",
+      "Membres de l'équipe.",
+      "Années de pratique.",
+      "Pays desservis."
+    ],
+    "team_title": "L'équipe",
+    "team_see_all": "Voir les 32 personnes",
+    "timeline_eyebrow": "Chronologie",
+    "timeline_title_1": "Douze ans,",
+    "timeline_title_2": "une pratique",
+    "milestones": [
+      { "t": "Fondation du studio",         "d": "Akwasi Mensah ouvre le studio dans un atelier d'une pièce sur Volta Street, Cantonments." },
+      { "t": "Première commande hôtelière", "d": "Hôtel Saharienne, Lagos — 42 clés, notre percée dans le secteur hôtelier." },
+      { "t": "Bureau de Berlin",            "d": "Un deuxième studio ouvre à Mitte pour servir les clients et promoteurs européens." },
+      { "t": "Salone del Mobile",           "d": "Maison Onyx présentée dans le pavillon ghanéen. La presse internationale suit." },
+      { "t": "100ème commande",             "d": "Un siècle de bâtiments achevés sur trois continents. En avant." }
+    ],
+    "cta_title_1": "Commencer",
+    "cta_title_accent": "une conversation",
+    "cta_btn": "Réserver une consultation",
+    "cta_btn_mobile": "Réserver une consultation"
+  },
+  "contact": {
+    "eyebrow": "Prenez contact",
+    "title_1": "Construisons quelque chose de",
+    "title_accent": "calme.",
+    "form_title": "Envoyer une demande",
+    "field_name": "Nom complet",
+    "field_name_ph": "Votre nom",
+    "field_email": "E-mail",
+    "field_email_ph": "votre@email.com",
+    "field_phone": "Téléphone",
+    "field_phone_ph": "+233 24 000 0000",
+    "field_location": "Localisation du projet",
+    "field_location_ph": "Ville, Pays",
+    "project_type": "Type de projet",
+    "types": ["Résidence privée", "Hôtellerie", "Bureau d'entreprise", "Promotion immobilière", "Extérieur"],
+    "message_label": "Parlez-nous du projet",
+    "message_ph": "Décrivez votre projet, vos objectifs, votre calendrier...",
+    "nda": "NDA disponible sur demande",
+    "submit": "Envoyer la demande",
+    "sent_title": "Demande envoyée",
+    "sent_desc": "Merci. Nous vous contacterons dans un délai d'un jour ouvrable.",
+    "send_another": "Envoyer une autre",
+    "or_faster": "Ou, plus rapide",
+    "quick_contact": "Contact rapide",
+    "wa_label": "WhatsApp",
+    "wa_badge": "Répond en ~4 min",
+    "call_label": "Appeler le studio",
+    "call_badge": "Lun — Ven · 09–18 GMT",
+    "email_label": "E-mail",
+    "press_title": "Presse & RP",
+    "press_text": "Pour les demandes de presse, les demandes d'images et les propositions de reportages, veuillez contacter Daniela Korb à press@gyacity.com.",
+    "careers_title": "Carrières",
+    "careers_text": "Nous recrutons des architectes, des designers et des artisans ayant deux ans ou plus de pratique. Soumettez un portfolio de trois projets.",
+    "careers_link": "Voir les postes ouverts",
+    "studios_title": "Trois studios",
+    "by_appointment": "Sur rendez-vous uniquement",
+    "principal_label": "Directeur",
+    "direct_label": "Direct",
+    "open_maps": "Ouvrir dans les cartes"
+  },
+  "projects": {
+    "eyebrow": "Archives",
+    "desc": "Cent vingt-quatre commandes, filtrées. Utilisez les catégories pour vous concentrer sur une discipline.",
+    "title": "Projets.",
+    "sort": "Trier",
+    "most_recent": "Les plus récents",
+    "view": "Voir",
+    "showing": "{{count}} sur 124 — page 1 / 14",
+    "cta_title_1": "Prêt à démarrer",
+    "cta_title_accent": "votre projet?",
+    "cta_btn": "Commencer une conversation",
+    "filter_all": "Tous 124",
+    "filter_residential": "Résidentiel 68",
+    "filter_hospitality": "Hôtellerie 24",
+    "filter_corporate": "Entreprise 18",
+    "filter_exterior": "Extérieur 14",
+    "cat_all": "Tous",
+    "cat_residential": "Résidentiel",
+    "cat_hospitality": "Hôtellerie",
+    "cat_corporate": "Entreprise",
+    "cat_exterior": "Extérieur"
+  },
+  "footer": {
+    "tagline": "Architecture, intérieurs et environnements extérieurs. Accra · Lagos · Berlin. Fondé en 2014.",
+    "studio_group": "Studio",
+    "studio_items": ["À propos", "Approche", "Journal", "Presse"],
+    "services_group": "Services",
+    "services_items": ["Maisons", "Appartements", "Commercial", "Bureaux"],
+    "social_group": "Réseaux sociaux",
+    "social_items": ["Instagram", "TikTok", "Pinterest", "LinkedIn"],
+    "copyright": "© MMXXVI Gyacity Ltd.",
+    "crafted": "Conçu à Accra, Lagos & Berlin",
+    "legal": "Confidentialité · Mentions légales"
+  }
+}

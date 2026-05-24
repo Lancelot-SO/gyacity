@@ -3,6 +3,7 @@ import { HCaps, MotionSection } from '@/components/ui';
 import { useCounter } from '@/hooks/useCounter';
 import { fadeLeft, fadeRight, fadeUp } from '@/animations/variants';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 function AnimatedStat({ n, l, accent }) {
   const { ref, count } = useCounter(parseInt(n, 10), 2200);
@@ -16,25 +17,27 @@ function AnimatedStat({ n, l, accent }) {
   );
 }
 
-const STATS = [
-  { n: '124', l: 'Completed projects — from private apartments to commercial spaces across different countries.' },
-  { n: '32',  l: 'Skilled professionals in our team, each bringing expertise in design, architecture and visualisation.' },
-  null,
-  { n: '8',   l: 'Countries our clients come from — we confidently work on international projects.', accent: true },
-];
-
 export function SecStats({ accent }) {
+  const { t } = useTranslation();
+
+  const STATS = [
+    { n: '124', l: t('stats.stat1') },
+    { n: '32',  l: t('stats.stat2') },
+    null,
+    { n: '8',   l: t('stats.stat3'), accent: true },
+  ];
+
   return (
     <section style={{ padding: '40px 40px 80px' }}>
       <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: 80, alignItems: 'flex-start', marginBottom: 56 }}>
         <MotionSection variants={fadeLeft}>
           <HCaps size={68} line={0.98} weight={800} tracking="-0.025em">
-            People trust us<br />with their<br />homes
+            {t('stats.title')}
           </HCaps>
         </MotionSection>
         <MotionSection variants={fadeRight}>
           <p style={{ margin: 0, marginTop: 8, fontSize: 14.5, lineHeight: 1.65, color: V2.mute, maxWidth: 420 }}>
-            Gyacity is a team of highly qualified architects and interior designers with twelve years of practice. We understand that every space is unique — just like the people who live in it. That&rsquo;s why your vision, lifestyle and personal style are always at the heart of our work.
+            {t('stats.desc')}
           </p>
         </MotionSection>
       </div>

@@ -1,0 +1,194 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "projects": "Projekte",
+    "contact": "Kontakt",
+    "close": "Schließen",
+    "menu": "Menü"
+  },
+  "hero": {
+    "studio_title": "Innenarchitektur Studio",
+    "service1": "Innenarchitektur",
+    "service2": "Architektur & Bau",
+    "headline": "Das Hauptziel des Studios ist es, die beeindruckende und innovative Arbeit unserer Agentur zu präsentieren",
+    "headline_accent": "und neue Kunden zu gewinnen.",
+    "task_tag": "Aufgabe.",
+    "task_text": "Erstellen einer attraktiven Website, die die Ästhetik und den Stil des Innenarchitekturstudios vermittelt und neue Kunden für Beratungen zur Gestaltung ihres Raums gewinnt.",
+    "solution_tag": "Lösung.",
+    "solution_text": "Nach der Analyse der Nische, der Konkurrenten und der Zielgruppe haben wir eine minimalistische und intuitive Website erstellt, die Besuchern ermöglicht, mehr über das Unternehmen zu erfahren und die gewünschte Aktion durchzuführen."
+  },
+  "interiors": {
+    "title": "Interieurs mit Seele und Stil",
+    "filters": ["Häuser", "Wohnungen", "Gewerbeflächen", "Büros"],
+    "tagline": "Wo Luxus auf Innovation trifft",
+    "consultation": "Beratung"
+  },
+  "stats": {
+    "title": "Menschen vertrauen uns ihre Häuser an",
+    "desc": "Gyacity ist ein Team hochqualifizierter Architekten und Innenarchitekten mit zwölf Jahren Praxis. Wir verstehen, dass jeder Raum einzigartig ist — genau wie die Menschen, die darin leben. Deshalb stehen Ihre Vision, Ihr Lebensstil und Ihr persönlicher Stil stets im Mittelpunkt unserer Arbeit.",
+    "stat1": "Abgeschlossene Projekte — von privaten Wohnungen bis hin zu Gewerbeflächen in verschiedenen Ländern.",
+    "stat2": "Hochqualifizierte Fachleute in unserem Team, die Expertise in Design, Architektur und Visualisierung einbringen.",
+    "stat3": "Länder, aus denen unsere Kunden stammen — wir arbeiten sicher an internationalen Projekten.",
+    "desc_mobile": "Gyacity ist ein Team hochqualifizierter Innenarchitekten mit zwölf Jahren Erfahrung.",
+    "stat1_mobile": "Abgeschlossene Projekte weltweit.",
+    "stat2_mobile": "Qualifizierte Fachleute in unserem Team.",
+    "stat3_mobile": "Länder, aus denen unsere Kunden stammen."
+  },
+  "services": {
+    "title": "Leistungen",
+    "book": "Beratung buchen",
+    "consult": "Beraten",
+    "items": ["Einfamilienhausdesign", "Wohnungsdesign", "Gewerbeflächen", "Bürodesign"],
+    "more": "Mehr Details",
+    "more_short": "Mehr"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "view_all": "Alle anzeigen"
+  },
+  "clients": {
+    "title": "Kunden über unsere Arbeit",
+    "testimonials": [
+      "Die Zusammenarbeit mit Gyacity war eine echte Freude. Ihre Designer zeigten Kreativität, Liebe zum Detail und die Fähigkeit, unsere Wünsche zum Leben zu erwecken. Unser Zuhause ist zu einem wirklich wundervollen Ort geworden.",
+      "Gyacity ist im Bereich Innenarchitektur wirklich professionell. Sie haben unsere alte Küche in einen Raum verwandelt, in dem wir jetzt gerne Zeit verbringen. Danke für Ihre Arbeit und Ihr Engagement.",
+      "Gyacity hat getan, was wir nur den großen europäischen Häusern zugetraut hätten. Zurückhaltend, ruhig, tiefgründig durchdacht — und unverkennbar diesem Ort verhaftet.",
+      "Zwölf Monate später fotografiert das Hotel noch besser als am Eröffnungstag. Gäste fragen, wer es entworfen hat. Wir werden nie müde, darauf zu antworten."
+    ]
+  },
+  "belief": {
+    "eyebrow": "Wir glauben an",
+    "text": "Gemeinsam mit Ihnen gestalten, nicht für Sie. Jeder Raum ist ein Ausdruck gemeinsamer Vision und offenen Dialogs — der dem fertigen Design Tiefe, Harmonie und Charakter verleiht."
+  },
+  "vision": {
+    "eyebrow": "Inspiration",
+    "title_1": "Lassen Sie uns Ihre Vision zum",
+    "title_accent": "Leben erwecken",
+    "desc": "Unsere Experten helfen Ihnen gerne dabei, einen harmonischen Raum zu schaffen, der Ihren Bedürfnissen und Ihrem Stil entspricht.",
+    "name_label": "Ihr Name",
+    "phone_label": "Ihre Telefonnummer",
+    "book": "Beratung buchen"
+  },
+  "contact_band": {
+    "title": "Kontakt aufnehmen",
+    "send": "Anfrage senden",
+    "book": "Beratung buchen"
+  },
+  "about": {
+    "eyebrow": "Das Studio",
+    "title_1": "Wir bauen",
+    "title_accent": "ruhige,",
+    "title_2": "durchdachte Orte",
+    "belief_eyebrow": "Wir glauben an",
+    "belief_text": "Gemeinsam mit Ihnen gestalten, nicht für Sie. Jeder Raum ist ein Ausdruck gemeinsamer Vision und offenen Dialogs — der dem fertigen Design Tiefe, Harmonie und Charakter verleiht.",
+    "beliefs": [
+      { "label": "Zurückhaltung", "text": "Wir arbeiten mit Reduktion. Weniger Materialien, tiefere Überlegung zu jedem einzelnen. Das beste Detail ist oft das, das man nicht bemerkt." },
+      { "label": "Ort",           "text": "Architektur gehört zu einem Klima, einer Kultur, einem bestimmten Lichteinfall. Wir entwerfen mit dem Standort — nicht trotz ihm." },
+      { "label": "Handwerk",      "text": "Unser hauseigenes Atelier hält die Linie vom Entwurf bis zur Installation. Möbel, Türen, Tischlerarbeiten — innerhalb der Praxis gefertigt." },
+      { "label": "Geduld",        "text": "Wir nehmen eine begrenzte Anzahl von Aufträgen pro Saison an. Die Arbeit nimmt die Zeit, die sie braucht." }
+    ],
+    "stats_title": "In Zahlen",
+    "stats": [
+      "Aufträge seit 2014 abgeschlossen.",
+      "Architekten, Designer und Handwerker in drei Studios.",
+      "Jahre in der Praxis. Gleiche Prinzipien, jedes Jahr verfeinert.",
+      "Länder, aus denen unsere Kunden stammen."
+    ],
+    "stats_mobile": [
+      "Abgeschlossene Aufträge.",
+      "Teammitglieder.",
+      "Jahre in der Praxis.",
+      "Betreute Länder."
+    ],
+    "team_title": "Das Team",
+    "team_see_all": "Alle 32 Personen anzeigen",
+    "timeline_eyebrow": "Zeitlinie",
+    "timeline_title_1": "Zwölf Jahre,",
+    "timeline_title_2": "eine Praxis",
+    "milestones": [
+      { "t": "Studio gegründet",          "d": "Akwasi Mensah eröffnet das Studio in einem Einzimmer-Atelier in der Volta Street, Cantonments." },
+      { "t": "Erster Gastgewerbeauftrag", "d": "Hôtel Saharienne, Lagos — 42 Zimmer, unser Durchbruch in der Gastgewerbearbeit." },
+      { "t": "Berliner Büro",            "d": "Ein zweites Studio öffnet in Mitte, um europäische Kunden und Entwickler zu bedienen." },
+      { "t": "Salone del Mobile",        "d": "Maison Onyx im ghanaischen Pavillon präsentiert. Internationale Presse folgt." },
+      { "t": "100. Auftrag",             "d": "Ein Jahrhundert abgeschlossener Gebäude auf drei Kontinenten. Weiter geht's." }
+    ],
+    "cta_title_1": "Ein",
+    "cta_title_accent": "Gespräch beginnen",
+    "cta_btn": "Beratung buchen",
+    "cta_btn_mobile": "Beratung buchen"
+  },
+  "contact": {
+    "eyebrow": "Kontakt aufnehmen",
+    "title_1": "Lasst uns etwas",
+    "title_accent": "Ruhiges bauen.",
+    "form_title": "Eine Anfrage senden",
+    "field_name": "Vollständiger Name",
+    "field_name_ph": "Ihr Name",
+    "field_email": "E-Mail",
+    "field_email_ph": "ihre@email.com",
+    "field_phone": "Telefon",
+    "field_phone_ph": "+233 24 000 0000",
+    "field_location": "Projektstandort",
+    "field_location_ph": "Stadt, Land",
+    "project_type": "Projekttyp",
+    "types": ["Privatwohnung", "Gastgewerbe", "Unternehmensbüro", "Immobilienentwicklung", "Außenbereich"],
+    "message_label": "Erzählen Sie uns vom Projekt",
+    "message_ph": "Beschreiben Sie Ihr Projekt, Ziele, Zeitplan...",
+    "nda": "NDA auf Anfrage verfügbar",
+    "submit": "Anfrage senden",
+    "sent_title": "Anfrage gesendet",
+    "sent_desc": "Vielen Dank. Wir melden uns innerhalb eines Werktages.",
+    "send_another": "Weitere Anfrage senden",
+    "or_faster": "Oder schneller",
+    "quick_contact": "Schnellkontakt",
+    "wa_label": "WhatsApp",
+    "wa_badge": "Antwortet in ~4 Min",
+    "call_label": "Studio anrufen",
+    "call_badge": "Mo — Fr · 09–18 GMT",
+    "email_label": "E-Mail",
+    "press_title": "Presse & PR",
+    "press_text": "Für Presseanfragen, Bildanfragen und Themenvorschläge wenden Sie sich bitte an Daniela Korb unter press@gyacity.com.",
+    "careers_title": "Karriere",
+    "careers_text": "Wir suchen Architekten, Designer und Handwerker mit zwei oder mehr Jahren Berufserfahrung. Reichen Sie ein Portfolio mit drei Projekten ein.",
+    "careers_link": "Offene Stellen ansehen",
+    "studios_title": "Drei Studios",
+    "by_appointment": "Nur nach Vereinbarung",
+    "principal_label": "Leiter",
+    "direct_label": "Direkt",
+    "open_maps": "In Karten öffnen"
+  },
+  "projects": {
+    "eyebrow": "Archiv",
+    "desc": "Einhundertvierundzwanzig Aufträge, gefiltert. Verwenden Sie die Kategorien, um sich auf eine Disziplin zu konzentrieren.",
+    "title": "Projekte.",
+    "sort": "Sortieren",
+    "most_recent": "Neueste zuerst",
+    "view": "Ansehen",
+    "showing": "{{count}} von 124 — Seite 1 / 14",
+    "cta_title_1": "Bereit, Ihr Projekt",
+    "cta_title_accent": "zu starten?",
+    "cta_btn": "Ein Gespräch beginnen",
+    "filter_all": "Alle 124",
+    "filter_residential": "Wohnbau 68",
+    "filter_hospitality": "Gastgewerbe 24",
+    "filter_corporate": "Unternehmen 18",
+    "filter_exterior": "Außenbereich 14",
+    "cat_all": "Alle",
+    "cat_residential": "Wohnbau",
+    "cat_hospitality": "Gastgewerbe",
+    "cat_corporate": "Unternehmen",
+    "cat_exterior": "Außenbereich"
+  },
+  "footer": {
+    "tagline": "Architektur, Interieurs und Außenumgebungen. Accra · Lagos · Berlin. Gegr. 2014.",
+    "studio_group": "Studio",
+    "studio_items": ["Über uns", "Ansatz", "Journal", "Presse"],
+    "services_group": "Leistungen",
+    "services_items": ["Häuser", "Wohnungen", "Gewerbe", "Büros"],
+    "social_group": "Soziales",
+    "social_items": ["Instagram", "TikTok", "Pinterest", "LinkedIn"],
+    "copyright": "© MMXXVI Gyacity Ltd.",
+    "crafted": "Gestaltet in Accra, Lagos & Berlin",
+    "legal": "Datenschutz · Impressum"
+  }
+}

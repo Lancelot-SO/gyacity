@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { V2 } from '@/tokens';
 import { HCaps, OutlineCard, TiltCard, MotionSection } from '@/components/ui';
 import { TESTIMONIALS } from '@/data';
@@ -19,14 +20,20 @@ function NavBtn({ onClick, children, filled, accent }) {
 }
 
 export function SecClients({ accent }) {
+  const { t } = useTranslation();
   const [idx, setIdx] = useState(0);
-  const shown = [TESTIMONIALS[idx], TESTIMONIALS[(idx + 1) % TESTIMONIALS.length]];
+  const quotes = t('clients.testimonials', { returnObjects: true });
+
+  const shown = [
+    { ...TESTIMONIALS[idx], quote: quotes[idx] },
+    { ...TESTIMONIALS[(idx + 1) % TESTIMONIALS.length], quote: quotes[(idx + 1) % TESTIMONIALS.length] },
+  ];
 
   return (
     <section style={{ padding: '40px 40px 80px' }}>
       <MotionSection style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 36 }}>
         <HCaps size={56} weight={800} tracking="-0.02em" style={{ maxWidth: 560 }}>
-          Clients about<br />our work
+          {t('clients.title')}
         </HCaps>
         <div style={{ display: 'inline-flex', gap: 10 }}>
           <NavBtn onClick={() => setIdx(i => (i - 1 + TESTIMONIALS.length) % TESTIMONIALS.length)} accent={accent}>
@@ -40,7 +47,7 @@ export function SecClients({ accent }) {
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
         <AnimatePresence mode="wait">
-          {shown.map((t, i) => (
+          {shown.map((testimonial, i) => (
             <motion.div
               key={`${idx}-${i}`}
               initial={{ opacity: 0, y: 20, rotateX: 8 }}
@@ -60,10 +67,10 @@ export function SecClients({ accent }) {
                       &ldquo;
                     </motion.div>
                     <div>
-                      <blockquote style={{ margin: 0, fontSize: 14, lineHeight: 1.6, color: V2.cream, maxWidth: 460 }}>{t.quote}</blockquote>
+                      <blockquote style={{ margin: 0, fontSize: 14, lineHeight: 1.6, color: V2.cream, maxWidth: 460 }}>{testimonial.quote}</blockquote>
                       <div style={{ marginTop: 24 }}>
-                        <div style={{ fontFamily: V2.font, fontSize: 13, fontWeight: 600, color: V2.cream }}>{t.name}</div>
-                        <div style={{ fontFamily: V2.font, fontSize: 11, color: V2.mute, letterSpacing: '0.12em', textTransform: 'uppercase', marginTop: 4 }}>{t.place}</div>
+                        <div style={{ fontFamily: V2.font, fontSize: 13, fontWeight: 600, color: V2.cream }}>{testimonial.name}</div>
+                        <div style={{ fontFamily: V2.font, fontSize: 11, color: V2.mute, letterSpacing: '0.12em', textTransform: 'uppercase', marginTop: 4 }}>{testimonial.place}</div>
                       </div>
                     </div>
                   </div>

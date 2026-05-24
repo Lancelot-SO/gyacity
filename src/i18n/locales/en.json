@@ -1,0 +1,194 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "close": "Close",
+    "menu": "Menu"
+  },
+  "hero": {
+    "studio_title": "Interior Design Studio",
+    "service1": "Interior Design",
+    "service2": "Architecture & Build",
+    "headline": "The main goal of the studio is to showcase our agency's impressive and innovative work",
+    "headline_accent": "and attract new clients.",
+    "task_tag": "Task.",
+    "task_text": "Create an attractive website that conveys the aesthetics and style of the interior design agency and attracts new clients for consultations on the design of their space.",
+    "solution_tag": "Solution.",
+    "solution_text": "After analysing the agency's niche, competitors, and target audience, we created a minimalistic and intuitive website that allows visitors to learn more about the company and take the desired action."
+  },
+  "interiors": {
+    "title": "Interiors with soul and style",
+    "filters": ["Houses", "Apartments", "Commercial spaces", "Offices"],
+    "tagline": "Where luxury meets innovation",
+    "consultation": "Consultation"
+  },
+  "stats": {
+    "title": "People trust us with their homes",
+    "desc": "Gyacity is a team of highly qualified architects and interior designers with twelve years of practice. We understand that every space is unique — just like the people who live in it. That's why your vision, lifestyle and personal style are always at the heart of our work.",
+    "stat1": "Completed projects — from private apartments to commercial spaces across different countries.",
+    "stat2": "Skilled professionals in our team, each bringing expertise in design, architecture and visualisation.",
+    "stat3": "Countries our clients come from — we confidently work on international projects.",
+    "desc_mobile": "Gyacity is a team of highly qualified interior designers with twelve years of experience.",
+    "stat1_mobile": "Completed projects worldwide.",
+    "stat2_mobile": "Skilled professionals on our team.",
+    "stat3_mobile": "Countries our clients come from."
+  },
+  "services": {
+    "title": "Services",
+    "book": "Book Consultation",
+    "consult": "Consult",
+    "items": ["Private house design", "Apartment design", "Commercial spaces", "Office design"],
+    "more": "More details",
+    "more_short": "More"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "view_all": "View all"
+  },
+  "clients": {
+    "title": "Clients about our work",
+    "testimonials": [
+      "Working with Gyacity has been a real pleasure. Their designers demonstrated creativity, attention to detail, and the ability to bring our wishes to life. Our home has become a truly wonderful place.",
+      "Gyacity is truly professional in interior design. They transformed our old kitchen into a space where we now love to spend time. Thank you for your work and dedication.",
+      "Gyacity did what we believed only the great European houses could. Restrained, quiet, deeply considered — and unmistakably of this place.",
+      "Twelve months in and the hotel still photographs better than the day we opened. Guests ask who designed it. We never tire of answering."
+    ]
+  },
+  "belief": {
+    "eyebrow": "We believe in",
+    "text": "Creating with you, not for you. Every space is a reflection of shared vision and open dialogue — bringing depth, harmony and character to the final design."
+  },
+  "vision": {
+    "eyebrow": "Inspire",
+    "title_1": "Let's bring your vision to",
+    "title_accent": "life",
+    "desc": "Our experts will be happy to help you create a harmonious space that suits your needs and style.",
+    "name_label": "Your name",
+    "phone_label": "Your phone",
+    "book": "Book Consultation"
+  },
+  "contact_band": {
+    "title": "Get in touch",
+    "send": "Send Inquiry",
+    "book": "Book Consultation"
+  },
+  "about": {
+    "eyebrow": "The studio",
+    "title_1": "We build",
+    "title_accent": "quiet,",
+    "title_2": "considered places",
+    "belief_eyebrow": "We believe in",
+    "belief_text": "Creating with you, not for you. Every space is a reflection of shared vision and open dialogue — bringing depth, harmony and character to the final design.",
+    "beliefs": [
+      { "label": "Restraint", "text": "We work with subtraction. Fewer materials, deeper consideration of each. The best detail is often the one you don't notice." },
+      { "label": "Place",     "text": "Architecture belongs to a climate, a culture, a particular fall of light. We design with site — not despite it." },
+      { "label": "Craft",     "text": "Our in-house atelier holds the line from sketch to install. Furniture, doors, joinery — made within the practice." },
+      { "label": "Patience",  "text": "We accept a limited number of commissions each season. The work takes the time it takes." }
+    ],
+    "stats_title": "By the numbers",
+    "stats": [
+      "Commissions delivered since 2014.",
+      "Architects, designers and makers across three studios.",
+      "Years in practice. Same principles, refined each year.",
+      "Countries our clients call home."
+    ],
+    "stats_mobile": [
+      "Commissions delivered.",
+      "Team members.",
+      "Years in practice.",
+      "Countries served."
+    ],
+    "team_title": "The team",
+    "team_see_all": "See all 32 people",
+    "timeline_eyebrow": "Timeline",
+    "timeline_title_1": "Twelve years,",
+    "timeline_title_2": "one practice",
+    "milestones": [
+      { "t": "Studio founded",              "d": "Akwasi Mensah opens the studio in a single-room atelier on Volta Street, Cantonments." },
+      { "t": "First hospitality commission","d": "Hôtel Saharienne, Lagos — 42 keys, our breakthrough into hospitality work." },
+      { "t": "Berlin office",              "d": "A second studio opens in Mitte to serve European clients and developers." },
+      { "t": "Salone del Mobile",          "d": "Maison Onyx featured in the Ghanaian pavilion. International press follows." },
+      { "t": "100th commission",           "d": "A century of finished buildings across three continents. Onwards." }
+    ],
+    "cta_title_1": "Begin a",
+    "cta_title_accent": "conversation",
+    "cta_btn": "Book a consultation",
+    "cta_btn_mobile": "Book consultation"
+  },
+  "contact": {
+    "eyebrow": "Get in touch",
+    "title_1": "Let's build something",
+    "title_accent": "quiet.",
+    "form_title": "Send an inquiry",
+    "field_name": "Full name",
+    "field_name_ph": "Your name",
+    "field_email": "Email",
+    "field_email_ph": "your@email.com",
+    "field_phone": "Phone",
+    "field_phone_ph": "+233 24 000 0000",
+    "field_location": "Project location",
+    "field_location_ph": "City, Country",
+    "project_type": "Project type",
+    "types": ["Private residence", "Hospitality", "Corporate office", "Real-estate dev.", "Exterior"],
+    "message_label": "Tell us about the project",
+    "message_ph": "Describe your project, goals, timeline...",
+    "nda": "NDA available on request",
+    "submit": "Send inquiry",
+    "sent_title": "Inquiry sent",
+    "sent_desc": "Thank you. We'll be in touch within one business day.",
+    "send_another": "Send another",
+    "or_faster": "Or, faster",
+    "quick_contact": "Quick contact",
+    "wa_label": "WhatsApp",
+    "wa_badge": "Replies ~4 min",
+    "call_label": "Call the studio",
+    "call_badge": "Mon — Fri · 09–18 GMT",
+    "email_label": "Email",
+    "press_title": "Press & PR",
+    "press_text": "For press inquiries, image requests and feature pitches, please contact Daniela Korb at press@gyacity.com.",
+    "careers_title": "Careers",
+    "careers_text": "We hire architects, designers and makers with two or more years of practice. Submit a portfolio of three projects.",
+    "careers_link": "See open roles",
+    "studios_title": "Three studios",
+    "by_appointment": "By appointment only",
+    "principal_label": "Principal",
+    "direct_label": "Direct",
+    "open_maps": "Open in maps"
+  },
+  "projects": {
+    "eyebrow": "Archive",
+    "desc": "One hundred and twenty-four commissions, filtered. Use the categories to focus on a discipline.",
+    "title": "Projects.",
+    "sort": "Sort",
+    "most_recent": "Most recent",
+    "view": "View",
+    "showing": "Showing {{count}} of 124 — page 1 / 14",
+    "cta_title_1": "Ready to start",
+    "cta_title_accent": "your project?",
+    "cta_btn": "Begin a conversation",
+    "filter_all": "All 124",
+    "filter_residential": "Residential 68",
+    "filter_hospitality": "Hospitality 24",
+    "filter_corporate": "Corporate 18",
+    "filter_exterior": "Exterior 14",
+    "cat_all": "All",
+    "cat_residential": "Residential",
+    "cat_hospitality": "Hospitality",
+    "cat_corporate": "Corporate",
+    "cat_exterior": "Exterior"
+  },
+  "footer": {
+    "tagline": "Architecture, interiors and exterior environments. Accra · Lagos · Berlin. Est. 2014.",
+    "studio_group": "Studio",
+    "studio_items": ["About", "Approach", "Journal", "Press"],
+    "services_group": "Services",
+    "services_items": ["Houses", "Apartments", "Commercial", "Offices"],
+    "social_group": "Social",
+    "social_items": ["Instagram", "TikTok", "Pinterest", "LinkedIn"],
+    "copyright": "© MMXXVI Gyacity Ltd.",
+    "crafted": "Crafted in Accra, Lagos & Berlin",
+    "legal": "Privacy · Imprint"
+  }
+}

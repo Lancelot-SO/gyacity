@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { V2 } from '@/tokens';
 import { HCaps, Eyebrow, GhostCTA, Img, TiltCard, MotionSection } from '@/components/ui';
 import { PROJECTS, IMGS } from '@/data';
@@ -27,15 +28,16 @@ function NavBtn({ onClick, children, accent, filled }) {
 }
 
 export function SecPortfolio({ accent, onNavigate }) {
+  const { t } = useTranslation();
   const [start, setStart] = useState(0);
   const visible = ITEMS.slice(start, start + 3);
 
   return (
     <section style={{ padding: '60px 0 80px', borderTop: `1px solid ${V2.line}` }}>
       <MotionSection style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', padding: '0 40px', marginBottom: 32 }}>
-        <HCaps size={56} weight={800} tracking="-0.02em">Portfolio</HCaps>
+        <HCaps size={56} weight={800} tracking="-0.02em">{t('portfolio.title')}</HCaps>
         <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-          <GhostCTA onClick={() => onNavigate?.('projects')}>View all</GhostCTA>
+          <GhostCTA onClick={() => onNavigate?.('projects')}>{t('portfolio.view_all')}</GhostCTA>
           <div style={{ display: 'inline-flex', gap: 10 }}>
             <NavBtn onClick={() => setStart(s => Math.max(0, s - 1))} accent={accent}>
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M10 6H2M6 2L2 6l4 4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" /></svg>
