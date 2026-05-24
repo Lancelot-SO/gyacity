@@ -33,7 +33,7 @@ export function SiteNav({ active, accent, navigate, mobile }) {
           display: 'flex', alignItems: 'center', justifyContent: 'space-between',
         }}>
           <button onClick={() => go('home')} style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}>
-            <V2Mark size={13} />
+            <V2Mark size={20} />
           </button>
           <button onClick={() => setMenuOpen(!menuOpen)} style={{
             background: 'none', border: 'none', padding: 0, cursor: 'pointer',
@@ -103,7 +103,7 @@ export function SiteNav({ active, accent, navigate, mobile }) {
       alignItems: 'center', gap: 40,
     }}>
       <button onClick={() => go('home')} style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer', justifySelf: 'start' }}>
-        <V2Mark size={18} />
+        <V2Mark size={28} />
       </button>
 
       <nav style={{ display: 'flex', gap: 32 }}>

@@ -24,7 +24,7 @@ export function SiteFooter({ accent }) {
         style={{ position: 'relative', display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr', gap: 40, marginBottom: 80 }}
       >
         <motion.div variants={fadeUp}>
-          <V2Mark size={16} />
+          <V2Mark size={26} />
           <div style={{ marginTop: 18, fontFamily: V2.font, fontSize: 13, color: V2.mute, lineHeight: 1.6, maxWidth: 240 }}>
             {t('footer.tagline')}
           </div>
