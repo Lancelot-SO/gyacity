@@ -56,7 +56,7 @@ export function SiteFooter({ accent }) {
           viewport={{ once: true }}
           transition={{ duration: 1.2, ease: [0.0, 0.0, 0.2, 1] }}
         >
-          <HCaps as="div" size={240} line={0.85} weight={800} tracking="-0.045em">
+          <HCaps as="div" size="clamp(72px, 18vw, 240px)" line={0.85} weight={800} tracking="-0.045em">
             Gyacity<span style={{ color: accent || V2.coral }}>©</span>
           </HCaps>
         </motion.div>
