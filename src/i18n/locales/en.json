@@ -179,6 +179,22 @@
     "cat_corporate": "Corporate",
     "cat_exterior": "Exterior"
   },
+  "project": {
+    "back": "All projects",
+    "overview": "Overview",
+    "location": "Location",
+    "year": "Year",
+    "area": "Area",
+    "discipline": "Discipline",
+    "category": "Category",
+    "gallery": "Gallery",
+    "film": "Film",
+    "watch": "Watch film",
+    "next": "Next project",
+    "cta_title_1": "Like what you",
+    "cta_title_accent": "see?",
+    "cta_btn": "Start your project"
+  },
   "footer": {
     "tagline": "Architecture, interiors and exterior environments. Accra · Lagos · Berlin. Est. 2014.",
     "studio_group": "Studio",

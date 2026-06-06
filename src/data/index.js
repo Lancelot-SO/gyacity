@@ -31,3 +31,60 @@ export const OFFICES = [
   { city:'Lagos',  tz:'WAT', principal:'Ifeoma Okafor',  addr:['Plot 7B, Bourdillon Road','Ikoyi, Lagos'],   tel:'+234 1 271 4090',  email:'lagos@gyacity.com' },
   { city:'Berlin', tz:'CET', principal:'Lukas Brandt',   addr:['Linienstraße 154','10115 Berlin-Mitte'],     tel:'+49 30 235 928 12',email:'berlin@gyacity.com' },
 ];
+
+// ── Project detail ───────────────────────────────────────────────────────────
+// Shared editorial imagery; each detail page draws a deterministic slice so the
+// galleries feel curated rather than random.
+const GALLERY_POOL = [
+  'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1800&q=88',
+  'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1800&q=88',
+  'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1800&q=88',
+  'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1800&q=88',
+  'https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=1800&q=88',
+  'https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?w=1800&q=88',
+  'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=1800&q=88',
+  'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1800&q=88',
+];
+
+// Per-project copy + extras. Keep summaries to a single evocative line.
+// `video.src` points at stable placeholder footage — swap for real project films.
+const PLACEHOLDER_FILM = 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4';
+
+const PROJECT_DETAILS = {
+  'maison-onyx':      { area:'720 m²',   services:'Architecture · Interiors · Joinery', summary:'A private residence carved in onyx, oak and quiet light — where mass dissolves into calm.', video:{ src:PLACEHOLDER_FILM, poster:'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1800&q=88' } },
+  'hotel-saharienne': { area:'42 keys',  services:'Interiors · Lighting · FF&E',         summary:'Forty-two keys of desert restraint — warm shadow, hand-troweled plaster and the slow luxury of less.', video:{ src:PLACEHOLDER_FILM, poster:'https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=1800&q=88' } },
+  'ardor-hq':         { area:'3,200 m²', services:'Architecture · Workplace · Identity',  summary:'A headquarters that whispers — brushed brass, deep timber and daylight engineered to the hour.' },
+  'villa-cisse':      { area:'540 m²',   services:'Architecture · Interiors · Joinery',  summary:'Family life, distilled. Open volumes, tactile stone and a courtyard that breathes with the seasons.' },
+  'courtyard-ikoyi':  { area:'1,100 m²', services:'Landscape · Façade · Lighting',       summary:'Garden and façade as one gesture — a green threshold between the city and the still interior.' },
+  'taverne-noire':    { area:'110 covers', services:'Interiors · Lighting · FF&E',       summary:'A hundred and ten covers in low candlelight — oxblood, char and the intimacy of the long table.' },
+  'luxe-living':      { area:'480 m²',   services:'Interiors · Styling · Art',           summary:'Coastal calm rendered in linen, lime and pale oak — a residence tuned to the Atlantic light.' },
+  'soft-minimal':     { area:'210 m²',   services:'Interiors · Joinery · Lighting',      summary:'An apartment reduced to its essentials — soft edges, honest materials, nothing left to spare.' },
+  'dust-light':       { area:'380 m²',   services:'Architecture · Interiors · Landscape', summary:'A villa between dust and light — raw concrete softened by tropical green and open air.' },
+};
+
+// Returns the project merged with its detail copy + a 6-image gallery, or null.
+export function getProjectDetail(id) {
+  const index = PROJECTS.findIndex(p => p.id === id);
+  if (index === -1) return null;
+  const base = PROJECTS[index];
+  const detail = PROJECT_DETAILS[id] || {};
+  const offset = index % GALLERY_POOL.length;
+  const rotated = [...GALLERY_POOL.slice(offset), ...GALLERY_POOL.slice(0, offset)];
+  const gallery = [base.img, ...rotated].filter((v, i, a) => a.indexOf(v) === i).slice(0, 6);
+  return {
+    area: base.type.split('·').pop().trim(),
+    services: 'Architecture · Interiors',
+    summary: base.type,
+    ...detail,
+    ...base,
+    index,
+    gallery,
+  };
+}
+
+// The next project in the archive (wraps around) — used for the "next" link.
+export function getAdjacentProject(id) {
+  const index = PROJECTS.findIndex(p => p.id === id);
+  if (index === -1) return null;
+  return PROJECTS[(index + 1) % PROJECTS.length];
+}

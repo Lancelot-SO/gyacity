@@ -179,6 +179,22 @@
     "cat_corporate": "Unternehmen",
     "cat_exterior": "Außenbereich"
   },
+  "project": {
+    "back": "Alle Projekte",
+    "overview": "Überblick",
+    "location": "Standort",
+    "year": "Jahr",
+    "area": "Fläche",
+    "discipline": "Disziplin",
+    "category": "Kategorie",
+    "gallery": "Galerie",
+    "film": "Film",
+    "watch": "Film ansehen",
+    "next": "Nächstes Projekt",
+    "cta_title_1": "Gefällt Ihnen, was Sie",
+    "cta_title_accent": "sehen?",
+    "cta_btn": "Projekt starten"
+  },
   "footer": {
     "tagline": "Architektur, Interieurs und Außenumgebungen. Accra · Lagos · Berlin. Gegr. 2014.",
     "studio_group": "Studio",

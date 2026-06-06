@@ -12,4 +12,5 @@ export { MotionSection, MotionChild } from './MotionSection';
 export { TiltCard }      from './TiltCard';
 export { Cursor }        from './Cursor';
 export { FloatingOrbs }  from './FloatingOrbs';
+export { VideoFrame }    from './VideoFrame';
 export { ArrowUR, ArrowR, ArrowL } from './Icons';

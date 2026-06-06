@@ -13,7 +13,7 @@ const CAT_DEFS = [
   { key: 'Exterior',    labelKey: 'projects.cat_exterior' },
 ];
 
-export function MobileProjects({ accent }) {
+export function MobileProjects({ accent, onNavigate }) {
   const { t } = useTranslation();
   const [filter, setFilter] = useState('All');
   const shown = filter === 'All' ? PROJECTS : PROJECTS.filter(p => p.cat === filter);
@@ -32,7 +32,7 @@ export function MobileProjects({ accent }) {
       </div>
 
       {shown.map(p => (
-        <div key={p.id} style={{ border: `1px solid ${V2.line}`, padding: 20, marginBottom: 12 }}>
+        <div key={p.id} onClick={() => onNavigate?.(`project/${p.id}`)} style={{ border: `1px solid ${V2.line}`, padding: 20, marginBottom: 12, cursor: 'pointer' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 12 }}>
             <Eyebrow color={V2.cream}>{p.no} · {p.title}</Eyebrow>
             <span style={{ fontFamily: V2.font, fontSize: 10, color: V2.mute, letterSpacing: '0.14em', textTransform: 'uppercase' }}>{p.year}</span>

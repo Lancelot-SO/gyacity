@@ -77,7 +77,8 @@ export function ProjectsPage({ accent, onNavigate }) {
                 <motion.div
                   key={p.id}
                   variants={fadeUp}
-                  style={{ gridColumn: isHero ? 'span 4' : 'span 2', gridRow: isHero ? 'span 2' : 'span 1' }}
+                  onClick={() => onNavigate?.(`project/${p.id}`)}
+                  style={{ gridColumn: isHero ? 'span 4' : 'span 2', gridRow: isHero ? 'span 2' : 'span 1', cursor: 'none' }}
                 >
                   <TiltCard strength={isHero ? 6 : 10} glare style={{ background: V2.bg, height: '100%' }}>
                     <article>
