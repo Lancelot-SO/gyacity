@@ -1,3 +1,14 @@
+// The Bar — real project photography (bundled by Vite).
+import barNeon       from '@/assets/the-bar/IMG_9938.jpg'; // red-neon night exterior
+import barNight      from '@/assets/the-bar/IMG_9945.jpg'; // moody finished interior
+import barPanels     from '@/assets/the-bar/IMG_9941.jpg'; // bar counter, diamond panels
+import barBlue       from '@/assets/the-bar/IMG_9933.jpg'; // bar under blue ceiling
+import barFacade     from '@/assets/the-bar/IMG_9936.jpg'; // glass facade, day
+import barFacade2    from '@/assets/the-bar/IMG_9937.jpg'; // facade, second angle
+import barTerrace    from '@/assets/the-bar/IMG_9939.jpg'; // string-lit terrace, dusk
+import barTerrace2   from '@/assets/the-bar/IMG_9940.jpg'; // terrace, second angle
+import barBuild      from '@/assets/the-bar/IMG_9934.jpg'; // build in progress
+
 export const PROJECTS = [
   { id:'maison-onyx',       no:'I',    title:'Maison Onyx',        place:'East Legon, Accra',       year:'2025', cat:'Residential', type:'Private residence · 720 m²',  img:'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1400&q=85' },
   { id:'hotel-saharienne',  no:'II',   title:'Hôtel Saharienne',   place:'Victoria Island, Lagos',  year:'2024', cat:'Hospitality', type:'Boutique hotel · 42 keys',     img:'https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=1400&q=85' },
@@ -8,6 +19,7 @@ export const PROJECTS = [
   { id:'luxe-living',       no:'VII',  title:'Luxe Living',        place:'Lisbon, Portugal',        year:'2023', cat:'Residential', type:'Private residence · 480 m²',  img:'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1400&q=85' },
   { id:'soft-minimal',      no:'VIII', title:'Soft Minimalism',    place:'Milan, Italy',            year:'2023', cat:'Residential', type:'Apartment · 210 m²',          img:'https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=85' },
   { id:'dust-light',        no:'IX',   title:'Dust & Light',       place:'Palm, Indonesia',         year:'2024', cat:'Residential', type:'Private villa · 380 m²',      img:'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1400&q=85' },
+  { id:'the-bar',           no:'X',    title:'The Bar',            place:'Spintex, Accra',          year:'2024', cat:'Hospitality', type:'Bar & lounge',                img:barNeon },
 ];
 
 export const TESTIMONIALS = [
@@ -51,6 +63,7 @@ const GALLERY_POOL = [
 const PLACEHOLDER_FILM = 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4';
 
 const PROJECT_DETAILS = {
+  'the-bar':          { area:'Bar & terrace', services:'Architecture · Interiors · Lighting', summary:'A roadside bar wrapped in red light — warm timber, brass and backlit panels, built for nights that run long.', gallery:[barNight, barPanels, barBlue, barFacade, barFacade2, barTerrace, barTerrace2, barBuild] },
   'maison-onyx':      { area:'720 m²',   services:'Architecture · Interiors · Joinery', summary:'A private residence carved in onyx, oak and quiet light — where mass dissolves into calm.', video:{ src:PLACEHOLDER_FILM, poster:'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1800&q=88' } },
   'hotel-saharienne': { area:'42 keys',  services:'Interiors · Lighting · FF&E',         summary:'Forty-two keys of desert restraint — warm shadow, hand-troweled plaster and the slow luxury of less.', video:{ src:PLACEHOLDER_FILM, poster:'https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=1800&q=88' } },
   'ardor-hq':         { area:'3,200 m²', services:'Architecture · Workplace · Identity',  summary:'A headquarters that whispers — brushed brass, deep timber and daylight engineered to the hour.' },
@@ -70,7 +83,8 @@ export function getProjectDetail(id) {
   const detail = PROJECT_DETAILS[id] || {};
   const offset = index % GALLERY_POOL.length;
   const rotated = [...GALLERY_POOL.slice(offset), ...GALLERY_POOL.slice(0, offset)];
-  const gallery = [base.img, ...rotated].filter((v, i, a) => a.indexOf(v) === i).slice(0, 6);
+  // Hero is shown separately, so the gallery excludes base.img to avoid a repeat.
+  const gallery = (detail.gallery || rotated).filter(src => src !== base.img).slice(0, 8);
   return {
     area: base.type.split('·').pop().trim(),
     services: 'Architecture · Interiors',

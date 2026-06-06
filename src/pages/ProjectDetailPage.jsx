@@ -22,7 +22,12 @@ export function ProjectDetailPage({ accent, onNavigate, id }) {
 
   if (!p) return null;
 
-  const g = p.gallery;
+  // Lead image runs full-width; the rest pair up into alternating rows so any
+  // number of photos lays out cleanly.
+  const [lead, ...restGallery] = p.gallery;
+  const pairs = [];
+  for (let i = 0; i < restGallery.length; i += 2) pairs.push(restGallery.slice(i, i + 2));
+
   const facts = [
     { label: t('project.location'),   value: p.place },
     { label: t('project.year'),       value: p.year },
@@ -97,14 +102,11 @@ export function ProjectDetailPage({ accent, onNavigate, id }) {
 
       {/* Gallery */}
       <section style={{ padding: '0 40px 40px' }}>
-        <MotionSection variants={fadeUp} style={{ marginBottom: 24 }}>
-          <Img src={g[1] || g[0]} ratio="16/9" dark={0.05} />
-        </MotionSection>
-
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24, marginBottom: 24 }}>
-          <MotionSection variants={fadeLeft}><TiltCard strength={6} glare><Img src={g[2]} ratio="4/5" dark={0.05} /></TiltCard></MotionSection>
-          <MotionSection variants={fadeRight}><TiltCard strength={6} glare><Img src={g[3]} ratio="4/5" dark={0.05} /></TiltCard></MotionSection>
-        </div>
+        {lead && (
+          <MotionSection variants={fadeUp} style={{ marginBottom: 24 }}>
+            <Img src={lead} ratio="16/9" dark={0.05} />
+          </MotionSection>
+        )}
 
         {p.video && (
           <MotionSection variants={fadeUp} style={{ marginBottom: 24 }}>
@@ -116,10 +118,32 @@ export function ProjectDetailPage({ accent, onNavigate, id }) {
           </MotionSection>
         )}
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: 24 }}>
-          <MotionSection variants={fadeLeft}><Img src={g[4]} ratio="16/10" dark={0.05} /></MotionSection>
-          <MotionSection variants={fadeRight}><Img src={g[5]} ratio="16/10" dark={0.05} /></MotionSection>
-        </div>
+        {pairs.map((pair, idx) => {
+          if (pair.length === 1) {
+            return (
+              <MotionSection key={idx} variants={fadeUp} style={{ marginBottom: 24 }}>
+                <Img src={pair[0]} ratio="16/9" dark={0.05} />
+              </MotionSection>
+            );
+          }
+          const portrait = idx % 2 === 0;
+          const ratio = portrait ? '4/5' : '16/10';
+          const cols = portrait ? '1fr 1fr' : '1.4fr 1fr';
+          return (
+            <div key={idx} style={{ display: 'grid', gridTemplateColumns: cols, gap: 24, marginBottom: 24 }}>
+              <MotionSection variants={fadeLeft}>
+                {portrait
+                  ? <TiltCard strength={6} glare><Img src={pair[0]} ratio={ratio} dark={0.05} /></TiltCard>
+                  : <Img src={pair[0]} ratio={ratio} dark={0.05} />}
+              </MotionSection>
+              <MotionSection variants={fadeRight}>
+                {portrait
+                  ? <TiltCard strength={6} glare><Img src={pair[1]} ratio={ratio} dark={0.05} /></TiltCard>
+                  : <Img src={pair[1]} ratio={ratio} dark={0.05} />}
+              </MotionSection>
+            </div>
+          );
+        })}
       </section>
 
       {/* Next project */}

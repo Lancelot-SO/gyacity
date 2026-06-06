@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { useTranslation } from 'react-i18next';
 import { V2 } from '@/tokens';
 import { HCaps, Eyebrow, Img, GhostCTA, VideoFrame, ArrowR } from '@/components/ui';
@@ -54,11 +55,12 @@ export function MobileProjectDetail({ accent, onNavigate, id }) {
 
       {/* Gallery */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-        <Img src={g[1] || g[0]} ratio="4/3" dark={0.05} />
-        <Img src={g[2]} ratio="4/5" dark={0.05} />
-        {p.video && <VideoFrame src={p.video.src} poster={p.video.poster} accent={a} label={t('project.watch')} />}
-        <Img src={g[3]} ratio="4/3" dark={0.05} />
-        <Img src={g[4]} ratio="4/5" dark={0.05} />
+        {g.map((src, i) => (
+          <Fragment key={i}>
+            <Img src={src} ratio={i % 2 === 0 ? '4/3' : '4/5'} dark={0.05} />
+            {i === 0 && p.video && <VideoFrame src={p.video.src} poster={p.video.poster} accent={a} label={t('project.watch')} />}
+          </Fragment>
+        ))}
       </div>
 
       {/* Next project */}
