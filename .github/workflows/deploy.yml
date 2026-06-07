@@ -21,6 +21,14 @@ jobs:
             script_stop: true
 
             script: |
+              export NVM_DIR="/root/.nvm"
+              [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+              nvm use 20
+
+              node -v 
+              npm -v
+              
               cd /var/www/production/gyacity
 
               git fetch origin
