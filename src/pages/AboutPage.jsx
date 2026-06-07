@@ -3,15 +3,15 @@ import { useTranslation } from 'react-i18next';
 import { V2 } from '@/tokens';
 import { HCaps, Eyebrow, CTA, GhostCTA, Img, StarField, TiltCard, MotionSection, FloatingOrbs } from '@/components/ui';
 import { SiteFooter } from '@/components/layout/SiteFooter';
-import { PROJECTS, IMGS } from '@/data';
+import { IMGS } from '@/data';
 import { useCounter } from '@/hooks/useCounter';
 import { fadeUp, fadeLeft, fadeRight, stagger, scaleIn } from '@/animations/variants';
 
 const TEAM = [
-  { name: 'Akwasi Mensah', role: 'Founding Principal',    city: 'Accra',  img: PROJECTS[0].img },
-  { name: 'Ifeoma Okafor', role: 'Director, Hospitality', city: 'Lagos',  img: PROJECTS[1].img },
-  { name: 'Lukas Brandt',  role: 'Director, Europe',      city: 'Berlin', img: PROJECTS[2].img },
-  { name: 'Adwoa Asante',  role: 'Head of Interiors',     city: 'Accra',  img: PROJECTS[3].img },
+  { name: 'Akwasi Mensah', role: 'Founding Principal',    city: 'Accra',  img: IMGS.hero },
+  { name: 'Ifeoma Okafor', role: 'Director, Hospitality', city: 'Lagos',  img: IMGS.arch },
+  { name: 'Lukas Brandt',  role: 'Director, Europe',      city: 'Berlin', img: IMGS.kitchen },
+  { name: 'Adwoa Asante',  role: 'Head of Interiors',     city: 'Accra',  img: IMGS.luxe },
 ];
 
 const MILESTONE_YEARS = ['2014', '2017', '2019', '2022', '2025'];

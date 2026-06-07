@@ -44,8 +44,10 @@
     "more_short": "Mehr"
   },
   "portfolio": {
+    "eyebrow": "Ausgewählte Arbeiten",
     "title": "Portfolio",
-    "view_all": "Alle anzeigen"
+    "view_all": "Alle anzeigen",
+    "view_project": "Projekt ansehen"
   },
   "clients": {
     "title": "Kunden über unsere Arbeit",
@@ -159,12 +161,12 @@
   },
   "projects": {
     "eyebrow": "Archiv",
-    "desc": "Einhundertvierundzwanzig Aufträge, gefiltert. Verwenden Sie die Kategorien, um sich auf eine Disziplin zu konzentrieren.",
+    "desc": "Ausgewählte Aufträge. Verwenden Sie die Kategorien, um sich auf eine Disziplin zu konzentrieren.",
     "title": "Projekte.",
     "sort": "Sortieren",
     "most_recent": "Neueste zuerst",
     "view": "Ansehen",
-    "showing": "{{count}} von 124 — Seite 1 / 14",
+    "showing": "{{count}} von {{total}} angezeigt",
     "cta_title_1": "Bereit, Ihr Projekt",
     "cta_title_accent": "zu starten?",
     "cta_btn": "Ein Gespräch beginnen",

@@ -9,15 +9,15 @@ export function MobileHome({ accent, onNavigate }) {
   const { t } = useTranslation();
   const filters = t('interiors.filters', { returnObjects: true });
   const quotes  = t('clients.testimonials', { returnObjects: true });
-  const serviceNames = t('services.items', { returnObjects: true });
 
   const [activeFilter, setActiveFilter] = useState(filters[1]);
   const [tIdx, setTIdx] = useState(0);
 
-  const SERVICES = serviceNames.slice(0, 3).map((name, i) => ({
-    name,
-    img: [PROJECTS[0].img, PROJECTS[1].img, PROJECTS[5].img][i],
-  }));
+  // Portfolio takes the prominent slot; lead with the newest project (The Bar).
+  const PORTFOLIO = [
+    ...PROJECTS.filter(p => p.id === 'the-bar'),
+    ...PROJECTS.filter(p => p.id !== 'the-bar').slice(0, 4),
+  ];
 
   const STATS = [
     { n: '124', l: t('stats.stat1_mobile') },
@@ -46,6 +46,28 @@ export function MobileHome({ accent, onNavigate }) {
         </div>
       </div>
 
+      {/* Portfolio */}
+      <div style={{ border: `1px solid ${V2.line}`, padding: 22, marginBottom: 12 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+          <HCaps size={26} weight={800} tracking="-0.02em">{t('portfolio.title')}</HCaps>
+          <GhostCTA onClick={() => onNavigate('projects')}>{t('portfolio.view_all')}</GhostCTA>
+        </div>
+        <div style={{ marginTop: 20, display: 'flex', flexDirection: 'column', gap: 18 }}>
+          {PORTFOLIO.map(p => (
+            <div key={p.id} onClick={() => onNavigate(`project/${p.id}`)} style={{ cursor: 'pointer' }}>
+              <Img src={p.img} ratio="3/2" dark={0.06} />
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', paddingTop: 12 }}>
+                <div>
+                  <HCaps size={18} line={1.15} weight={700} tracking="0">{p.title}</HCaps>
+                  <div style={{ marginTop: 4, fontFamily: V2.font, fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: V2.mute }}>{p.cat} · {p.place}</div>
+                </div>
+                <MoreLink accent={accent}>{t('portfolio.view_project')}</MoreLink>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Stats */}
       <div style={{ border: `1px solid ${V2.line}`, padding: 22, marginBottom: 12 }}>
         <HCaps size={28} line={1} weight={800} tracking="-0.02em">
@@ -62,25 +84,6 @@ export function MobileHome({ accent, onNavigate }) {
             <div style={{ marginTop: 8, fontSize: 11.5, lineHeight: 1.55, color: V2.mute }}>{s.l}</div>
           </div>
         ))}
-      </div>
-
-      {/* Services */}
-      <div style={{ border: `1px solid ${V2.line}`, padding: 22, marginBottom: 12 }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
-          <HCaps size={26} weight={800} tracking="-0.02em">{t('services.title')}</HCaps>
-          <GhostCTA onClick={() => onNavigate('contact')}>{t('services.consult')}</GhostCTA>
-        </div>
-        <div style={{ marginTop: 20, display: 'flex', flexDirection: 'column', gap: 18 }}>
-          {SERVICES.map(s => (
-            <div key={s.name}>
-              <Img src={s.img} ratio="3/2" dark={0.05} />
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', paddingTop: 12 }}>
-                <HCaps size={16} line={1.15} weight={700} tracking="0">{s.name}</HCaps>
-                <MoreLink>{t('services.more_short')}</MoreLink>
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
 
       {/* Vision CTA */}
