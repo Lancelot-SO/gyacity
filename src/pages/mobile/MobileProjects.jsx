@@ -5,13 +5,16 @@ import { HCaps, Eyebrow, Pill, Img, MoreLink } from '@/components/ui';
 import { PROJECTS } from '@/data';
 import { MobileFooter } from './MobileFooter';
 
-const CAT_DEFS = [
-  { key: 'All',         labelKey: 'projects.cat_all' },
-  { key: 'Residential', labelKey: 'projects.cat_residential' },
-  { key: 'Hospitality', labelKey: 'projects.cat_hospitality' },
-  { key: 'Corporate',   labelKey: 'projects.cat_corporate' },
-  { key: 'Exterior',    labelKey: 'projects.cat_exterior' },
-];
+const CAT_LABEL_KEYS = {
+  All:         'projects.cat_all',
+  Residential: 'projects.cat_residential',
+  Hospitality: 'projects.cat_hospitality',
+  Corporate:   'projects.cat_corporate',
+  Exterior:    'projects.cat_exterior',
+};
+
+// Only surface categories that actually have projects.
+const CAT_KEYS = ['All', ...Array.from(new Set(PROJECTS.map(p => p.cat)))];
 
 export function MobileProjects({ accent, onNavigate }) {
   const { t } = useTranslation();
@@ -26,8 +29,8 @@ export function MobileProjects({ accent, onNavigate }) {
       </div>
 
       <div style={{ border: `1px solid ${V2.line}`, padding: 16, marginBottom: 12, display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-        {CAT_DEFS.map(c => (
-          <Pill key={c.key} active={c.key === filter} accent={accent} onClick={() => setFilter(c.key)}>{t(c.labelKey)}</Pill>
+        {CAT_KEYS.map(key => (
+          <Pill key={key} active={key === filter} accent={accent} onClick={() => setFilter(key)}>{t(CAT_LABEL_KEYS[key])}</Pill>
         ))}
       </div>
 

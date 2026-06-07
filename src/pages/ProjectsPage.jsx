@@ -2,18 +2,22 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { V2 } from '@/tokens';
-import { HCaps, Eyebrow, Pill, MoreLink, Img, StarField, CTA, NavArrows, TiltCard, MotionSection, FloatingOrbs } from '@/components/ui';
+import { HCaps, Eyebrow, Pill, MoreLink, Img, StarField, CTA, TiltCard, MotionSection, FloatingOrbs } from '@/components/ui';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { PROJECTS } from '@/data';
 import { fadeUp, fadeLeft, fadeRight, stagger } from '@/animations/variants';
 
-const FILTER_DEFS = [
-  { key: 'All',          labelKey: 'projects.filter_all' },
-  { key: 'Residential',  labelKey: 'projects.filter_residential' },
-  { key: 'Hospitality',  labelKey: 'projects.filter_hospitality' },
-  { key: 'Corporate',    labelKey: 'projects.filter_corporate' },
-  { key: 'Exterior',     labelKey: 'projects.filter_exterior' },
-];
+const CAT_LABEL_KEYS = {
+  All:         'projects.cat_all',
+  Residential: 'projects.cat_residential',
+  Hospitality: 'projects.cat_hospitality',
+  Corporate:   'projects.cat_corporate',
+  Exterior:    'projects.cat_exterior',
+};
+
+// Only surface filters for categories that actually have projects.
+const FILTER_KEYS = ['All', ...Array.from(new Set(PROJECTS.map(p => p.cat)))];
+const countFor = key => (key === 'All' ? PROJECTS.length : PROJECTS.filter(p => p.cat === key).length);
 
 export function ProjectsPage({ accent, onNavigate }) {
   const { t } = useTranslation();
@@ -46,9 +50,9 @@ export function ProjectsPage({ accent, onNavigate }) {
             variants={stagger(0.07)}
             style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}
           >
-            {FILTER_DEFS.map(f => (
-              <motion.div key={f.key} variants={fadeUp}>
-                <Pill active={f.key === filterKey} accent={accent} onClick={() => setFilterKey(f.key)}>{t(f.labelKey)}</Pill>
+            {FILTER_KEYS.map(key => (
+              <motion.div key={key} variants={fadeUp}>
+                <Pill active={key === filterKey} accent={accent} onClick={() => setFilterKey(key)}>{t(CAT_LABEL_KEYS[key])} {countFor(key)}</Pill>
               </motion.div>
             ))}
           </motion.div>
@@ -102,21 +106,11 @@ export function ProjectsPage({ accent, onNavigate }) {
           </motion.div>
         </AnimatePresence>
 
-        {/* Pagination */}
-        <MotionSection variants={fadeUp} style={{ marginTop: 56, display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTop: `1px solid ${V2.line}`, paddingTop: 24 }}>
+        {/* Count */}
+        <MotionSection variants={fadeUp} style={{ marginTop: 56, display: 'flex', justifyContent: 'flex-start', alignItems: 'center', borderTop: `1px solid ${V2.line}`, paddingTop: 24 }}>
           <span style={{ fontFamily: V2.font, fontSize: 11, color: V2.mute, letterSpacing: '0.14em', textTransform: 'uppercase' }}>
-            {t('projects.showing', { count: shown.length })}
+            {t('projects.showing', { count: shown.length, total: PROJECTS.length })}
           </span>
-          <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
-            {['1', '2', '3', '…', '14'].map((n, i) => (
-              <motion.span
-                key={i}
-                whileHover={{ scale: 1.1 }}
-                style={{ fontFamily: V2.font, fontSize: 12, fontWeight: 500, width: 32, height: 32, borderRadius: '50%', background: i === 0 ? V2.cream : 'transparent', color: i === 0 ? V2.bg : V2.cream, border: i === 0 ? 'none' : `1px solid ${V2.line}`, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', cursor: i === 0 ? 'default' : 'none' }}
-              >{n}</motion.span>
-            ))}
-            <NavArrows accent={accent} />
-          </div>
         </MotionSection>
       </section>
 
