@@ -1,4 +1,4 @@
-name: Deploy GyaCity
+name: Deploy GyaCity Construction
 
 on:
   push:
