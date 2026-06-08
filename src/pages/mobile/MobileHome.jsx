@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { V2 } from '@/tokens';
 import { HCaps, Eyebrow, Pill, GhostCTA, CTA, Img, MoreLink, StarField } from '@/components/ui';
-import { PROJECTS, TESTIMONIALS, IMGS } from '@/data';
+import { PROJECTS, TESTIMONIALS, HOME_IMGS } from '@/data';
 import { MobileFooter } from './MobileFooter';
 
 export function MobileHome({ accent, onNavigate }) {
@@ -42,7 +42,7 @@ export function MobileHome({ accent, onNavigate }) {
           <div style={{ marginTop: 14 }}><GhostCTA onClick={() => onNavigate('contact')}>{t('interiors.consultation')}</GhostCTA></div>
         </div>
         <div style={{ marginTop: 20 }}>
-          <Img src={IMGS.arch} ratio="4/5" dark={0.05} />
+          <Img src={HOME_IMGS.arch} ratio="4/5" dark={0.05} />
         </div>
       </div>
 

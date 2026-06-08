@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { V2 } from '@/tokens';
 import { HCaps, Eyebrow, OutlineCard, Img, FloatingOrbs } from '@/components/ui';
-import { IMGS } from '@/data';
+import { HOME_IMGS } from '@/data';
 import { EASE_OUT } from '@/animations/variants';
 
 export function SecHero({ accent }) {
@@ -42,7 +42,7 @@ export function SecHero({ accent }) {
 
       <div style={{ padding: '0 40px', overflow: 'hidden' }}>
         <motion.div style={{ y: imgY }}>
-          <Img src={IMGS.hero} ratio="16/10" dark={0.08} />
+          <Img src={HOME_IMGS.hero} ratio="16/10" dark={0.08} />
         </motion.div>
       </div>
 

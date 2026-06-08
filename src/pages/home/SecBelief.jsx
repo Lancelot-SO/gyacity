@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { V2 } from '@/tokens';
 import { HCaps, Eyebrow, Img, MotionSection } from '@/components/ui';
-import { IMGS } from '@/data';
+import { HOME_IMGS } from '@/data';
 import { fadeUp } from '@/animations/variants';
 
 export function SecBelief() {
@@ -23,7 +23,7 @@ export function SecBelief() {
 
       <div style={{ overflow: 'hidden' }}>
         <motion.div style={{ y }}>
-          <Img src={IMGS.kitchen} ratio="16/8" dark={0.08} />
+          <Img src={HOME_IMGS.kitchen} ratio="16/8" dark={0.08} />
         </motion.div>
       </div>
     </section>

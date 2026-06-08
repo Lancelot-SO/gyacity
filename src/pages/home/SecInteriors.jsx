@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { V2 } from '@/tokens';
 import { HCaps, Eyebrow, Pill, GhostCTA, Img, MotionSection, MotionChild } from '@/components/ui';
-import { IMGS } from '@/data';
+import { HOME_IMGS } from '@/data';
 import { fadeLeft, fadeRight, fadeUp, stagger } from '@/animations/variants';
 
 export function SecInteriors({ accent, onNavigate }) {
@@ -40,7 +40,7 @@ export function SecInteriors({ accent, onNavigate }) {
       </div>
 
       <MotionSection style={{ marginTop: 40 }}>
-        <Img src={IMGS.arch} ratio="16/8" dark={0.1} />
+        <Img src={HOME_IMGS.arch} ratio="16/8" dark={0.1} />
       </MotionSection>
     </section>
   );
