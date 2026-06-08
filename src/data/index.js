@@ -59,7 +59,7 @@ export const HOME_IMGS = {
 };
 
 export const OFFICES = [
-  { city:'Ghana',   tz:'GMT', principal:'Akwasi Mensah',  addr:['Lakeside Estate','Kumasi'],              tel:'+233 50 599 8696', email:'accra@gyacity.com' },
+  { city:'Ghana',   tz:'GMT', principal:'Brown Gyasi Sydney',  addr:['Lakeside Estate','Kumasi'],          tel:'+233 50 599 8696', email:'accra@gyacity.com' },
   { city:'Nigeria', tz:'WAT', principal:'Ifeoma Okafor',  addr:['Plot 7B, Bourdillon Road','Ikoyi'],       tel:'+234 1 271 4090',  email:'lagos@gyacity.com' },
   { city:'Germany', tz:'CET', principal:'Lukas Brandt',   addr:['Linienstraße 154','10115 Berlin-Mitte'],  tel:'+49 30 235 928 12',email:'berlin@gyacity.com' },
 ];

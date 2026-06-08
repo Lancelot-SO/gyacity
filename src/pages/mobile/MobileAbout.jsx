@@ -4,7 +4,7 @@ import { HCaps, Eyebrow, CTA, Img, StarField } from '@/components/ui';
 import { IMGS } from '@/data';
 import { MobileFooter } from './MobileFooter';
 
-const STAT_NUMS = ['124', '32', '12', '8'];
+const STAT_NUMS = ['124', '32', '7', '8'];
 
 export function MobileAbout({ accent, onNavigate }) {
   const { t } = useTranslation();

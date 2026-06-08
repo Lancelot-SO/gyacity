@@ -8,14 +8,14 @@ import { useCounter } from '@/hooks/useCounter';
 import { fadeUp, fadeLeft, fadeRight, stagger, scaleIn } from '@/animations/variants';
 
 const TEAM = [
-  { name: 'Akwasi Mensah', role: 'Founding Principal',    city: 'Accra',  img: IMGS.hero },
+  { name: 'Brown Gyasi Sydney', role: 'Founding Principal', city: 'Kumasi', img: IMGS.hero },
   { name: 'Ifeoma Okafor', role: 'Director, Hospitality', city: 'Lagos',  img: IMGS.arch },
   { name: 'Lukas Brandt',  role: 'Director, Europe',      city: 'Berlin', img: IMGS.kitchen },
   { name: 'Adwoa Asante',  role: 'Head of Interiors',     city: 'Accra',  img: IMGS.luxe },
 ];
 
-const MILESTONE_YEARS = ['2014', '2017', '2019', '2022', '2025'];
-const STAT_NUMS = ['124', '32', '12', '8'];
+const MILESTONE_YEARS = ['2019', '2021', '2023', '2024', '2026'];
+const STAT_NUMS = ['124', '32', '7', '8'];
 
 function CounterStat({ n, l, accent, delay = 0 }) {
   const { ref, count } = useCounter(parseInt(n, 10), 2000);
