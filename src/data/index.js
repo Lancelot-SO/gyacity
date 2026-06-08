@@ -23,6 +23,9 @@ import emPendant  from '@/assets/emerald-lounge/IMG_9909.jpg'; // sculptural pen
 import emNeon     from '@/assets/emerald-lounge/IMG_9920.jpg'; // neon script + lights detail
 import emGreen    from '@/assets/emerald-lounge/IMG_9901.jpg'; // emerald suite, furnishing
 
+// Homepage hero (provided asset).
+import heroImg    from '@/assets/hero.jpg';
+
 export const PROJECTS = [
   { id:'emerald-lounge', no:'I',  title:'Emerald Lounge', place:'East Legon, Accra', year:'2024', cat:'Residential', type:'Private residence', img:emHero },
   { id:'the-bar',        no:'II', title:'The Bar',        place:'Spintex, Accra',    year:'2024', cat:'Hospitality', type:'Bar & lounge',       img:barNeon },
@@ -35,13 +38,23 @@ export const TESTIMONIALS = [
   { quote:'Twelve months in and the hotel still photographs better than the day we opened. Guests ask who designed it. We never tire of answering.', name:'Adetola Bankole', place:'Lagos, Nigeria' },
 ];
 
+// Site-wide decorative imagery — drawn from the studio's real Accra projects so
+// every section reflects the company's Ghanaian/West-African work.
 export const IMGS = {
-  hero:    'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=2000&q=88',
-  arch:    'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1600&q=85',
-  kitchen: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1800&q=88',
-  luxe:    'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1400&q=85',
-  min:     'https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=85',
-  dust:    'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1400&q=85',
+  hero:    emWide,    // Emerald Lounge — clean wide living room
+  arch:    barNight,  // The Bar — long backlit counter (reads well as a wide band)
+  kitchen: emLiving,  // Emerald Lounge — sofas, rug, emerald walls
+  luxe:    emRoomA,   // Emerald Lounge — full seating, neon feature
+  min:     barPanels, // The Bar — counter & diamond panels
+  dust:    barTerrace,// The Bar — string-lit terrace
+};
+
+// Homepage decorative imagery — African architecture & styling (Unsplash stock).
+// Kept separate from IMGS so other pages are unaffected.
+export const HOME_IMGS = {
+  hero:    heroImg, // provided hero image
+  arch:    'https://images.unsplash.com/photo-1779218404505-6e669b205030?w=1600&q=85&auto=format&fit=crop', // warm African-styled lounge
+  kitchen: 'https://images.unsplash.com/photo-1672865362670-b22b90b1fb95?w=1600&q=85&auto=format&fit=crop', // earthen interior with fireplace
 };
 
 export const OFFICES = [

@@ -11,16 +11,20 @@
     "studio_title": "Interior Design Studio",
     "service1": "Interior Design",
     "service2": "Architecture & Build",
-    "headline": "The main goal of the studio is to showcase our agency's impressive and innovative work",
-    "headline_accent": "and attract new clients.",
-    "task_tag": "Task.",
-    "task_text": "Create an attractive website that conveys the aesthetics and style of the interior design agency and attracts new clients for consultations on the design of their space.",
-    "solution_tag": "Solution.",
-    "solution_text": "After analysing the agency's niche, competitors, and target audience, we created a minimalistic and intuitive website that allows visitors to learn more about the company and take the desired action."
+    "headline": "Interiors and architecture, shaped around how you live —",
+    "headline_accent": "and built to last.",
+    "task_tag": "Approach.",
+    "task_text": "We design with restraint — every material, proportion and detail chosen for the way you live, and made to last.",
+    "solution_tag": "Practice.",
+    "solution_text": "Architecture, interiors and the build under one roof — from first sketch to final install, across Accra, Lagos and Berlin."
   },
   "interiors": {
-    "title": "Interiors with soul and style",
-    "filters": ["Houses", "Apartments", "Commercial spaces", "Offices"],
+    "title": "Three disciplines, one studio",
+    "disciplines": [
+      { "name": "Interiors",    "text": "Furniture, finishes and styling, considered down to the last detail." },
+      { "name": "Architecture", "text": "Form, light and structure, designed around how you live." },
+      { "name": "Build",        "text": "From first sketch to final install, delivered in-house." }
+    ],
     "tagline": "Where luxury meets innovation",
     "consultation": "Consultation"
   },

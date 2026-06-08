@@ -11,16 +11,20 @@
     "studio_title": "Studio de Design d'Intérieur",
     "service1": "Design d'Intérieur",
     "service2": "Architecture & Construction",
-    "headline": "L'objectif principal du studio est de présenter le travail impressionnant et innovant de notre agence",
-    "headline_accent": "et d'attirer de nouveaux clients.",
-    "task_tag": "Objectif.",
-    "task_text": "Créer un site web attrayant qui véhicule l'esthétique et le style de l'agence de design d'intérieur et attire de nouveaux clients pour des consultations sur la conception de leur espace.",
-    "solution_tag": "Solution.",
-    "solution_text": "Après avoir analysé la niche, les concurrents et le public cible de l'agence, nous avons créé un site web minimaliste et intuitif qui permet aux visiteurs d'en savoir plus sur l'entreprise et de passer à l'action souhaitée."
+    "headline": "Des intérieurs et une architecture pensés pour votre vie —",
+    "headline_accent": "et conçus pour durer.",
+    "task_tag": "Approche.",
+    "task_text": "Nous concevons avec retenue — chaque matériau, proportion et détail choisi pour votre façon de vivre, et fait pour durer.",
+    "solution_tag": "Pratique.",
+    "solution_text": "Architecture, intérieurs et réalisation réunis — du premier croquis à la pose finale, à Accra, Lagos et Berlin."
   },
   "interiors": {
-    "title": "Intérieurs avec âme et style",
-    "filters": ["Maisons", "Appartements", "Espaces commerciaux", "Bureaux"],
+    "title": "Trois disciplines, un studio",
+    "disciplines": [
+      { "name": "Intérieurs",  "text": "Mobilier, finitions et style, pensés jusque dans le moindre détail." },
+      { "name": "Architecture", "text": "Forme, lumière et structure, conçues pour votre façon de vivre." },
+      { "name": "Réalisation",  "text": "Du premier croquis à la pose finale, en interne." }
+    ],
     "tagline": "Là où le luxe rencontre l'innovation",
     "consultation": "Consultation"
   },
