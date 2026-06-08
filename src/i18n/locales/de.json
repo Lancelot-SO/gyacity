@@ -19,8 +19,12 @@
     "solution_text": "Architektur, Interieurs und Ausführung aus einer Hand — vom ersten Entwurf bis zur fertigen Montage, in Accra, Lagos und Berlin."
   },
   "interiors": {
-    "title": "Interieurs mit Seele und Stil",
-    "filters": ["Häuser", "Wohnungen", "Gewerbeflächen", "Büros"],
+    "title": "Drei Disziplinen, ein Studio",
+    "disciplines": [
+      { "name": "Interieurs",  "text": "Möbel, Oberflächen und Styling — bis ins letzte Detail durchdacht." },
+      { "name": "Architektur", "text": "Form, Licht und Struktur, gestaltet nach Ihrem Leben." },
+      { "name": "Bau",         "text": "Vom ersten Entwurf bis zur fertigen Montage — alles aus eigener Hand." }
+    ],
     "tagline": "Wo Luxus auf Innovation trifft",
     "consultation": "Beratung"
   },

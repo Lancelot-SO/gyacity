@@ -1,16 +1,15 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { V2 } from '@/tokens';
-import { HCaps, Eyebrow, Pill, GhostCTA, CTA, Img, MoreLink, StarField } from '@/components/ui';
+import { HCaps, Eyebrow, GhostCTA, CTA, Img, MoreLink, StarField } from '@/components/ui';
 import { PROJECTS, TESTIMONIALS, HOME_IMGS } from '@/data';
 import { MobileFooter } from './MobileFooter';
 
 export function MobileHome({ accent, onNavigate }) {
   const { t } = useTranslation();
-  const filters = t('interiors.filters', { returnObjects: true });
+  const disciplines = t('interiors.disciplines', { returnObjects: true });
   const quotes  = t('clients.testimonials', { returnObjects: true });
 
-  const [activeFilter, setActiveFilter] = useState(filters[1]);
   const [tIdx, setTIdx] = useState(0);
 
   // Portfolio takes the prominent slot; lead with the newest project (The Bar).
@@ -32,9 +31,15 @@ export function MobileHome({ accent, onNavigate }) {
         <HCaps size={36} line={0.95} weight={800} tracking="-0.02em">
           {t('interiors.title')}
         </HCaps>
-        <div style={{ marginTop: 16, display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-          {filters.map(f => (
-            <Pill key={f} active={f === activeFilter} accent={accent} onClick={() => setActiveFilter(f)}>{f}</Pill>
+        <div style={{ marginTop: 18, display: 'flex', flexDirection: 'column', gap: 16 }}>
+          {disciplines.map((d, i) => (
+            <div key={d.name} style={{ borderTop: `1px solid ${V2.line}`, paddingTop: 12 }}>
+              <span style={{ fontFamily: V2.mono, fontSize: 11, letterSpacing: '0.14em', color: accent || V2.coral }}>
+                {String(i + 1).padStart(2, '0')}
+              </span>
+              <HCaps size={18} line={1.1} weight={700} tracking="-0.01em" style={{ marginTop: 8 }}>{d.name}</HCaps>
+              <p style={{ marginTop: 6, fontFamily: V2.font, fontSize: 12.5, lineHeight: 1.55, color: V2.mute }}>{d.text}</p>
+            </div>
           ))}
         </div>
         <div style={{ marginTop: 20 }}>

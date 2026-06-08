@@ -19,8 +19,12 @@
     "solution_text": "Architecture, interiors and the build under one roof — from first sketch to final install, across Accra, Lagos and Berlin."
   },
   "interiors": {
-    "title": "Interiors with soul and style",
-    "filters": ["Houses", "Apartments", "Commercial spaces", "Offices"],
+    "title": "Three disciplines, one studio",
+    "disciplines": [
+      { "name": "Interiors",    "text": "Furniture, finishes and styling, considered down to the last detail." },
+      { "name": "Architecture", "text": "Form, light and structure, designed around how you live." },
+      { "name": "Build",        "text": "From first sketch to final install, delivered in-house." }
+    ],
     "tagline": "Where luxury meets innovation",
     "consultation": "Consultation"
   },
