@@ -23,8 +23,9 @@ import emPendant  from '@/assets/emerald-lounge/IMG_9909.jpg'; // sculptural pen
 import emNeon     from '@/assets/emerald-lounge/IMG_9920.jpg'; // neon script + lights detail
 import emGreen    from '@/assets/emerald-lounge/IMG_9901.jpg'; // emerald suite, furnishing
 
-// Homepage hero (provided asset).
+// Homepage hero + banner (provided assets).
 import heroImg    from '@/assets/hero.jpg';
+import bannerImg  from '@/assets/banner.jpeg';
 
 export const PROJECTS = [
   { id:'emerald-lounge', no:'I',  title:'Emerald Lounge', place:'East Legon, Accra', year:'2024', cat:'Residential', type:'Private residence', img:emHero },
@@ -52,15 +53,15 @@ export const IMGS = {
 // Homepage decorative imagery — African architecture & styling (Unsplash stock).
 // Kept separate from IMGS so other pages are unaffected.
 export const HOME_IMGS = {
-  hero:    heroImg, // provided hero image
-  arch:    'https://images.unsplash.com/photo-1779218404505-6e669b205030?w=1600&q=85&auto=format&fit=crop', // warm African-styled lounge
+  hero:    heroImg,   // provided hero image
+  banner:  bannerImg, // provided banner strip (architectural model)
   kitchen: 'https://images.unsplash.com/photo-1672865362670-b22b90b1fb95?w=1600&q=85&auto=format&fit=crop', // earthen interior with fireplace
 };
 
 export const OFFICES = [
-  { city:'Accra',  tz:'GMT', principal:'Akwasi Mensah',  addr:['No. 14 Volta Street','Cantonments, Accra'],  tel:'+233 24 905 1184', email:'accra@gyacity.com' },
-  { city:'Lagos',  tz:'WAT', principal:'Ifeoma Okafor',  addr:['Plot 7B, Bourdillon Road','Ikoyi, Lagos'],   tel:'+234 1 271 4090',  email:'lagos@gyacity.com' },
-  { city:'Berlin', tz:'CET', principal:'Lukas Brandt',   addr:['Linienstraße 154','10115 Berlin-Mitte'],     tel:'+49 30 235 928 12',email:'berlin@gyacity.com' },
+  { city:'Ghana',   tz:'GMT', principal:'Akwasi Mensah',  addr:['Lakeside Estate','Kumasi'],              tel:'+233 50 599 8696', email:'accra@gyacity.com' },
+  { city:'Nigeria', tz:'WAT', principal:'Ifeoma Okafor',  addr:['Plot 7B, Bourdillon Road','Ikoyi'],       tel:'+234 1 271 4090',  email:'lagos@gyacity.com' },
+  { city:'Germany', tz:'CET', principal:'Lukas Brandt',   addr:['Linienstraße 154','10115 Berlin-Mitte'],  tel:'+49 30 235 928 12',email:'berlin@gyacity.com' },
 ];
 
 // ── Project detail ───────────────────────────────────────────────────────────

@@ -46,8 +46,9 @@ export function MobileHome({ accent, onNavigate }) {
           <Eyebrow>{t('interiors.tagline')}</Eyebrow>
           <div style={{ marginTop: 14 }}><GhostCTA onClick={() => onNavigate('contact')}>{t('interiors.consultation')}</GhostCTA></div>
         </div>
-        <div style={{ marginTop: 20 }}>
-          <Img src={HOME_IMGS.arch} ratio="4/5" dark={0.05} />
+        {/* Banner strip — breaks out of the card padding to span its full width */}
+        <div style={{ marginTop: 20, marginLeft: -20, marginRight: -20, marginBottom: -20 }}>
+          <Img src={HOME_IMGS.banner} dark={0.06} style={{ height: 130 }} />
         </div>
       </div>
 

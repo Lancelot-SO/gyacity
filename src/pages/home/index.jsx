@@ -11,7 +11,7 @@ import { SecContactBand } from './SecContactBand';
 
 export function HomePage({ accent, onNavigate }) {
   return (
-    <div style={{ background: V2.bg, color: V2.cream, fontFamily: V2.font }}>
+    <div style={{ background: V2.bg, color: V2.cream, fontFamily: V2.font, overflowX: 'clip' }}>
       <SecHero        accent={accent} />
       <SecInteriors   accent={accent} onNavigate={onNavigate} />
       <SecPortfolio   accent={accent} onNavigate={onNavigate} />
