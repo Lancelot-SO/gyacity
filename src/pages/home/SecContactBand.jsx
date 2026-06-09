@@ -24,7 +24,6 @@ export function SecContactBand({ accent, onNavigate }) {
             <div style={{ marginTop: 18, fontFamily: V2.font, fontSize: 13.5, color: V2.cream, lineHeight: 1.6 }}>
               {o.addr.map((a, i) => <div key={i}>{a}</div>)}
             </div>
-            <div style={{ marginTop: 16, fontFamily: V2.mono, fontSize: 12, color: V2.mute, letterSpacing: '0.04em' }}>{o.tel}</div>
           </motion.div>
         ))}
       </motion.div>

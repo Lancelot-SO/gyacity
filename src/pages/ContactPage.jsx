@@ -144,8 +144,8 @@ export function ContactPage({ accent, onNavigate }) {
           <MotionSection variants={fadeRight}>
             <Eyebrow color={accent || V2.coral}>{t('contact.or_faster')}</Eyebrow>
             <div style={{ marginTop: 24, display: 'flex', flexDirection: 'column', gap: 14 }}>
-              <ContactRow label={t('contact.wa_label')}   value="+233 24 905 1184" badge={t('contact.wa_badge')}   href="https://wa.me/233249051184" accent={accent} />
-              <ContactRow label={t('contact.call_label')} value="+233 24 905 1184" badge={t('contact.call_badge')} href="tel:+233249051184"          accent={accent} />
+              <ContactRow label={t('contact.wa_label')}   value="+233 50 599 8696" badge={t('contact.wa_badge')}   href="https://wa.me/233505998696" accent={accent} />
+              <ContactRow label={t('contact.call_label')} value="+233 50 599 8696" badge={t('contact.call_badge')} href="tel:+233505998696"          accent={accent} />
               <ContactRow label={t('contact.email_label')}value="studio@gyacity.com"                              href="mailto:studio@gyacity.com"  accent={accent} />
             </div>
             <div style={{ marginTop: 40, padding: 24, border: `1px solid ${V2.line}` }}>

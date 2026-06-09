@@ -30,11 +30,11 @@
   },
   "stats": {
     "title": "People trust us with their homes",
-    "desc": "Gyacity is a team of highly qualified architects and interior designers with twelve years of practice. We understand that every space is unique — just like the people who live in it. That's why your vision, lifestyle and personal style are always at the heart of our work.",
+    "desc": "Gyacity is a team of highly qualified architects and interior designers with seven years of practice. We understand that every space is unique — just like the people who live in it. That's why your vision, lifestyle and personal style are always at the heart of our work.",
     "stat1": "Completed projects — from private apartments to commercial spaces across different countries.",
     "stat2": "Skilled professionals in our team, each bringing expertise in design, architecture and visualisation.",
     "stat3": "Countries our clients come from — we confidently work on international projects.",
-    "desc_mobile": "Gyacity is a team of highly qualified interior designers with twelve years of experience.",
+    "desc_mobile": "Gyacity is a team of highly qualified interior designers with seven years of experience.",
     "stat1_mobile": "Completed projects worldwide.",
     "stat2_mobile": "Skilled professionals on our team.",
     "stat3_mobile": "Countries our clients come from."
@@ -95,7 +95,7 @@
     ],
     "stats_title": "By the numbers",
     "stats": [
-      "Commissions delivered since 2014.",
+      "Commissions delivered since 2019.",
       "Architects, designers and makers across three studios.",
       "Years in practice. Same principles, refined each year.",
       "Countries our clients call home."
@@ -109,14 +109,14 @@
     "team_title": "The team",
     "team_see_all": "See all 32 people",
     "timeline_eyebrow": "Timeline",
-    "timeline_title_1": "Twelve years,",
+    "timeline_title_1": "Seven years,",
     "timeline_title_2": "one practice",
     "milestones": [
-      { "t": "Studio founded",              "d": "Akwasi Mensah opens the studio in a single-room atelier on Volta Street, Cantonments." },
-      { "t": "First hospitality commission","d": "Hôtel Saharienne, Lagos — 42 keys, our breakthrough into hospitality work." },
-      { "t": "Berlin office",              "d": "A second studio opens in Mitte to serve European clients and developers." },
-      { "t": "Salone del Mobile",          "d": "Maison Onyx featured in the Ghanaian pavilion. International press follows." },
-      { "t": "100th commission",           "d": "A century of finished buildings across three continents. Onwards." }
+      { "t": "Studio founded",   "d": "Brown Gyasi Sydney opens Gyacity as a single-room atelier in Kumasi." },
+      { "t": "First residences", "d": "The first private homes are delivered across Kumasi and Accra." },
+      { "t": "In-house atelier", "d": "The practice brings furniture, joinery and finishes under one roof." },
+      { "t": "Signature projects","d": "The Bar and Emerald Lounge open in Accra — hospitality and residential in one year." },
+      { "t": "Berlin studio",    "d": "Gyacity expands into Europe with a second studio in Berlin." }
     ],
     "cta_title_1": "Begin a",
     "cta_title_accent": "conversation",
@@ -202,7 +202,7 @@
     "cta_btn": "Start your project"
   },
   "footer": {
-    "tagline": "Architecture, interiors and exterior environments. Accra · Lagos · Berlin. Est. 2014.",
+    "tagline": "Architecture, interiors and exterior environments. Accra · Lagos · Berlin. Est. 2019.",
     "studio_group": "Studio",
     "studio_items": ["About", "Approach", "Journal", "Press"],
     "services_group": "Services",

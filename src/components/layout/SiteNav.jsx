@@ -129,7 +129,7 @@ export function SiteNav({ active, accent, navigate, mobile }) {
 
       <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gap: 14 }}>
         <span style={{ fontFamily: V2.font, fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: V2.mute }}>
-          +233 24 905 1184
+          +233 50 599 8696
         </span>
         <span style={{ width: 1, height: 14, background: V2.line }} />
         <div style={{ display: 'flex', gap: 3 }}>

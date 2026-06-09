@@ -47,7 +47,7 @@ export function SecVisionCTA({ accent }) {
           </p>
           <div style={{ marginTop: 40, display: 'flex', flexDirection: 'column', gap: 18 }}>
             <FormFieldLine label={t('vision.name_label')} value={name} onChange={setName} placeholder="Adwoa Mensah" />
-            <FormFieldLine label={t('vision.phone_label')} value={phone} onChange={setPhone} placeholder="+233 24 905 1184" />
+            <FormFieldLine label={t('vision.phone_label')} value={phone} onChange={setPhone} placeholder="+233 50 599 8696" />
             <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: 10 }}>
               <motion.button
                 whileHover={{ background: accent || V2.coral, borderColor: accent || V2.coral, color: V2.bg, scale: 1.08 }}

@@ -26,8 +26,9 @@ export function SecInteriors({ accent, onNavigate }) {
         </MotionSection>
       </div>
 
-      <MotionSection style={{ marginTop: 40 }}>
-        <Img src={HOME_IMGS.arch} ratio="16/8" dark={0.1} />
+      {/* Full-bleed banner strip — breaks out of the section's 40px side padding */}
+      <MotionSection style={{ marginTop: 48, marginLeft: -40, marginRight: -40 }}>
+        <Img src={HOME_IMGS.banner} dark={0.12} style={{ height: 300 }} />
       </MotionSection>
 
       <motion.div

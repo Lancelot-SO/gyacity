@@ -21,7 +21,7 @@ export function WhatsAppBtn() {
           <div style={{ fontSize: 12, color: V2.mute, lineHeight: 1.5, marginBottom: 14 }}>
             Message us on WhatsApp — we typically reply within 4 minutes.
           </div>
-          <a href="https://wa.me/233249051184" target="_blank" rel="noopener noreferrer"
+          <a href="https://wa.me/233505998696" target="_blank" rel="noopener noreferrer"
             style={{
               display: 'inline-flex', alignItems: 'center', gap: 8,
               padding: '10px 18px', background: '#25D366', color: '#fff',

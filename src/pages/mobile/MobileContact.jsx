@@ -8,7 +8,7 @@ export function MobileContact({ accent }) {
   const { t } = useTranslation();
 
   const QUICK_ROWS = [
-    { href: 'https://wa.me/233249051184', label: t('contact.wa_label'),   value: '+233 24 905 1184',   badge: t('contact.wa_badge') },
+    { href: 'https://wa.me/233505998696', label: t('contact.wa_label'),   value: '+233 50 599 8696',   badge: t('contact.wa_badge') },
     { href: 'mailto:studio@gyacity.com',  label: t('contact.email_label'), value: 'studio@gyacity.com' },
   ];
 
