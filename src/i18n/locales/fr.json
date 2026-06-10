@@ -54,12 +54,12 @@
     "view_project": "Voir le projet"
   },
   "clients": {
-    "title": "Les clients parlent de notre travail",
+    "title": "Ce que disent nos clients",
     "testimonials": [
-      "Travailler avec Gyacity a été un vrai plaisir. Leurs designers ont fait preuve de créativité, d'attention aux détails et de la capacité à donner vie à nos souhaits. Notre maison est devenue un endroit vraiment merveilleux.",
-      "Gyacity est vraiment professionnel en matière de design d'intérieur. Ils ont transformé notre ancienne cuisine en un espace où nous aimons maintenant passer du temps. Merci pour votre travail et votre dévouement.",
-      "Gyacity a fait ce que nous pensions ne pouvoir faire que les grandes maisons européennes. Sobre, calme, profondément réfléchi — et incontestablement ancré dans cet endroit.",
-      "Douze mois plus tard, l'hôtel se photographie encore mieux qu'au jour de l'ouverture. Les clients demandent qui l'a conçu. Nous ne nous lassons jamais de répondre."
+      "Gyacity a transformé notre salon en quelque chose que nous n'aurions jamais imaginé. Chaque détail a été réfléchi — du plafond aux finitions. Notre famille n'arrête pas d'en parler.",
+      "Nous avons confié notre maison à Kumasi à Brown et son équipe, et ils ont dépassé toutes nos attentes. L'espace est chaleureux, pensé dans les moindres détails, et incontestablement le nôtre.",
+      "Ce qui m'a le plus impressionné, c'est leur écoute. Ils n'ont pas seulement conçu pour l'espace — ils ont conçu pour notre famille. Je recommande Gyacity à tous ceux que je connais à Kumasi.",
+      "Du premier rendez-vous à la remise des clés, tout a été géré avec un vrai professionnalisme et beaucoup de soin. Ils ont compris exactement ce que nous voulions, avant même que nous le sachions."
     ]
   },
   "belief": {
@@ -82,9 +82,9 @@
   },
   "about": {
     "eyebrow": "Le studio",
-    "title_1": "Nous construisons des endroits",
-    "title_accent": "calmes",
-    "title_2": "et réfléchis",
+    "title_1": "Chaque espace reflète",
+    "title_accent": "la personne",
+    "title_2": "qui y vit.",
     "belief_eyebrow": "Nous croyons en",
     "belief_text": "Créer avec vous, pas pour vous. Chaque espace est le reflet d'une vision partagée et d'un dialogue ouvert — apportant profondeur, harmonie et caractère au design final.",
     "beliefs": [
@@ -125,8 +125,8 @@
   },
   "contact": {
     "eyebrow": "Prenez contact",
-    "title_1": "Construisons quelque chose de",
-    "title_accent": "calme.",
+    "title_1": "Construisons quelque chose",
+    "title_accent": "ensemble.",
     "form_title": "Envoyer une demande",
     "field_name": "Nom complet",
     "field_name_ph": "Votre nom",

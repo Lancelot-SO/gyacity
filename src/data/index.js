@@ -23,20 +23,33 @@ import emPendant  from '@/assets/emerald-lounge/IMG_9909.jpg'; // sculptural pen
 import emNeon     from '@/assets/emerald-lounge/IMG_9920.jpg'; // neon script + lights detail
 import emGreen    from '@/assets/emerald-lounge/IMG_9901.jpg'; // emerald suite, furnishing
 
+// The Sanctuary — bathroom suite renovation photography.
+import sanHero    from '@/assets/the-sanctuary/IMG_9993.jpg'; // full room overview — hero
+import sanWide    from '@/assets/the-sanctuary/IMG_9991.jpg'; // shower + toilet, wide
+import sanAerial  from '@/assets/the-sanctuary/IMG_9995.jpg'; // aerial, full layout
+import sanVanity  from '@/assets/the-sanctuary/IMG_9992.jpg'; // LED mirror vanity close-up
+import sanShower  from '@/assets/the-sanctuary/IMG_9988.jpg'; // black steel shower enclosure
+import sanNiche   from '@/assets/the-sanctuary/IMG_9994.jpg'; // gold niche feature wall
+import sanDetail  from '@/assets/the-sanctuary/IMG_9996.jpg'; // gold niche + glass cubicle
+import sanToilet  from '@/assets/the-sanctuary/IMG_9987.jpg'; // vanity/toilet area
+import sanToilet2 from '@/assets/the-sanctuary/IMG_9990.jpg'; // vanity/toilet, second angle
+import sanBasin   from '@/assets/the-sanctuary/IMG_9989.jpg'; // marble corner basin detail
+
 // Homepage hero + banner (provided assets).
 import heroImg    from '@/assets/hero.jpg';
 import bannerImg  from '@/assets/banner.jpeg';
 
 export const PROJECTS = [
-  { id:'emerald-lounge', no:'I',  title:'Emerald Lounge', place:'East Legon, Accra', year:'2024', cat:'Residential', type:'Private residence', img:emHero },
-  { id:'the-bar',        no:'II', title:'The Bar',        place:'Spintex, Accra',    year:'2024', cat:'Hospitality', type:'Bar & lounge',       img:barNeon },
+  { id:'emerald-lounge', no:'I',   title:'Emerald Lounge', place:'Kumasi', year:'2024', cat:'Residential', type:'Private residence', img:emHero  },
+  { id:'the-bar',        no:'II',  title:'The Bar',        place:'Kumasi', year:'2024', cat:'Hospitality', type:'Bar & lounge',      img:barNeon },
+  { id:'the-sanctuary',  no:'III', title:'The Sanctuary',  place:'Kumasi', year:'2025', cat:'Residential', type:'Bathroom suite',    img:sanHero },
 ];
 
 export const TESTIMONIALS = [
-  { quote:'Working with Gyacity has been a real pleasure. Their designers demonstrated creativity, attention to detail, and the ability to bring our wishes to life. Our home has become a truly wonderful place.', name:'Ksenia Marchenko', place:'Kyiv, Ukraine' },
-  { quote:'Gyacity is truly professional in interior design. They transformed our old kitchen into a space where we now love to spend time. Thank you for your work and dedication.', name:'Chiara Moretti', place:'Milan, Italy' },
-  { quote:'Gyacity did what we believed only the great European houses could. Restrained, quiet, deeply considered — and unmistakably of this place.', name:'Nana Adjoa Owusu', place:'Accra, Ghana' },
-  { quote:'Twelve months in and the hotel still photographs better than the day we opened. Guests ask who designed it. We never tire of answering.', name:'Adetola Bankole', place:'Lagos, Nigeria' },
+  { name:'Kwame Asante',   place:'Kumasi, Ghana' },
+  { name:'Abena Mensah',   place:'Accra, Ghana'  },
+  { name:'Kofi Agyemang',  place:'Kumasi, Ghana' },
+  { name:'Ama Boateng',    place:'Accra, Ghana'  },
 ];
 
 // Site-wide decorative imagery — drawn from the studio's real Accra projects so
@@ -72,6 +85,12 @@ const PROJECT_DETAILS = {
     services: 'Interiors · Lighting · FF&E',
     summary: 'A family lounge in deep emerald and cream — sculptural light, soft velvet and marble underfoot.',
     gallery: [emWide, emRoomA, emRoomB, emTv, emLiving, emRoomC, emRoomD, emTvAngle, emPendant, emNeon, emGreen],
+  },
+  'the-sanctuary': {
+    area: 'Bathroom suite',
+    services: 'Interiors · Tiling · Lighting · FF&E',
+    summary: 'Dark marble, teak and gold — a private bathroom transformed into a personal sanctuary.',
+    gallery: [sanWide, sanAerial, sanVanity, sanShower, sanNiche, sanDetail, sanToilet, sanToilet2, sanBasin],
   },
   'the-bar': {
     area: 'Bar & terrace',

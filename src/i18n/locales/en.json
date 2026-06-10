@@ -54,12 +54,12 @@
     "view_project": "View project"
   },
   "clients": {
-    "title": "Clients about our work",
+    "title": "What our clients say",
     "testimonials": [
-      "Working with Gyacity has been a real pleasure. Their designers demonstrated creativity, attention to detail, and the ability to bring our wishes to life. Our home has become a truly wonderful place.",
-      "Gyacity is truly professional in interior design. They transformed our old kitchen into a space where we now love to spend time. Thank you for your work and dedication.",
-      "Gyacity did what we believed only the great European houses could. Restrained, quiet, deeply considered — and unmistakably of this place.",
-      "Twelve months in and the hotel still photographs better than the day we opened. Guests ask who designed it. We never tire of answering."
+      "Gyacity turned our living room into something we never imagined possible. Every detail was thought through — from the ceiling to the finishes. Our family can't stop talking about it.",
+      "We trusted Brown and his team with our home in Kumasi, and they delivered beyond anything we expected. The space feels warm, considered, and unmistakably ours.",
+      "What impressed me most was how they listened. They didn't just design for the space — they designed for our family. I recommend Gyacity to everyone I know in Kumasi.",
+      "From the first meeting to the final handover, everything was handled with real professionalism and care. They understood exactly what we wanted, even before we did."
     ]
   },
   "belief": {
@@ -82,9 +82,9 @@
   },
   "about": {
     "eyebrow": "The studio",
-    "title_1": "We build",
-    "title_accent": "quiet,",
-    "title_2": "considered places",
+    "title_1": "Every space reflects",
+    "title_accent": "the person",
+    "title_2": "who lives in it.",
     "belief_eyebrow": "We believe in",
     "belief_text": "Creating with you, not for you. Every space is a reflection of shared vision and open dialogue — bringing depth, harmony and character to the final design.",
     "beliefs": [
@@ -126,7 +126,7 @@
   "contact": {
     "eyebrow": "Get in touch",
     "title_1": "Let's build something",
-    "title_accent": "quiet.",
+    "title_accent": "together.",
     "form_title": "Send an inquiry",
     "field_name": "Full name",
     "field_name_ph": "Your name",
