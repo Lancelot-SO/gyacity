@@ -23,20 +23,68 @@ import emPendant  from '@/assets/emerald-lounge/IMG_9909.jpg'; // sculptural pen
 import emNeon     from '@/assets/emerald-lounge/IMG_9920.jpg'; // neon script + lights detail
 import emGreen    from '@/assets/emerald-lounge/IMG_9901.jpg'; // emerald suite, furnishing
 
+// The Luminary — new-build residence, Kumasi.
+import lumHero    from '@/assets/the-luminary/IMG_9958.jpg'; // exterior facade — hero
+import lumLiving1 from '@/assets/the-luminary/IMG_9959.jpg'; // main living room, amber LED tray ceiling + staircase
+import lumLiving2 from '@/assets/the-luminary/IMG_9960.jpg'; // living room wide, moulded wall panel
+import lumKitchen from '@/assets/the-luminary/IMG_9963.jpg'; // cream+walnut fitted kitchen, built-in appliances
+import lumStair1  from '@/assets/the-luminary/IMG_9962.jpg'; // dark staircase treads, chrome railing, wainscot wall
+import lumStair2  from '@/assets/the-luminary/IMG_9964.jpg'; // staircase looking up, moulding panels
+import lumCeil    from '@/assets/the-luminary/IMG_9965.jpg'; // dramatic angled amber LED ceiling panels, bedroom
+import lumNiche1  from '@/assets/the-luminary/IMG_9966.jpg'; // built-in amber niche feature wall, tile floor
+import lumLanding from '@/assets/the-luminary/IMG_9967.jpg'; // upper landing, floating amber LED ceiling
+import lumBed1   from '@/assets/the-luminary/IMG_9968.jpg'; // bedroom, amber tray ceiling + niche
+import lumBed2   from '@/assets/the-luminary/IMG_9969.jpg'; // bedroom, amber tray ceiling
+import lumBed3   from '@/assets/the-luminary/IMG_9961.jpg'; // bedroom, amber LED tray, wood floors
+import lumNiche2  from '@/assets/the-luminary/IMG_9970.jpg'; // large room, amber niche feature wall
+import lumHall    from '@/assets/the-luminary/IMG_9971.jpg'; // upper corridor, floating LED ceiling
+import lumWardobe from '@/assets/the-luminary/IMG_9972.jpg'; // walk-in wardrobe, full-height latte oak joinery
+
+// The Quarters — full house renovation, Accra.
+import qtHero    from '@/assets/the-quarters/IMG_9986.jpg'; // completed exterior — hero
+import qtLiving  from '@/assets/the-quarters/IMG_9983.jpg'; // open-plan living, staircase visible
+import qtKitchen from '@/assets/the-quarters/IMG_9985.jpg'; // navy + walnut fitted kitchen
+import qtStair   from '@/assets/the-quarters/IMG_9976.jpg'; // marble staircase under construction
+import qtRoom1   from '@/assets/the-quarters/IMG_9979.jpg'; // upper room, angular tray ceiling + floor-to-ceiling window
+import qtRoom2   from '@/assets/the-quarters/IMG_9984.jpg'; // room, dramatic cathedral tray ceiling, dual windows
+import qtRoom3   from '@/assets/the-quarters/IMG_9981.jpg'; // bedroom, tray ceiling, Accra neighbourhood view
+import qtRoom4   from '@/assets/the-quarters/IMG_9978.jpg'; // bedroom, coffer ceiling, large window
+import qtRoom5   from '@/assets/the-quarters/IMG_9982.jpg'; // bedroom, tray ceiling, wide
+import qtOpen1   from '@/assets/the-quarters/IMG_9973.jpg'; // living room mid-build, marble floor
+import qtOpen2   from '@/assets/the-quarters/IMG_9977.jpg'; // open-plan living + kitchen, wide
+import qtOpen3   from '@/assets/the-quarters/IMG_9975.jpg'; // open-plan with kitchen cabinets, tray ceiling
+import qtOpen4   from '@/assets/the-quarters/IMG_9974.jpg'; // living room, scaffolding, marble
+import qtOpen5   from '@/assets/the-quarters/IMG_9980.jpg'; // upper room, floor-to-ceiling window, black door
+
+// The Sanctuary — bathroom suite renovation photography.
+import sanHero    from '@/assets/the-sanctuary/IMG_9993.jpg'; // full room overview — hero
+import sanWide    from '@/assets/the-sanctuary/IMG_9991.jpg'; // shower + toilet, wide
+import sanAerial  from '@/assets/the-sanctuary/IMG_9995.jpg'; // aerial, full layout
+import sanVanity  from '@/assets/the-sanctuary/IMG_9992.jpg'; // LED mirror vanity close-up
+import sanShower  from '@/assets/the-sanctuary/IMG_9988.jpg'; // black steel shower enclosure
+import sanNiche   from '@/assets/the-sanctuary/IMG_9994.jpg'; // gold niche feature wall
+import sanDetail  from '@/assets/the-sanctuary/IMG_9996.jpg'; // gold niche + glass cubicle
+import sanToilet  from '@/assets/the-sanctuary/IMG_9987.jpg'; // vanity/toilet area
+import sanToilet2 from '@/assets/the-sanctuary/IMG_9990.jpg'; // vanity/toilet, second angle
+import sanBasin   from '@/assets/the-sanctuary/IMG_9989.jpg'; // marble corner basin detail
+
 // Homepage hero + banner (provided assets).
 import heroImg    from '@/assets/hero.jpg';
 import bannerImg  from '@/assets/banner.jpeg';
 
 export const PROJECTS = [
-  { id:'emerald-lounge', no:'I',  title:'Emerald Lounge', place:'East Legon, Accra', year:'2024', cat:'Residential', type:'Private residence', img:emHero },
-  { id:'the-bar',        no:'II', title:'The Bar',        place:'Spintex, Accra',    year:'2024', cat:'Hospitality', type:'Bar & lounge',       img:barNeon },
+  { id:'emerald-lounge', no:'I',   title:'Emerald Lounge', place:'Kumasi', year:'2024', cat:'Residential', type:'Private residence', img:emHero  },
+  { id:'the-bar',        no:'II',  title:'The Bar',        place:'Kumasi', year:'2024', cat:'Hospitality', type:'Bar & lounge',      img:barNeon },
+  { id:'the-sanctuary',  no:'III', title:'The Sanctuary',  place:'Kumasi', year:'2025', cat:'Residential', type:'Bathroom suite',    img:sanHero },
+  { id:'the-quarters',   no:'IV',  title:'The Quarters',   place:'Accra',  year:'2025', cat:'Residential', type:'Full house renovation', img:qtHero  },
+  { id:'the-luminary',   no:'V',   title:'The Luminary',   place:'Kumasi', year:'2025', cat:'Residential', type:'New-build residence',   img:lumHero },
 ];
 
 export const TESTIMONIALS = [
-  { quote:'Working with Gyacity has been a real pleasure. Their designers demonstrated creativity, attention to detail, and the ability to bring our wishes to life. Our home has become a truly wonderful place.', name:'Ksenia Marchenko', place:'Kyiv, Ukraine' },
-  { quote:'Gyacity is truly professional in interior design. They transformed our old kitchen into a space where we now love to spend time. Thank you for your work and dedication.', name:'Chiara Moretti', place:'Milan, Italy' },
-  { quote:'Gyacity did what we believed only the great European houses could. Restrained, quiet, deeply considered — and unmistakably of this place.', name:'Nana Adjoa Owusu', place:'Accra, Ghana' },
-  { quote:'Twelve months in and the hotel still photographs better than the day we opened. Guests ask who designed it. We never tire of answering.', name:'Adetola Bankole', place:'Lagos, Nigeria' },
+  { name:'Kwame Asante',   place:'Kumasi, Ghana' },
+  { name:'Abena Mensah',   place:'Accra, Ghana'  },
+  { name:'Kofi Agyemang',  place:'Kumasi, Ghana' },
+  { name:'Ama Boateng',    place:'Accra, Ghana'  },
 ];
 
 // Site-wide decorative imagery — drawn from the studio's real Accra projects so
@@ -73,11 +121,29 @@ const PROJECT_DETAILS = {
     summary: 'A family lounge in deep emerald and cream — sculptural light, soft velvet and marble underfoot.',
     gallery: [emWide, emRoomA, emRoomB, emTv, emLiving, emRoomC, emRoomD, emTvAngle, emPendant, emNeon, emGreen],
   },
+  'the-sanctuary': {
+    area: 'Bathroom suite',
+    services: 'Interiors · Tiling · Lighting · FF&E',
+    summary: 'Dark marble, teak and gold — a private bathroom transformed into a personal sanctuary.',
+    gallery: [sanWide, sanAerial, sanVanity, sanShower, sanNiche, sanDetail, sanToilet, sanToilet2, sanBasin],
+  },
   'the-bar': {
     area: 'Bar & terrace',
     services: 'Architecture · Interiors · Lighting',
     summary: 'A roadside bar wrapped in red light — warm timber, brass and backlit panels, built for nights that run long.',
     gallery: [barNight, barPanels, barBlue, barFacade, barFacade2, barTerrace, barTerrace2, barBuild],
+  },
+  'the-luminary': {
+    area: 'Full residence',
+    services: 'Architecture · Build · Interiors · Joinery',
+    summary: 'A new-build home in Kumasi defined by warm amber light — cove ceilings in every room, a fully fitted kitchen, bespoke joinery and illuminated wall niches throughout.',
+    gallery: [lumLiving1, lumLiving2, lumKitchen, lumStair1, lumStair2, lumCeil, lumNiche1, lumLanding, lumBed1, lumBed2, lumBed3, lumNiche2, lumHall, lumWardobe],
+  },
+  'the-quarters': {
+    area: 'Full residence',
+    services: 'Architecture · Build · Interiors · FF&E',
+    summary: 'A complete structural overhaul of a two-storey home in Accra — new ceilings, marble floors, a bespoke kitchen and a rebuilt staircase, delivered from the ground up.',
+    gallery: [qtLiving, qtKitchen, qtStair, qtRoom1, qtRoom2, qtRoom3, qtRoom4, qtRoom5, qtOpen1, qtOpen2, qtOpen3, qtOpen4, qtOpen5],
   },
 };
 
