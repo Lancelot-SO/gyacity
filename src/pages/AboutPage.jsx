@@ -1,18 +1,20 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { V2 } from '@/tokens';
-import { HCaps, Eyebrow, CTA, GhostCTA, Img, StarField, TiltCard, MotionSection, FloatingOrbs } from '@/components/ui';
+import { HCaps, Eyebrow, CTA, Img, StarField, MotionSection, FloatingOrbs } from '@/components/ui';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { IMGS } from '@/data';
 import { useCounter } from '@/hooks/useCounter';
 import { fadeUp, fadeLeft, fadeRight, stagger, scaleIn } from '@/animations/variants';
 
+/* TEAM — shelved until photography + bios are ready.
 const TEAM = [
   { name: 'Brown Gyasi Sydney', role: 'Founding Principal', city: 'Kumasi', img: IMGS.hero },
   { name: 'Ifeoma Okafor', role: 'Director, Hospitality', city: 'Lagos',  img: IMGS.arch },
   { name: 'Lukas Brandt',  role: 'Director, Europe',      city: 'Berlin', img: IMGS.kitchen },
   { name: 'Adwoa Asante',  role: 'Head of Interiors',     city: 'Accra',  img: IMGS.luxe },
 ];
+*/
 
 const MILESTONE_YEARS = ['2019', '2021', '2023', '2024', '2026'];
 const STAT_NUMS = ['124', '32', '7', '8'];
@@ -55,7 +57,7 @@ export function AboutPage({ accent, onNavigate }) {
 
       {/* Hero image */}
       <MotionSection variants={scaleIn} style={{ padding: '0 40px 80px' }}>
-        <Img src={IMGS.kitchen} ratio="16/7" dark={0.08} />
+        <Img src="https://images.unsplash.com/photo-1699239116624-85268dce7377?w=1600&q=85&auto=format&fit=crop" ratio="16/7" dark={0.08} />
       </MotionSection>
 
       {/* Philosophy */}
@@ -98,7 +100,26 @@ export function AboutPage({ accent, onNavigate }) {
         </div>
       </section>
 
-      {/* Team */}
+      {/* Founder Quote — placeholder until Team section is ready.
+          To restore: remove this block and uncomment the Team block + TEAM array above. */}
+      <section style={{ padding: '80px 40px', borderTop: `1px solid ${V2.line}` }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 2.4fr', gap: 80, alignItems: 'flex-start' }}>
+          <MotionSection variants={fadeLeft}>
+            <Eyebrow color={accent || V2.coral}>Founding Principal</Eyebrow>
+          </MotionSection>
+          <MotionSection variants={fadeRight}>
+            <HCaps size={42} line={1.25} weight={500} tracking="-0.02em" style={{ textTransform: 'none' }}>
+              "Every space carries the memory of the people who built it — our job is to make sure that memory is worth keeping."
+            </HCaps>
+            <div style={{ marginTop: 32, display: 'flex', alignItems: 'center', gap: 14 }}>
+              <div style={{ width: 36, height: 1, background: accent || V2.coral, flexShrink: 0 }} />
+              <span style={{ fontSize: 11.5, letterSpacing: '0.16em', textTransform: 'uppercase', color: V2.mute }}>Brown Gyasi Sydney — Berlin</span>
+            </div>
+          </MotionSection>
+        </div>
+      </section>
+
+      {/* TEAM — shelved until photography + bios are ready.
       <section style={{ padding: '60px 40px 100px', borderTop: `1px solid ${V2.line}` }}>
         <MotionSection style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 40 }}>
           <HCaps size={56} weight={800} tracking="-0.02em">{t('about.team_title')}</HCaps>
@@ -125,6 +146,7 @@ export function AboutPage({ accent, onNavigate }) {
           ))}
         </motion.div>
       </section>
+      */}
 
       {/* Timeline */}
       <section style={{ padding: '60px 40px 100px', borderTop: `1px solid ${V2.line}` }}>

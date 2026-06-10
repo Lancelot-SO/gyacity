@@ -18,7 +18,7 @@ export function MobileAbout({ accent, onNavigate }) {
           {t('about.title_1')} <span style={{ color: accent || V2.coral }}>{t('about.title_accent')}</span> {t('about.title_2')}
         </HCaps>
         <div style={{ marginTop: 20 }}>
-          <Img src={IMGS.kitchen} ratio="4/3" dark={0.08} />
+          <Img src="https://images.unsplash.com/photo-1699239116624-85268dce7377?w=1200&q=85&auto=format&fit=crop" ratio="4/3" dark={0.08} />
         </div>
       </div>
 
