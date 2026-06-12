@@ -8,6 +8,14 @@ import barFacade2    from '@/assets/the-bar/IMG_9937.jpg'; // facade, second ang
 import barTerrace    from '@/assets/the-bar/IMG_9939.jpg'; // string-lit terrace, dusk
 import barTerrace2   from '@/assets/the-bar/IMG_9940.jpg'; // terrace, second angle
 import barBuild      from '@/assets/the-bar/IMG_9934.jpg'; // build in progress
+import barV1 from '@/assets/the-bar/bar-v1.mov';
+import barV2 from '@/assets/the-bar/bar-v2.mov';
+import barV3 from '@/assets/the-bar/bar-v3.mov';
+import barV4 from '@/assets/the-bar/bar-v4.mov';
+import barV5 from '@/assets/the-bar/bar-v5.mov';
+import barV6 from '@/assets/the-bar/bar-v6.mov';
+import barV7 from '@/assets/the-bar/bar-v7.mov';
+import barV8 from '@/assets/the-bar/bar-v8.mov';
 
 // Emerald Lounge — real project photography (bundled by Vite).
 import emHero     from '@/assets/emerald-lounge/IMG_9913.jpg'; // full lounge, neon feature
@@ -22,6 +30,17 @@ import emTvAngle  from '@/assets/emerald-lounge/IMG_9907.jpg'; // media wall, si
 import emPendant  from '@/assets/emerald-lounge/IMG_9909.jpg'; // sculptural pendant detail
 import emNeon     from '@/assets/emerald-lounge/IMG_9920.jpg'; // neon script + lights detail
 import emGreen    from '@/assets/emerald-lounge/IMG_9901.jpg'; // emerald suite, furnishing
+
+// The Retreat — luxury serviced apartment, Kumasi.
+import retHero    from '@/assets/the-retreat/IMG_0136.jpg'; // living room, pool table + media wall + chandelier — hero
+import retMirror  from '@/assets/the-retreat/IMG_0134.jpg'; // full-height mirror wall, wine rack, open-plan
+import retLiving1 from '@/assets/the-retreat/IMG_0137.jpg'; // living room wide, wine rack + chandelier angle
+import retLiving2 from '@/assets/the-retreat/IMG_0138.jpg'; // kitchen angle, full living room + wine rack
+import retWine    from '@/assets/the-retreat/IMG_0135.jpg'; // wine rack detail + caramel kitchen
+import retBed1    from '@/assets/the-retreat/IMG_0132.jpg'; // master bedroom, marble TV wall + red velvet poof
+import retBed2    from '@/assets/the-retreat/IMG_0133.jpg'; // bedroom, bed + wardrobe + wall art
+import retBed3    from '@/assets/the-retreat/IMG_0141.jpg'; // bedroom, teal curtains + cream armchair
+import retBed4    from '@/assets/the-retreat/IMG_0142.jpg'; // twin-bed room, teal curtains + marble bedding
 
 // The Luminary — new-build residence, Kumasi.
 import lumHero    from '@/assets/the-luminary/IMG_9958.jpg'; // exterior facade — hero
@@ -77,7 +96,8 @@ export const PROJECTS = [
   { id:'the-bar',        no:'II',  title:'The Bar',        place:'Kumasi', year:'2024', cat:'Hospitality', type:'Bar & lounge',      img:barNeon },
   { id:'the-sanctuary',  no:'III', title:'The Sanctuary',  place:'Kumasi', year:'2025', cat:'Residential', type:'Bathroom suite',    img:sanHero },
   { id:'the-quarters',   no:'IV',  title:'The Quarters',   place:'Accra',  year:'2025', cat:'Residential', type:'Full house renovation', img:qtHero  },
-  { id:'the-luminary',   no:'V',   title:'The Luminary',   place:'Kumasi', year:'2025', cat:'Residential', type:'New-build residence',   img:lumHero },
+  { id:'the-luminary',   no:'V',   title:'The Luminary',   place:'Kumasi', year:'2025', cat:'Residential', type:'New-build residence',   img:lumHero  },
+  { id:'the-retreat',    no:'VI',  title:'The Retreat',    place:'Kumasi', year:'2025', cat:'Hospitality', type:'Serviced apartment',    img:retHero  },
 ];
 
 export const TESTIMONIALS = [
@@ -132,6 +152,13 @@ const PROJECT_DETAILS = {
     services: 'Architecture · Interiors · Lighting',
     summary: 'A roadside bar wrapped in red light — warm timber, brass and backlit panels, built for nights that run long.',
     gallery: [barNight, barPanels, barBlue, barFacade, barFacade2, barTerrace, barTerrace2, barBuild],
+    videos: [barV1, barV2, barV3, barV4, barV5, barV6, barV7, barV8],
+  },
+  'the-retreat': {
+    area: 'Full apartment',
+    services: 'Interiors · FF&E · Lighting · Joinery',
+    summary: 'A fully furnished short-let apartment in Kumasi — mirror walls, a floor-to-ceiling wine display, pool table and amber-lit bedrooms styled for guests who expect more.',
+    gallery: [retMirror, retLiving1, retLiving2, retWine, retBed1, retBed2, retBed3, retBed4],
   },
   'the-luminary': {
     area: 'Full residence',

@@ -108,13 +108,21 @@ export function ProjectDetailPage({ accent, onNavigate, id }) {
           </MotionSection>
         )}
 
-        {p.video && (
+        {(p.video || p.videos?.length > 0) && (
           <MotionSection variants={fadeUp} style={{ marginBottom: 24 }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 14 }}>
               <Eyebrow color={V2.cream}>{t('project.film')}</Eyebrow>
               <span style={{ fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: V2.mute }}>{p.title} · {p.year}</span>
             </div>
-            <VideoFrame src={p.video.src} poster={p.video.poster} accent={a} label={t('project.watch')} />
+            {p.videos?.length > 0 ? (
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+                {p.videos.map((src, i) => (
+                  <VideoFrame key={i} src={src} accent={a} label={i === 0 ? t('project.watch') : undefined} />
+                ))}
+              </div>
+            ) : (
+              <VideoFrame src={p.video.src} poster={p.video.poster} accent={a} label={t('project.watch')} />
+            )}
           </MotionSection>
         )}
 
