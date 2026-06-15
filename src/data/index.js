@@ -31,6 +31,12 @@ import emPendant  from '@/assets/emerald-lounge/IMG_9909.jpg'; // sculptural pen
 import emNeon     from '@/assets/emerald-lounge/IMG_9920.jpg'; // neon script + lights detail
 import emGreen    from '@/assets/emerald-lounge/IMG_9901.jpg'; // emerald suite, furnishing
 
+// The Nook — compact short-let apartment, Kumasi.
+import nookHero  from '@/assets/the-nook/IMG_0141.jpg'; // bedroom, teal curtains + cream armchair — hero
+import nookBed   from '@/assets/the-nook/IMG_0142.jpg'; // twin-bed room, teal curtains + marble bedding
+import nookExt1  from '@/assets/the-nook/IMG_0143.jpg'; // exterior under construction, front angle
+import nookExt2  from '@/assets/the-nook/IMG_0144.jpg'; // exterior under construction, wider angle
+
 // The Retreat — luxury serviced apartment, Kumasi.
 import retHero    from '@/assets/the-retreat/IMG_0136.jpg'; // living room, pool table + media wall + chandelier — hero
 import retMirror  from '@/assets/the-retreat/IMG_0134.jpg'; // full-height mirror wall, wine rack, open-plan
@@ -87,6 +93,38 @@ import sanToilet  from '@/assets/the-sanctuary/IMG_9987.jpg'; // vanity/toilet a
 import sanToilet2 from '@/assets/the-sanctuary/IMG_9990.jpg'; // vanity/toilet, second angle
 import sanBasin   from '@/assets/the-sanctuary/IMG_9989.jpg'; // marble corner basin detail
 
+// The Ivory — new-build residence, Kumasi.
+import ivHero   from '@/assets/the-ivory/IMG_0152.jpg'; // exterior front, cream render + dark brown accent — hero
+import ivLiving from '@/assets/the-ivory/IMG_0154.jpg'; // grand open living room, marble floor + LED ceiling
+import ivKit1   from '@/assets/the-ivory/IMG_0155.jpg'; // kitchen + island, open to living, pendant light
+import ivKit2   from '@/assets/the-ivory/IMG_0156.jpg'; // kitchen second angle, L-shape + built-ins
+import ivKit3   from '@/assets/the-ivory/IMG_0158.jpg'; // kitchen with illuminated pantry cabinet + marble island
+import ivRoom1  from '@/assets/the-ivory/IMG_0157.jpg'; // room, amber LED tray, sliding glass door
+import ivRoom2  from '@/assets/the-ivory/IMG_0159.jpg'; // room, amber LED tray, black-framed windows
+import ivRoom3  from '@/assets/the-ivory/IMG_0160.jpg'; // upper room, large amber LED ceiling, marble floor
+import ivExt2   from '@/assets/the-ivory/IMG_0153.jpg'; // exterior side angle
+
+// The Grand — full luxury residence, Kumasi.
+import grHero   from '@/assets/the-grand/IMG_0177.jpg'; // master bath, freestanding tub + marble walls — hero
+import grFoyer1 from '@/assets/the-grand/IMG_0161.jpg'; // double-height foyer, ring chandelier, marble wall
+import grFoyer2 from '@/assets/the-grand/IMG_0162.jpg'; // foyer second angle
+import grHall   from '@/assets/the-grand/IMG_0165.jpg'; // ground floor hall, geometric LED + illuminated staircase
+import grStair  from '@/assets/the-grand/IMG_0167.jpg'; // staircase, amber step lighting + walnut feature wall
+import grMez    from '@/assets/the-grand/IMG_0166.jpg'; // mezzanine/upper landing, looking down
+import grLiv1   from '@/assets/the-grand/IMG_0169.jpg'; // upper living room, marble feature wall + balcony door
+import grLiv2   from '@/assets/the-grand/IMG_0170.jpg'; // living room wide
+import grLiv3   from '@/assets/the-grand/IMG_0171.jpg'; // living room third angle
+import grBed    from '@/assets/the-grand/IMG_0168.jpg'; // master bedroom with en-suite glass wall visible
+import grKit1   from '@/assets/the-grand/IMG_0163.jpg'; // kitchen, lilac gloss cabinets + black marble counters
+import grKit2   from '@/assets/the-grand/IMG_0164.jpg'; // kitchen island angle, pendant lights
+import grRoom   from '@/assets/the-grand/IMG_0173.jpg'; // bedroom, dark marble floor + geometric ceiling light
+import grCinema from '@/assets/the-grand/IMG_0174.jpg'; // home cinema, star-field ceiling + blue LED panels
+import grTerr   from '@/assets/the-grand/IMG_0175.jpg'; // terrace, glass balustrade + slatted pergola
+import grBath1  from '@/assets/the-grand/IMG_0172.jpg'; // black marble bathroom, vessel sinks + freestanding tub
+import grBath2  from '@/assets/the-grand/IMG_0176.jpg'; // white marble bathroom, double vanity + smart toilet
+import grBath3  from '@/assets/the-grand/IMG_0178.jpg'; // black bathroom, soaking tub + glass shower
+import grWard   from '@/assets/the-grand/IMG_0179.jpg'; // walk-in wardrobe, glass-front illuminated oak cabinetry
+
 // Homepage hero + banner (provided assets).
 import heroImg    from '@/assets/hero.jpg';
 import bannerImg  from '@/assets/banner.jpeg';
@@ -98,6 +136,9 @@ export const PROJECTS = [
   { id:'the-quarters',   no:'IV',  title:'The Quarters',   place:'Accra',  year:'2025', cat:'Residential', type:'Full house renovation', img:qtHero  },
   { id:'the-luminary',   no:'V',   title:'The Luminary',   place:'Kumasi', year:'2025', cat:'Residential', type:'New-build residence',   img:lumHero  },
   { id:'the-retreat',    no:'VI',  title:'The Retreat',    place:'Kumasi', year:'2025', cat:'Hospitality', type:'Serviced apartment',    img:retHero  },
+  { id:'the-nook',       no:'VII',  title:'The Nook',       place:'Kumasi', year:'2025', cat:'Hospitality', type:'Short-let apartment',   img:nookHero },
+  { id:'the-ivory',      no:'VIII', title:'The Ivory',      place:'Kumasi', year:'2026', cat:'Residential', type:'New-build residence',   img:ivHero   },
+  { id:'the-grand',      no:'IX',   title:'The Grand',      place:'Accra',  year:'2026', cat:'Residential', type:'Luxury residence',       img:grHero   },
 ];
 
 export const TESTIMONIALS = [
@@ -154,6 +195,12 @@ const PROJECT_DETAILS = {
     gallery: [barNight, barPanels, barBlue, barFacade, barFacade2, barTerrace, barTerrace2, barBuild],
     videos: [barV1, barV2, barV3, barV4, barV5, barV6, barV7, barV8],
   },
+  'the-nook': {
+    area: 'Apartment',
+    services: 'Interiors · FF&E',
+    summary: 'A compact short-let in Kumasi — clean bedrooms, teal drapes and all the essentials, made comfortable for guests on a budget.',
+    gallery: [nookBed, nookExt1, nookExt2],
+  },
   'the-retreat': {
     area: 'Full apartment',
     services: 'Interiors · FF&E · Lighting · Joinery',
@@ -171,6 +218,18 @@ const PROJECT_DETAILS = {
     services: 'Architecture · Build · Interiors · FF&E',
     summary: 'A complete structural overhaul of a two-storey home in Accra — new ceilings, marble floors, a bespoke kitchen and a rebuilt staircase, delivered from the ground up.',
     gallery: [qtLiving, qtKitchen, qtStair, qtRoom1, qtRoom2, qtRoom3, qtRoom4, qtRoom5, qtOpen1, qtOpen2, qtOpen3, qtOpen4, qtOpen5],
+  },
+  'the-grand': {
+    area: 'Full residence',
+    services: 'Architecture · Build · Interiors · FF&E · Lighting',
+    summary: 'A full luxury home in Accra — double-height foyer, home cinema with star-field ceiling, walk-in wardrobe, dual en-suite bathrooms in contrasting marble, and a terrace with pergola, designed and delivered across every level.',
+    gallery: [grFoyer1, grFoyer2, grHall, grStair, grMez, grLiv1, grLiv2, grLiv3, grBed, grKit1, grKit2, grRoom, grCinema, grTerr, grBath1, grBath2, grBath3, grWard],
+  },
+  'the-ivory': {
+    area: 'Full residence',
+    services: 'Architecture · Build · Interiors · FF&E',
+    summary: 'A new-build in Kumasi finished entirely in white marble — amber cove ceilings, a champagne gloss kitchen with marble island, and open rooms filled with natural light.',
+    gallery: [ivLiving, ivKit1, ivKit2, ivKit3, ivRoom1, ivRoom2, ivRoom3, ivExt2],
   },
 };
 
