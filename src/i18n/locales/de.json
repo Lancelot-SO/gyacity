@@ -4,6 +4,7 @@
     "about": "Über uns",
     "projects": "Projekte",
     "contact": "Kontakt",
+    "services": "Leistungen",
     "close": "Schließen",
     "menu": "Menü"
   },
@@ -200,6 +201,36 @@
     "cta_title_1": "Gefällt Ihnen, was Sie",
     "cta_title_accent": "sehen?",
     "cta_btn": "Projekt starten"
+  },
+  "services_home": {
+    "eyebrow": "Was wir anbieten",
+    "title": "Was wir tun.",
+    "sub": "Sechs Disziplinen. Ein Studio. Architektur, Interieurs und Bau unter einem Dach.",
+    "view_all": "Alle Leistungen"
+  },
+  "services_page": {
+    "eyebrow": "Sechs Disziplinen. Ein Studio.",
+    "title": "Leistungen.",
+    "tagline": "Architektur, Interieurs und Bau — vom ersten Entwurf bis zur Übergabe.",
+    "services": [
+      { "name": "Innenarchitektur",     "short": "Raum, Material und Stil.",        "desc": "Raumplanung, Materialauswahl, Möbel, Beleuchtung und Styling — vom Konzept bis zur Fertigstellung.",                                                  "bullets": ["Raumplanung", "Materialauswahl", "Möbel & Styling", "Maßanfertigungen"] },
+      { "name": "Architektur",          "short": "Form, Licht und Struktur.",       "desc": "Neubauten, Erweiterungen und Umbauten. Vom Bauantrag bis zur Tragwerksplanung gestalten wir Form und Struktur Ihres Raumes.",                          "bullets": ["Neubauten", "Erweiterungen", "Bauantragsplanung", "Tragwerksplanung"] },
+      { "name": "Bau & Ausführung",     "short": "Aus einer Hand, von Anfang bis Ende.", "desc": "Wir steuern die gesamte Bauausführung selbst. Kein Zeitverlust durch Dritte, keine Übergabelücken.",                                              "bullets": ["Vollständiges Baumanagement", "Keine Subunternehmer", "Termintreue Lieferung", "Nachbetreuung"] },
+      { "name": "Lichtplanung",         "short": "Jede Ebene durchdacht.",          "desc": "Ambiente-, Akzent- und Arbeitsbeleuchtung für Atmosphäre. Jedes Lichtband, jede Pendelleuchte sorgfältig positioniert.",                              "bullets": ["Ambiente & Akzentlicht", "LED-Lichtbänder", "Pendelleuchten", "Lichtsteuerung"] },
+      { "name": "Möbel & Ausstattung",  "short": "Beschafft und spezifiziert.",     "desc": "Möbel, Einrichtung und Ausstattung, ausgewählt für Ihren Raum, Ihren Lebensstil und Ihr Budget.",                                                     "bullets": ["Möbelbeschaffung", "Ausstattungsspezifikation", "Gerätebeschaffung", "Budgetmanagement"] },
+      { "name": "Maßschreinerei",       "short": "Im Studio gefertigt.",            "desc": "Maßgefertigte Küchen, Schränke, Einbaumöbel und Verkleidungen — im eigenen Atelier konzipiert und gebaut.",                                            "bullets": ["Maßküchen", "Schränke & Stauraum", "Einbaumöbel", "Türen & Paneele"] }
+    ],
+    "process_eyebrow": "Unser Prozess",
+    "process_title": "Wie wir arbeiten",
+    "steps": [
+      { "t": "Briefing",    "d": "Eine detaillierte Beratung, um Ihre Vision, Ihren Zeitplan und Ihr Budget zu verstehen." },
+      { "t": "Entwurf",     "d": "Konzeptentwicklung, Raumplanung, Materialmuster und 3D-Visualisierungen." },
+      { "t": "Bau",         "d": "Unser internes Team leitet den gesamten Bau — koordiniert, termingerecht und budgettreu." },
+      { "t": "Übergabe",    "d": "Abnahme, Reinigung, Begehung. Wir gehen erst, wenn alles stimmt." }
+    ],
+    "cta_title_1": "Bereit, ein",
+    "cta_title_accent": "Projekt zu starten?",
+    "cta_btn": "Beratung buchen"
   },
   "footer": {
     "tagline": "Architektur, Interieurs und Außenumgebungen. Accra · Lagos · Berlin. Gegr. 2019.",

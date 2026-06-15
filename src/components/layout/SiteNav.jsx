@@ -4,7 +4,7 @@ import { V2 } from '@/tokens';
 import { V2Mark } from '@/components/Logo';
 import { ArrowUR } from '@/components/ui';
 
-const LINK_KEYS = ['home', 'about', 'projects', 'contact'];
+const LINK_KEYS = ['home', 'about', 'projects', 'services', 'contact'];
 
 export function SiteNav({ active, accent, navigate, mobile }) {
   const { t, i18n } = useTranslation();

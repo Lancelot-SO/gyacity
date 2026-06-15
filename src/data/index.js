@@ -125,6 +125,30 @@ import grBath2  from '@/assets/the-grand/IMG_0176.jpg'; // white marble bathroom
 import grBath3  from '@/assets/the-grand/IMG_0178.jpg'; // black bathroom, soaking tub + glass shower
 import grWard   from '@/assets/the-grand/IMG_0179.jpg'; // walk-in wardrobe, glass-front illuminated oak cabinetry
 
+// The Soleil — new-build residence, Kumasi.
+import solHero  from '@/assets/the-soleil/IMG_0209.jpg'; // entrance dusk, stone column + amber uplights — hero
+import solExt1  from '@/assets/the-soleil/IMG_0211.jpg'; // exterior wide, amber step lighting + stone column
+import solExt2  from '@/assets/the-soleil/IMG_0210.jpg'; // entrance close, walnut pivot door + stone column
+import solLiv1  from '@/assets/the-soleil/IMG_0206.jpg'; // living room furnished, mustard velvet sofa + blue chandelier
+import solLiv2  from '@/assets/the-soleil/IMG_0202.jpg'; // open-plan living, geometric LED ceiling
+import solKit1  from '@/assets/the-soleil/IMG_0205.jpg'; // kitchen, charcoal gloss + walnut uppers + built-ins
+import solKit2  from '@/assets/the-soleil/IMG_0203.jpg'; // kitchen + open plan wide angle
+import solBed1  from '@/assets/the-soleil/IMG_0207.jpg'; // master bedroom, fluted walnut media wall + amber LED
+import solBed2  from '@/assets/the-soleil/IMG_0208.jpg'; // bedroom 2, fan-shaped tufted headboard + gold accents
+import solBed3  from '@/assets/the-soleil/IMG_0201.jpg'; // bedroom 3, walnut wardrobe + tall window
+import solBath1 from '@/assets/the-soleil/IMG_0204.jpg'; // white marble bathroom, vessel sink + round mirror
+import solBath2 from '@/assets/the-soleil/IMG_0200.jpg'; // beige tile bathroom, shower panel + wall-hung WC
+
+// The Frame — luxury villa in progress, Kumasi.
+import frHero   from '@/assets/the-frame/IMG_0219.jpg'; // 3D render, dusk angle — hero
+import frRender from '@/assets/the-frame/IMG_0220.jpg'; // 3D render, front elevation
+import frComp   from '@/assets/the-frame/IMG_0224.jpg'; // render vs reality comparison
+import frBuild1 from '@/assets/the-frame/IMG_0225.jpg'; // concrete structure, vertical fins, wide
+import frBuild2 from '@/assets/the-frame/IMG_0226.jpg'; // upper floor, concrete balconies
+import frBuild3 from '@/assets/the-frame/IMG_0227.jpg'; // rear elevation under construction
+import frWin    from '@/assets/the-frame/IMG_0222.jpg'; // floor-to-ceiling windows installed
+import frPool   from '@/assets/the-frame/IMG_0223.jpg'; // pool under construction, rear garden
+
 // Homepage hero + banner (provided assets).
 import heroImg    from '@/assets/hero.jpg';
 import bannerImg  from '@/assets/banner.jpeg';
@@ -139,6 +163,8 @@ export const PROJECTS = [
   { id:'the-nook',       no:'VII',  title:'The Nook',       place:'Kumasi', year:'2025', cat:'Hospitality', type:'Short-let apartment',   img:nookHero },
   { id:'the-ivory',      no:'VIII', title:'The Ivory',      place:'Kumasi', year:'2026', cat:'Residential', type:'New-build residence',   img:ivHero   },
   { id:'the-grand',      no:'IX',   title:'The Grand',      place:'Accra',  year:'2026', cat:'Residential', type:'Luxury residence',       img:grHero   },
+  { id:'the-soleil',     no:'X',    title:'The Soleil',     place:'Kumasi', year:'2026', cat:'Residential', type:'New-build residence',    img:solHero  },
+  { id:'the-frame',      no:'XI',   title:'The Frame',      place:'Kumasi', year:'2026', cat:'Residential', type:'Villa in progress',       img:frHero   },
 ];
 
 export const TESTIMONIALS = [
@@ -165,6 +191,16 @@ export const HOME_IMGS = {
   hero:    heroImg,   // provided hero image
   banner:  bannerImg, // provided banner strip (architectural model)
   kitchen: 'https://images.unsplash.com/photo-1672865362670-b22b90b1fb95?w=1600&q=85&auto=format&fit=crop', // earthen interior with fireplace
+};
+
+// Images used on the Services page — mapped to existing project photography.
+export const SERVICE_IMGS = {
+  interiors:    emHero,    // Emerald Lounge — rich, warm interior
+  architecture: barFacade, // The Bar — glass facade, day
+  build:        grFoyer1,  // The Grand — double-height foyer shows build quality
+  lighting:     grWard,    // walk-in wardrobe, full amber LED strip lighting
+  ffande:       solBed1,   // The Soleil — master bedroom, fully furnished
+  joinery:      grKit1,    // The Grand kitchen — charcoal cabinetry detail
 };
 
 export const OFFICES = [
@@ -218,6 +254,18 @@ const PROJECT_DETAILS = {
     services: 'Architecture · Build · Interiors · FF&E',
     summary: 'A complete structural overhaul of a two-storey home in Accra — new ceilings, marble floors, a bespoke kitchen and a rebuilt staircase, delivered from the ground up.',
     gallery: [qtLiving, qtKitchen, qtStair, qtRoom1, qtRoom2, qtRoom3, qtRoom4, qtRoom5, qtOpen1, qtOpen2, qtOpen3, qtOpen4, qtOpen5],
+  },
+  'the-frame': {
+    area: 'Full villa',
+    services: 'Architecture · Build · Interiors · Lighting',
+    summary: 'A three-storey luxury villa rising in Kumasi — LED linear facade lighting, open double garage, rooftop terrace and a rear pool. Structure is complete; finishing underway.',
+    gallery: [frRender, frComp, frBuild1, frBuild2, frBuild3, frWin, frPool],
+  },
+  'the-soleil': {
+    area: 'Full residence',
+    services: 'Architecture · Build · Interiors · FF&E · Lighting',
+    summary: 'A fully furnished new-build in Kumasi — stone-cladded entrance lit at dusk, mustard velvet living room, walnut media wall with amber backlighting, and gold-toned bedrooms throughout.',
+    gallery: [solExt1, solExt2, solLiv1, solLiv2, solKit1, solKit2, solBed1, solBed2, solBed3, solBath1, solBath2],
   },
   'the-grand': {
     area: 'Full residence',

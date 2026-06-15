@@ -74,6 +74,28 @@ export function MobileHome({ accent, onNavigate }) {
         </div>
       </div>
 
+      {/* Services teaser */}
+      <div style={{ border: `1px solid ${V2.line}`, padding: 22, marginBottom: 12 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+          <HCaps size={26} weight={800} tracking="-0.02em">{t('services_home.title')}</HCaps>
+          <GhostCTA onClick={() => onNavigate('services')}>{t('services_home.view_all')}</GhostCTA>
+        </div>
+        <p style={{ marginTop: 12, fontSize: 12.5, lineHeight: 1.6, color: V2.mute }}>{t('services_home.sub')}</p>
+        <div style={{ marginTop: 20, display: 'flex', flexDirection: 'column' }}>
+          {['Interior Design','Architecture','Build & Construction','Lighting Design','FF&E','Custom Joinery'].map((name, i) => (
+            <div key={name} onClick={() => onNavigate('services')} style={{
+              display: 'flex', alignItems: 'center', gap: 14,
+              padding: '12px 0', borderBottom: `1px solid ${V2.line}`, cursor: 'pointer',
+            }}>
+              <span style={{ fontFamily: V2.mono, fontSize: 10, letterSpacing: '0.14em', color: accent || V2.coral, minWidth: 24 }}>
+                {String(i + 1).padStart(2, '0')}
+              </span>
+              <span style={{ fontSize: 13, fontWeight: 600, letterSpacing: '0.04em', textTransform: 'uppercase' }}>{name}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Stats */}
       <div style={{ border: `1px solid ${V2.line}`, padding: 22, marginBottom: 12 }}>
         <HCaps size={28} line={1} weight={800} tracking="-0.02em">

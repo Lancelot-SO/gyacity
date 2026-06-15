@@ -4,6 +4,7 @@
     "about": "À propos",
     "projects": "Projets",
     "contact": "Contact",
+    "services": "Services",
     "close": "Fermer",
     "menu": "Menu"
   },
@@ -200,6 +201,36 @@
     "cta_title_1": "Vous aimez ce que vous",
     "cta_title_accent": "voyez?",
     "cta_btn": "Démarrer votre projet"
+  },
+  "services_home": {
+    "eyebrow": "Ce que nous offrons",
+    "title": "Ce que nous faisons.",
+    "sub": "Six disciplines. Un studio. Architecture, intérieurs et construction, réunis sous un même toit.",
+    "view_all": "Tous les services"
+  },
+  "services_page": {
+    "eyebrow": "Six disciplines. Un studio.",
+    "title": "Services.",
+    "tagline": "Architecture, intérieurs et construction — du premier croquis à la remise des clés.",
+    "services": [
+      { "name": "Design d'intérieur",   "short": "Espace, matière et style.",        "desc": "Agencement, sélection des matériaux, mobilier, éclairage et mise en scène — pensés du concept à la livraison.",                                       "bullets": ["Agencement spatial", "Sélection des matériaux", "Mobilier & styling", "Éléments sur mesure"] },
+      { "name": "Architecture",         "short": "Forme, lumière et structure.",     "desc": "Constructions neuves, extensions et rénovations architecturales. Du permis de construire à la structure, nous façonnons la forme et le flux de vos espaces.", "bullets": ["Constructions neuves", "Extensions", "Permis de construire", "Structure"] },
+      { "name": "Construction",         "short": "En interne, du début à la fin.",   "desc": "Nous gérons l'intégralité du chantier en interne. Pas de sous-traitants, pas de rupture à la livraison.",                                              "bullets": ["Gestion complète du chantier", "Sans sous-traitants", "Livraison dans les délais", "Suivi post-livraison"] },
+      { "name": "Conception lumière",   "short": "Chaque couche pensée.",            "desc": "Éclairage ambiant, d'accentuation et de travail conçu pour l'atmosphère. Chaque bandeau, chaque suspension positionné au millimètre.",                  "bullets": ["Ambiance & accentuation", "Bandeaux LED", "Suspension", "Contrôle d'éclairage"] },
+      { "name": "Mobilier & FF&E",      "short": "Sourcé et spécifié.",              "desc": "Mobilier, équipements et accessoires sélectionnés pour votre espace, votre mode de vie et votre budget.",                                              "bullets": ["Sourcing mobilier", "Spécification des équipements", "Procurement", "Gestion budgétaire"] },
+      { "name": "Menuiserie sur mesure","short": "Fabriqué au sein du studio.",      "desc": "Cuisines, dressings, menuiseries et agencements sur mesure conçus et fabriqués en interne. Sur mesure, fait pour durer.",                              "bullets": ["Cuisines sur mesure", "Dressings & rangements", "Agencements intégrés", "Portes & panneaux"] }
+    ],
+    "process_eyebrow": "Notre processus",
+    "process_title": "Comment nous travaillons",
+    "steps": [
+      { "t": "Brief",      "d": "Une consultation approfondie pour comprendre votre vision, vos délais et votre budget." },
+      { "t": "Conception", "d": "Développement du concept, agencement spatial, planches matières et visualisations 3D." },
+      { "t": "Réalisation","d": "Notre équipe interne gère l'intégralité du chantier — coordonné, dans les délais et le budget." },
+      { "t": "Remise",     "d": "Levée des réserves, nettoyage final, visite de réception. Nous ne partons pas avant que ce soit parfait." }
+    ],
+    "cta_title_1": "Prêt à démarrer",
+    "cta_title_accent": "un projet?",
+    "cta_btn": "Réserver une consultation"
   },
   "footer": {
     "tagline": "Architecture, intérieurs et environnements extérieurs. Accra · Lagos · Berlin. Fondé en 2019.",

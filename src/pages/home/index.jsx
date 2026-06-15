@@ -3,7 +3,8 @@ import { SiteFooter } from '@/components/layout/SiteFooter';
 import { SecHero }        from './SecHero';
 import { SecInteriors }   from './SecInteriors';
 import { SecStats }       from './SecStats';
-import { SecPortfolio }   from './SecPortfolio';
+import { SecPortfolio }     from './SecPortfolio';
+import { SecServicesStrip } from './SecServicesStrip';
 import { SecVisionCTA }   from './SecVisionCTA';
 import { SecClients }     from './SecClients';
 import { SecBelief }      from './SecBelief';
@@ -14,8 +15,9 @@ export function HomePage({ accent, onNavigate }) {
     <div style={{ background: V2.bg, color: V2.cream, fontFamily: V2.font, overflowX: 'clip' }}>
       <SecHero        accent={accent} />
       <SecInteriors   accent={accent} onNavigate={onNavigate} />
-      <SecPortfolio   accent={accent} onNavigate={onNavigate} />
-      <SecStats       accent={accent} />
+      <SecPortfolio      accent={accent} onNavigate={onNavigate} />
+      <SecServicesStrip  accent={accent} onNavigate={onNavigate} />
+      <SecStats          accent={accent} />
       <SecVisionCTA   accent={accent} />
       <SecClients     accent={accent} />
       <SecBelief />
