@@ -4,6 +4,7 @@
     "about": "About",
     "projects": "Projects",
     "contact": "Contact",
+    "services": "Services",
     "close": "Close",
     "menu": "Menu"
   },
@@ -200,6 +201,36 @@
     "cta_title_1": "Like what you",
     "cta_title_accent": "see?",
     "cta_btn": "Start your project"
+  },
+  "services_home": {
+    "eyebrow": "What we offer",
+    "title": "What we do.",
+    "sub": "Six disciplines. One studio. Architecture, interiors and construction, delivered under one roof.",
+    "view_all": "Explore all services"
+  },
+  "services_page": {
+    "eyebrow": "Six disciplines. One studio.",
+    "title": "Services.",
+    "tagline": "Architecture, interiors and construction — from first sketch to final handover.",
+    "services": [
+      { "name": "Interior Design",      "short": "Space, material and style.",    "desc": "Spatial planning, material selection, furniture, lighting and styling — considered from concept to completion.",                                         "bullets": ["Space planning", "Material selection", "Furniture & styling", "Custom fixtures"] },
+      { "name": "Architecture",         "short": "Form, light and structure.",    "desc": "New builds, extensions and architectural renovations. From planning application to structural design, we shape the form and flow of your space.",          "bullets": ["New builds", "Extensions & renovations", "Planning applications", "Structural design"] },
+      { "name": "Build & Construction", "short": "In-house, start to finish.",   "desc": "We manage the full construction ourselves. No third-party delays, no handover gaps. Your architect and builder answer to the same studio.",             "bullets": ["Full construction management", "No third-party contractors", "On-budget delivery", "Post-handover support"] },
+      { "name": "Lighting Design",      "short": "Every layer considered.",       "desc": "Ambient, accent and task lighting designed for atmosphere. Cove, pendant, strip and spot — positioned and specified to the millimetre.",                  "bullets": ["Ambient & accent layers", "LED cove & strip", "Pendant specification", "Lighting control"] },
+      { "name": "FF&E",                 "short": "Sourced and specified.",         "desc": "Furniture, fixtures and equipment selected for your space, your lifestyle and your budget. Every piece considered before it crosses the threshold.",      "bullets": ["Furniture sourcing", "Fixture specification", "Equipment procurement", "Budget management"] },
+      { "name": "Custom Joinery",       "short": "Made within the practice.",     "desc": "Bespoke kitchens, wardrobes, cabinetry and built-ins designed and made in-house. Made to measure, made to last.",                                       "bullets": ["Bespoke kitchens", "Wardrobes & storage", "Built-in cabinetry", "Custom doors & panels"] }
+    ],
+    "process_eyebrow": "Our process",
+    "process_title": "How we work",
+    "steps": [
+      { "t": "Brief",    "d": "A detailed consultation to understand your vision, timeline and budget." },
+      { "t": "Design",   "d": "Concept development, spatial planning, material boards and 3D visualisations." },
+      { "t": "Build",    "d": "Our in-house team manages the full construction — coordinated, on time, on budget." },
+      { "t": "Handover", "d": "Final snag, final clean, final walk-through. We don't leave until it's right." }
+    ],
+    "cta_title_1": "Ready to start",
+    "cta_title_accent": "a project?",
+    "cta_btn": "Book a consultation"
   },
   "footer": {
     "tagline": "Architecture, interiors and exterior environments. Accra · Lagos · Berlin. Est. 2019.",
