@@ -59,6 +59,9 @@ export function MobileProjectDetail({ accent, onNavigate, id }) {
           <Fragment key={i}>
             <Img src={src} ratio={i % 2 === 0 ? '4/3' : '4/5'} dark={0.05} />
             {i === 0 && p.video && <VideoFrame src={p.video.src} poster={p.video.poster} accent={a} label={t('project.watch')} />}
+            {i === 0 && p.videos?.length > 0 && p.videos.map((src, vi) => (
+              <VideoFrame key={vi} src={src} accent={a} label={vi === 0 ? t('project.watch') : undefined} style={{ marginTop: 12 }} />
+            ))}
           </Fragment>
         ))}
       </div>
