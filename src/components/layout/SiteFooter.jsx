@@ -5,13 +5,31 @@ import { HCaps, Eyebrow, StarField, ArrowUR, MotionSection } from '@/components/
 import { V2Mark } from '@/components/Logo';
 import { fadeUp, stagger } from '@/animations/variants';
 
-export function SiteFooter({ accent }) {
+const TIKTOK_URL = 'https://www.tiktok.com/@gyacity';
+
+export function SiteFooter({ accent, onNavigate }) {
   const { t } = useTranslation();
 
+  // Studio items: About, Approach → about page; Journal → null; Press → contact
+  const studioRoutes = ['about', 'about', null, 'contact'];
+
   const NAV_GROUPS = [
-    { title: t('footer.studio_group'),   items: t('footer.studio_items',   { returnObjects: true }) },
-    { title: t('footer.services_group'), items: t('footer.services_items', { returnObjects: true }) },
-    { title: t('footer.social_group'),   items: t('footer.social_items',   { returnObjects: true }), arrow: true },
+    {
+      title: t('footer.studio_group'),
+      items: t('footer.studio_items', { returnObjects: true }),
+      getRoute: (_, i) => studioRoutes[i] ?? null,
+    },
+    {
+      title: t('footer.services_group'),
+      items: t('footer.services_items', { returnObjects: true }),
+      getRoute: () => 'services',
+    },
+    {
+      title: t('footer.social_group'),
+      items: t('footer.social_items', { returnObjects: true }),
+      href: TIKTOK_URL,
+      arrow: true,
+    },
   ];
 
   return (
@@ -34,16 +52,49 @@ export function SiteFooter({ accent }) {
           <motion.div key={g.title} variants={fadeUp}>
             <Eyebrow color={V2.mute}>{g.title}</Eyebrow>
             <div style={{ marginTop: 18, display: 'flex', flexDirection: 'column', gap: 10 }}>
-              {g.items.map(item => (
-                <motion.a
-                  key={item} href="#"
-                  style={{ color: V2.cream, fontSize: 14, fontFamily: V2.font, display: 'inline-flex', alignItems: 'center', gap: 8 }}
-                  whileHover={{ x: 4, color: V2.coral }}
-                  transition={{ duration: 0.2 }}
-                >
-                  {item}{g.arrow && <ArrowUR size={11} />}
-                </motion.a>
-              ))}
+              {g.items.map((item, i) => {
+                const externalHref = g.href;
+                const internalRoute = g.getRoute ? g.getRoute(item, i) : null;
+
+                if (externalHref) {
+                  return (
+                    <motion.a
+                      key={item}
+                      href={externalHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: V2.cream, fontSize: 14, fontFamily: V2.font, display: 'inline-flex', alignItems: 'center', gap: 8, textDecoration: 'none' }}
+                      whileHover={{ x: 4, color: V2.coral }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      {item}{g.arrow && <ArrowUR size={11} />}
+                    </motion.a>
+                  );
+                }
+
+                if (internalRoute) {
+                  return (
+                    <motion.button
+                      key={item}
+                      onClick={() => onNavigate?.(internalRoute)}
+                      style={{ background: 'none', border: 'none', padding: 0, color: V2.cream, fontSize: 14, fontFamily: V2.font, display: 'inline-flex', alignItems: 'center', gap: 8, cursor: 'pointer', textAlign: 'left' }}
+                      whileHover={{ x: 4, color: V2.coral }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      {item}
+                    </motion.button>
+                  );
+                }
+
+                return (
+                  <motion.span
+                    key={item}
+                    style={{ color: V2.dim, fontSize: 14, fontFamily: V2.font, display: 'inline-flex', alignItems: 'center', gap: 8 }}
+                  >
+                    {item}
+                  </motion.span>
+                );
+              })}
             </div>
           </motion.div>
         ))}

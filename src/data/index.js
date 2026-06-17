@@ -139,6 +139,28 @@ import solBed3  from '@/assets/the-soleil/IMG_0201.jpg'; // bedroom 3, walnut wa
 import solBath1 from '@/assets/the-soleil/IMG_0204.jpg'; // white marble bathroom, vessel sink + round mirror
 import solBath2 from '@/assets/the-soleil/IMG_0200.jpg'; // beige tile bathroom, shower panel + wall-hung WC
 
+// The Pearl — new-build residence, Kumasi.
+import peHero  from '@/assets/the-pearl/IMG_0249.jpg'; // exterior night, amber spotlights + gold textured panel + glowing interior — hero
+import peLiv1  from '@/assets/the-pearl/IMG_0252.jpg'; // living room wide, staircase + multi-section LED cove, open plan
+import peLiv2  from '@/assets/the-pearl/IMG_0251.jpg'; // living room, amber cove, view toward entrance
+import peLiv3  from '@/assets/the-pearl/IMG_0250.jpg'; // living room opposite angle, blue-grey LED cove + columns
+import peStair from '@/assets/the-pearl/IMG_0253.jpg'; // staircase, white marble treads + amber LED cove above
+import peHall  from '@/assets/the-pearl/IMG_0256.jpg'; // corridor, amber LED linear cove running the full length
+import peLand  from '@/assets/the-pearl/IMG_0254.jpg'; // upper landing/room, angled cove + cool white LED, balcony glimpse
+import peBal   from '@/assets/the-pearl/IMG_0265.jpg'; // balcony, recessed spotlights + glass railing, stormy dusk sky
+import peBed1  from '@/assets/the-pearl/IMG_0258.jpg'; // bedroom, warm amber single-tier cove + large window
+import peBed2  from '@/assets/the-pearl/IMG_0261.jpg'; // bedroom, amber cove, large window + street view at night
+import peBed3  from '@/assets/the-pearl/IMG_0262.jpg'; // bedroom, blue-grey LED cove + en-suite corridor visible
+import peBed4  from '@/assets/the-pearl/IMG_0263.jpg'; // master bedroom wide, amber cove + walnut open shelving + TV
+import peBed5  from '@/assets/the-pearl/IMG_0264.jpg'; // master bedroom second angle, amber cove
+import peBed6  from '@/assets/the-pearl/IMG_0255.jpg'; // bedroom, peaked diamond LED cove in cool white
+import peBed7  from '@/assets/the-pearl/IMG_0257.jpg'; // bedroom, dark grey coffered cove, cool white LED
+import peWard1 from '@/assets/the-pearl/IMG_0259.jpg'; // walk-in wardrobe wide, open walnut shelving + amber cove
+import peWard2 from '@/assets/the-pearl/IMG_0260.jpg'; // walk-in wardrobe close, walnut unit + drawer detail
+import peKit1  from '@/assets/the-pearl/IMG_0266.jpg'; // kitchen wide, white gloss cabinets + grey marble tile walls + granite island
+import peKit2  from '@/assets/the-pearl/IMG_0267.jpg'; // kitchen angle, grey marble walls + island close + oven tower
+import peKit3  from '@/assets/the-pearl/IMG_0268.jpg'; // kitchen third angle, full layout + gas hob + rangehood
+
 // The Slate — new-build residence, Kumasi.
 import slHero  from '@/assets/the-slate/IMG_0248.jpg'; // exterior dusk, amber LED facade + warm interior glow — hero
 import slExt1  from '@/assets/the-slate/IMG_0229.jpg'; // exterior daytime, front elevation, cream + charcoal
@@ -188,6 +210,7 @@ export const PROJECTS = [
   { id:'the-soleil',     no:'X',    title:'The Soleil',     place:'Kumasi', year:'2026', cat:'Residential', type:'New-build residence',    img:solHero  },
   { id:'the-frame',      no:'XI',   title:'The Frame',      place:'Kumasi', year:'2026', cat:'Residential', type:'Villa in progress',       img:frHero   },
   { id:'the-slate',      no:'XII',  title:'The Slate',      place:'Kumasi', year:'2026', cat:'Residential', type:'New-build residence',      img:slHero   },
+  { id:'the-pearl',      no:'XIII', title:'The Pearl',      place:'Kumasi', year:'2026', cat:'Residential', type:'New-build residence',      img:peHero   },
 ];
 
 export const TESTIMONIALS = [
@@ -227,9 +250,9 @@ export const SERVICE_IMGS = {
 };
 
 export const OFFICES = [
-  { city:'Ghana',   tz:'GMT', principal:'Brown Gyasi Sydney',  addr:['Lakeside Estate','Kumasi'],          tel:'+233 50 599 8696', email:'accra@gyacity.com' },
-  { city:'Nigeria', tz:'WAT', principal:'Ifeoma Okafor',  addr:['Plot 7B, Bourdillon Road','Ikoyi'],       tel:'+234 1 271 4090',  email:'lagos@gyacity.com' },
-  { city:'Germany', tz:'CET', principal:'Lukas Brandt',   addr:['Linienstraße 154','10115 Berlin-Mitte'],  tel:'+49 30 235 928 12',email:'berlin@gyacity.com' },
+  { city:'Ghana',   tz:'GMT', principal:'Brown Gyasi Sydney',  addr:['Lakeside Estate','Kumasi'],          tel:'+233 50 599 8696', email:'accra@gyacity.com',  maps:'https://maps.google.com/?q=Lakeside+Estate,+Kumasi,+Ghana' },
+  { city:'Nigeria', tz:'WAT', principal:'Ifeoma Okafor',  addr:['Plot 7B, Bourdillon Road','Ikoyi'],       tel:'+234 1 271 4090',  email:'lagos@gyacity.com',  maps:'https://maps.google.com/?q=7B+Bourdillon+Road,+Ikoyi,+Lagos,+Nigeria' },
+  { city:'Germany', tz:'CET', principal:'Lukas Brandt',   addr:['Linienstraße 154','10115 Berlin-Mitte'],  tel:'+49 30 235 928 12',email:'berlin@gyacity.com', maps:'https://maps.google.com/?q=Linienstraße+154,+10115+Berlin,+Germany' },
 ];
 
 // ── Project detail ───────────────────────────────────────────────────────────
@@ -301,6 +324,12 @@ const PROJECT_DETAILS = {
     services: 'Architecture · Build · Interiors · FF&E',
     summary: 'A new-build in Kumasi finished entirely in white marble — amber cove ceilings, a champagne gloss kitchen with marble island, and open rooms filled with natural light.',
     gallery: [ivLiving, ivKit1, ivKit2, ivKit3, ivRoom1, ivRoom2, ivRoom3, ivExt2],
+  },
+  'the-pearl': {
+    area: 'Full residence',
+    services: 'Architecture · Build · Interiors · Lighting · Joinery',
+    summary: 'A new-build defined by white marble throughout — organic-veined floors in every room, a kitchen tiled floor-to-ceiling in grey marble with white gloss cabinets and a granite island, open walnut joinery, and LED cove ceilings shifting from warm amber to cool white room by room.',
+    gallery: [peLiv1, peLiv2, peLiv3, peStair, peHall, peLand, peBal, peBed1, peBed2, peBed3, peBed4, peBed5, peBed6, peBed7, peWard1, peWard2, peKit1, peKit2, peKit3],
   },
   'the-slate': {
     area: 'Full residence',

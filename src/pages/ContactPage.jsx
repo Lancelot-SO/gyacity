@@ -159,7 +159,7 @@ export function ContactPage({ accent, onNavigate }) {
               <div style={{ marginTop: 14, fontFamily: V2.font, fontSize: 13.5, color: V2.mute, lineHeight: 1.6 }}>
                 {t('contact.careers_text')}
               </div>
-              <div style={{ marginTop: 18 }}><GhostCTA>{t('contact.careers_link')}</GhostCTA></div>
+              <div style={{ marginTop: 18 }}><GhostCTA href="mailto:studio@gyacity.com?subject=Career%20Application">{t('contact.careers_link')}</GhostCTA></div>
             </div>
           </MotionSection>
         </div>
@@ -196,7 +196,7 @@ export function ContactPage({ accent, onNavigate }) {
                     <div style={{ marginTop: 8, fontFamily: V2.mono, fontSize: 12.5, color: V2.cream }}>{o.tel}</div>
                     <div style={{ marginTop: 4, fontFamily: V2.mono, fontSize: 12.5, color: V2.mute }}>{o.email}</div>
                   </div>
-                  <div style={{ marginTop: 24 }}><GhostCTA>{t('contact.open_maps')}</GhostCTA></div>
+                  <div style={{ marginTop: 24 }}><GhostCTA href={o.maps}>{t('contact.open_maps')}</GhostCTA></div>
                 </article>
               </TiltCard>
             </motion.div>
