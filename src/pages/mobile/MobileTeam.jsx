@@ -1,20 +1,69 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { V2 } from '@/tokens';
 import { HCaps, Eyebrow, CTA, StarField, ArrowUR } from '@/components/ui';
 import { TEAM } from '@/data';
 import { MobileFooter } from './MobileFooter';
 
-function MobileImageBlock({ src, initials, accent }) {
+function MobileImageBlock({ src, hoverSrc, initials, accent }) {
   const a = accent || V2.coral;
+  const [isHovered, setIsHovered] = useState(false);
+  const [hoveredOnce, setHoveredOnce] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    setHoveredOnce(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  const handleClick = () => {
+    setIsHovered(!isHovered);
+    setHoveredOnce(true);
+  };
 
   if (src) {
     return (
-      <div style={{ width: '100%', aspectRatio: '3/2', overflow: 'hidden', background: V2.bg2 }}>
+      <div 
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        onClick={handleClick}
+        style={{ width: '100%', aspectRatio: '3/2', overflow: 'hidden', background: V2.bg2, position: 'relative', cursor: 'pointer' }}
+      >
+        {/* Hover image (bottom layer) */}
+        {hoverSrc && (
+          <img
+            src={hoverSrc}
+            alt=""
+            loading="lazy"
+            style={{ 
+              position: 'absolute', 
+              inset: 0, 
+              width: '100%', 
+              height: '100%', 
+              objectFit: 'cover', 
+              display: 'block',
+              zIndex: 1
+            }}
+          />
+        )}
+        {/* Primary image (top layer) */}
         <img
           src={src}
           alt=""
           loading="lazy"
-          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+          className={hoveredOnce ? (isHovered ? 'glitch-flicker-out' : 'glitch-flicker-in') : ''}
+          style={{ 
+            position: 'absolute',
+            inset: 0,
+            width: '100%', 
+            height: '100%', 
+            objectFit: 'cover', 
+            display: 'block',
+            zIndex: 2
+          }}
         />
       </div>
     );
@@ -88,7 +137,7 @@ export function MobileTeam({ accent, onNavigate }) {
           style={{ border: `1px solid ${V2.line}`, marginBottom: 12, overflow: 'hidden' }}
         >
           {/* Photo */}
-          <MobileImageBlock src={member.photo} initials={member.initials} accent={accent} />
+          <MobileImageBlock src={member.photo} hoverSrc={member.photoHover} initials={member.initials} accent={accent} />
 
           <div style={{ padding: 24 }}>
             {/* Index chip + since */}

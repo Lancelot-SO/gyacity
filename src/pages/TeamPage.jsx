@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { V2 } from '@/tokens';
 import { HCaps, Eyebrow, CTA, StarField, MotionSection, FloatingOrbs, ArrowUR } from '@/components/ui';
@@ -7,17 +8,59 @@ import { fadeUp, fadeLeft, fadeRight, stagger, EASE_OUT } from '@/animations/var
 
 /* ── Image block (photo or fallback placeholder) ───────────────────────────── */
 
-function ImageBlock({ src, initials, accent }) {
+function ImageBlock({ src, hoverSrc, initials, accent }) {
   const a = accent || V2.coral;
+  const [isHovered, setIsHovered] = useState(false);
+  const [hoveredOnce, setHoveredOnce] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    setHoveredOnce(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
 
   if (src) {
     return (
-      <div style={{ position: 'absolute', inset: 0, overflow: 'hidden', background: V2.bg2 }}>
+      <div 
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        style={{ position: 'absolute', inset: 0, overflow: 'hidden', background: V2.bg2 }}
+      >
+        {/* Hover image (bottom layer) */}
+        {hoverSrc && (
+          <img
+            src={hoverSrc}
+            alt=""
+            loading="lazy"
+            style={{ 
+              position: 'absolute', 
+              inset: 0, 
+              width: '100%', 
+              height: '100%', 
+              objectFit: 'cover', 
+              display: 'block',
+              zIndex: 1
+            }}
+          />
+        )}
+        {/* Primary image (top layer) */}
         <motion.img
           src={src}
           alt=""
           loading="lazy"
-          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+          className={hoveredOnce ? (isHovered ? 'glitch-flicker-out' : 'glitch-flicker-in') : ''}
+          style={{ 
+            position: 'absolute',
+            inset: 0,
+            width: '100%', 
+            height: '100%', 
+            objectFit: 'cover', 
+            display: 'block',
+            zIndex: 2
+          }}
           initial={{ scale: 1.06, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           viewport={{ once: true, margin: '-80px' }}
@@ -28,6 +71,7 @@ function ImageBlock({ src, initials, accent }) {
           position: 'absolute', inset: 0,
           background: 'linear-gradient(to top, rgba(10,9,8,0.45) 0%, transparent 50%)',
           pointerEvents: 'none',
+          zIndex: 3,
         }} />
       </div>
     );
@@ -123,7 +167,7 @@ function PrincipalSection({ member, accent, rowIndex }) {
           borderRight: !flipped ? `1px solid ${V2.line}` : 'none',
           borderLeft: flipped ? `1px solid ${V2.line}` : 'none',
         }}>
-          <ImageBlock src={member.photo} initials={member.initials} accent={a} />
+          <ImageBlock src={member.photo} hoverSrc={member.photoHover} initials={member.initials} accent={a} />
         </div>
 
         {/* Text column */}

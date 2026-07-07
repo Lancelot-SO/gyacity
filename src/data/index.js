@@ -272,6 +272,7 @@ export const TEAM = [
     tel: '+233 50 599 8696',
     whatsapp: 'https://wa.me/233505998696',
     photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&q=85&auto=format&fit=crop&crop=top',
+    photoHover: 'https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=900&q=85&auto=format&fit=crop&crop=top',
   },
   {
     index: '02',
@@ -288,6 +289,7 @@ export const TEAM = [
     email: 'lagos@gyacity.com',
     tel: '+234 1 271 4090',
     photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&q=85&auto=format&fit=crop&crop=top',
+    photoHover: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=900&q=85&auto=format&fit=crop&crop=top',
   },
   {
     index: '03',
@@ -304,6 +306,7 @@ export const TEAM = [
     email: 'berlin@gyacity.com',
     tel: '+49 30 235 928 12',
     photo: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=900&q=85&auto=format&fit=crop&crop=top',
+    photoHover: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=900&q=85&auto=format&fit=crop&crop=top',
   },
 ];
 
