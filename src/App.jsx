@@ -13,14 +13,16 @@ import { ProjectsPage } from '@/pages/ProjectsPage';
 import { ProjectDetailPage } from '@/pages/ProjectDetailPage';
 import { ContactPage } from '@/pages/ContactPage';
 import { ServicesPage } from '@/pages/ServicesPage';
+import { TeamPage } from '@/pages/TeamPage';
 import { MobileHome } from '@/pages/mobile/MobileHome';
 import { MobileAbout } from '@/pages/mobile/MobileAbout';
 import { MobileProjects } from '@/pages/mobile/MobileProjects';
 import { MobileProjectDetail } from '@/pages/mobile/MobileProjectDetail';
 import { MobileContact } from '@/pages/mobile/MobileContact';
 import { MobileServices } from '@/pages/mobile/MobileServices';
+import { MobileTeam } from '@/pages/mobile/MobileTeam';
 
-const VALID_PAGES = ['home', 'about', 'projects', 'services', 'contact'];
+const VALID_PAGES = ['home', 'about', 'projects', 'services', 'contact', 'team'];
 
 // Routes are hash-based. `project/<id>` opens a project detail page; everything
 // else collapses to one of the top-level pages (defaulting to home).
@@ -42,6 +44,7 @@ function MobilePage({ route, accent, onNavigate }) {
   if (route.name === 'projects') return <MobileProjects accent={accent} onNavigate={onNavigate} />;
   if (route.name === 'services') return <MobileServices accent={accent} onNavigate={onNavigate} />;
   if (route.name === 'contact')  return <MobileContact  accent={accent} onNavigate={onNavigate} />;
+  if (route.name === 'team')     return <MobileTeam     accent={accent} onNavigate={onNavigate} />;
   return <MobileHome accent={accent} onNavigate={onNavigate} />;
 }
 
@@ -94,6 +97,7 @@ export default function App() {
                 {route.name === 'project' && <ProjectDetailPage id={route.id} accent={ACCENT} onNavigate={navigate} />}
                 {route.name === 'services' && <ServicesPage accent={ACCENT} onNavigate={navigate} />}
                 {route.name === 'contact' && <ContactPage accent={ACCENT} onNavigate={navigate} />}
+                {route.name === 'team' && <TeamPage accent={ACCENT} onNavigate={navigate} />}
               </>
             )}
           </motion.div>
