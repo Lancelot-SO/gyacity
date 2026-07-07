@@ -255,6 +255,61 @@ export const OFFICES = [
   { city:'Germany', tz:'CET', principal:'Lukas Brandt',   addr:['Linienstraße 154','10115 Berlin-Mitte'],  tel:'+49 30 235 928 12',email:'berlin@gyacity.com', maps:'https://maps.google.com/?q=Linienstraße+154,+10115+Berlin,+Germany' },
 ];
 
+export const TEAM = [
+  {
+    index: '01',
+    initials: 'BGS',
+    nameLine1: 'Brown Gyasi',
+    nameLine2: 'Sydney',
+    name: 'Brown Gyasi Sydney',
+    role: 'Founding Principal',
+    city: 'Kumasi · Berlin',
+    since: '2019',
+    focus: ['Architecture', 'Interiors', 'Build & Construction'],
+    bio: 'Brown founded Gyacity as a single-room atelier in Kumasi in 2019. Seven years on, he leads the studio\'s architectural direction across all three offices — bringing a restraint-first philosophy to every commission, from private residences to large-scale hospitality.',
+    quote: 'Every space carries the memory of the people who built it — our job is to make sure that memory is worth keeping.',
+    email: 'accra@gyacity.com',
+    tel: '+233 50 599 8696',
+    whatsapp: 'https://wa.me/233505998696',
+    photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&q=85&auto=format&fit=crop&crop=top',
+    photoHover: 'https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=900&q=85&auto=format&fit=crop&crop=top',
+  },
+  {
+    index: '02',
+    initials: 'IO',
+    nameLine1: 'Ifeoma',
+    nameLine2: 'Okafor',
+    name: 'Ifeoma Okafor',
+    role: 'Director, Hospitality',
+    city: 'Lagos',
+    since: '2021',
+    focus: ['Hospitality Design', 'Interiors', 'FF&E'],
+    bio: 'Ifeoma leads all hospitality commissions from the Lagos studio. She specialises in the intersection of West African material culture and international luxury — a design language developed across twelve hotel and restaurant projects since joining the practice.',
+    quote: 'The finest hospitality spaces are the ones where you feel held without feeling designed at.',
+    email: 'lagos@gyacity.com',
+    tel: '+234 1 271 4090',
+    photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&q=85&auto=format&fit=crop&crop=top',
+    photoHover: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=900&q=85&auto=format&fit=crop&crop=top',
+  },
+  {
+    index: '03',
+    initials: 'LB',
+    nameLine1: 'Lukas',
+    nameLine2: 'Brandt',
+    name: 'Lukas Brandt',
+    role: 'Director, Europe',
+    city: 'Berlin',
+    since: '2026',
+    focus: ['Architecture', 'Lighting Design', 'Custom Joinery'],
+    bio: 'Lukas opened the Berlin studio in 2026, extending Gyacity\'s reach into Europe. With a decade at a Munich practice and deep roots in Bauhaus-influenced architecture, he brings structural rigour to the studio\'s expressive design language.',
+    quote: 'Good architecture doesn\'t age because it was never about the moment.',
+    email: 'berlin@gyacity.com',
+    tel: '+49 30 235 928 12',
+    photo: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=900&q=85&auto=format&fit=crop&crop=top',
+    photoHover: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=900&q=85&auto=format&fit=crop&crop=top',
+  },
+];
+
 // ── Project detail ───────────────────────────────────────────────────────────
 // Per-project copy + the full image gallery shown on the detail page.
 const PROJECT_DETAILS = {

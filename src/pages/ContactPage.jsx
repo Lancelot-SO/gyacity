@@ -38,6 +38,27 @@ export function ContactPage({ accent, onNavigate }) {
   const [projectType, setProjectType] = useState('');
   const [message, setMessage]         = useState('');
   const [submitted, setSubmitted]     = useState(false);
+  const [sending, setSending]         = useState(false);
+  const [sendError, setSendError]     = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSending(true);
+    setSendError('');
+    try {
+      const res = await fetch(`${import.meta.env.VITE_API_URL ?? '/api'}/contact`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, phone, location, projectType, message }),
+      });
+      if (!res.ok) throw new Error('server');
+      setSubmitted(true);
+    } catch {
+      setSendError(t('contact.send_error'));
+    } finally {
+      setSending(false);
+    }
+  };
 
   const types = t('contact.types', { returnObjects: true });
 
@@ -72,7 +93,7 @@ export function ContactPage({ accent, onNavigate }) {
             <TiltCard strength={4} glare>
               <OutlineCard pad={40}>
                 {!submitted ? (
-                  <form onSubmit={e => { e.preventDefault(); setSubmitted(true); }}>
+                  <form onSubmit={handleSubmit}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 32 }}>
                       <HCaps size={28} weight={800} tracking="-0.015em">{t('contact.form_title')}</HCaps>
                       <span style={{ fontFamily: V2.font, fontSize: 11, color: V2.mute, letterSpacing: '0.16em', textTransform: 'uppercase' }}>01 / 03</span>
@@ -110,7 +131,16 @@ export function ContactPage({ accent, onNavigate }) {
                         </span>
                         {t('contact.nda')}
                       </span>
-                      <CTA accent={accent}>{t('contact.submit')}</CTA>
+                      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 10 }}>
+                        {sendError && (
+                          <span style={{ fontFamily: V2.font, fontSize: 11, color: '#e07070', letterSpacing: '0.1em' }}>
+                            {sendError}
+                          </span>
+                        )}
+                        <CTA accent={accent} style={sending ? { opacity: 0.55, pointerEvents: 'none' } : undefined}>
+                          {sending ? t('contact.sending') : t('contact.submit')}
+                        </CTA>
+                      </div>
                     </div>
                   </form>
                 ) : (

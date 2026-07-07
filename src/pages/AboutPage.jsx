@@ -1,9 +1,10 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { V2 } from '@/tokens';
-import { HCaps, Eyebrow, CTA, Img, StarField, MotionSection, FloatingOrbs } from '@/components/ui';
+import { HCaps, Eyebrow, CTA, GhostCTA, Img, StarField, MotionSection, FloatingOrbs } from '@/components/ui';
 import { SiteFooter } from '@/components/layout/SiteFooter';
-import { IMGS } from '@/data';
+import { IMGS, TEAM } from '@/data';
 import { useCounter } from '@/hooks/useCounter';
 import { fadeUp, fadeLeft, fadeRight, stagger, scaleIn } from '@/animations/variants';
 
@@ -30,6 +31,106 @@ function CounterStat({ n, l, accent, delay = 0 }) {
         {count}<span style={{ color: V2.coral }}>+</span>
       </HCaps>
       <div style={{ marginTop: 16, fontSize: 13.5, lineHeight: 1.55, color: V2.mute, maxWidth: 240 }}>{l}</div>
+    </motion.div>
+  );
+}
+
+function TeamTeaserCard({ member, accent, onNavigate }) {
+  const [isHovered, setIsHovered] = useState(false);
+  const [hoveredOnce, setHoveredOnce] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    setHoveredOnce(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  return (
+    <motion.div
+      variants={fadeUp}
+      onClick={() => onNavigate?.('team')}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      style={{ background: V2.bg2, cursor: 'none', overflow: 'hidden', position: 'relative' }}
+    >
+      {/* Photo */}
+      <div style={{ width: '100%', aspectRatio: '1/1', overflow: 'hidden', position: 'relative' }}>
+        {/* Hover image (bottom layer) */}
+        {member.photoHover && (
+          <img
+            src={member.photoHover}
+            alt=""
+            loading="lazy"
+            style={{
+              position: 'absolute',
+              inset: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              display: 'block',
+              zIndex: 1,
+            }}
+          />
+        )}
+        {/* Primary image (top layer) */}
+        <motion.img
+          src={member.photo}
+          alt={member.name}
+          loading="lazy"
+          className={hoveredOnce ? (isHovered ? 'glitch-flicker-out' : 'glitch-flicker-in') : ''}
+          style={{
+            position: 'absolute',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            display: 'block',
+            zIndex: 2,
+          }}
+          initial={{ scale: 1.06, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          viewport={{ once: true, margin: '-40px' }}
+          transition={{ duration: 1.2, ease: [0.0, 0.0, 0.2, 1] }}
+        />
+        {/* Bottom gradient so text area transitions cleanly */}
+        <div style={{
+          position: 'absolute', bottom: 0, left: 0, right: 0, height: 64,
+          background: 'linear-gradient(to top, rgba(20,18,16,0.85), transparent)',
+          pointerEvents: 'none',
+          zIndex: 3,
+        }} />
+      </div>
+
+      {/* Text content */}
+      <div style={{ padding: '22px 26px 28px', position: 'relative', zIndex: 4 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
+          <span style={{
+            fontFamily: V2.font, fontSize: 9.5, fontWeight: 700,
+            letterSpacing: '0.22em', textTransform: 'uppercase',
+            color: accent || V2.coral,
+            border: `1px solid ${accent || V2.coral}`,
+            padding: '3px 8px',
+          }}>{member.index}</span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+            <div style={{ width: 4, height: 4, borderRadius: '50%', background: accent || V2.coral, flexShrink: 0 }} />
+            <span style={{
+              fontFamily: V2.font, fontSize: 9.5,
+              letterSpacing: '0.16em', textTransform: 'uppercase',
+              color: accent || V2.coral,
+            }}>{member.city}</span>
+          </div>
+        </div>
+        <HCaps size={20} line={1.18} weight={700} tracking="-0.01em">
+          {member.name}
+        </HCaps>
+        <div style={{
+          marginTop: 7, fontFamily: V2.font, fontSize: 10.5,
+          color: V2.mute, letterSpacing: '0.13em', textTransform: 'uppercase',
+        }}>{member.role}</div>
+      </div>
     </motion.div>
   );
 }
@@ -147,6 +248,32 @@ export function AboutPage({ accent, onNavigate }) {
         </motion.div>
       </section>
       */}
+
+      {/* Executive team teaser */}
+      <section style={{ padding: '60px 40px 80px', borderTop: `1px solid ${V2.line}` }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 40 }}>
+          <MotionSection variants={fadeLeft}>
+            <HCaps size={56} weight={800} tracking="-0.02em">{t('about.team_title')}</HCaps>
+          </MotionSection>
+          <MotionSection variants={fadeRight}>
+            <GhostCTA onClick={() => onNavigate?.('team')}>{t('about.team_cta')}</GhostCTA>
+          </MotionSection>
+        </div>
+        <motion.div
+          initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-60px' }}
+          variants={stagger(0.1)}
+          style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 1, background: V2.line }}
+        >
+          {TEAM.map(member => (
+            <TeamTeaserCard
+              key={member.index}
+              member={member}
+              accent={accent}
+              onNavigate={onNavigate}
+            />
+          ))}
+        </motion.div>
+      </section>
 
       {/* Timeline */}
       <section style={{ padding: '60px 40px 100px', borderTop: `1px solid ${V2.line}` }}>
