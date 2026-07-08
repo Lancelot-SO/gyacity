@@ -82,7 +82,7 @@ export function MobileHome({ accent, onNavigate }) {
         </div>
         <p style={{ marginTop: 12, fontSize: 12.5, lineHeight: 1.6, color: V2.mute }}>{t('services_home.sub')}</p>
         <div style={{ marginTop: 20, display: 'flex', flexDirection: 'column' }}>
-          {['Interior Design','Architecture','Build & Construction','Lighting Design','FF&E','Custom Joinery'].map((name, i) => (
+          {['Interior Design','Architecture','Build & Construction','Lighting Design','FF&E','Custom Joinery','Landscaping'].map((name, i) => (
             <div key={name} onClick={() => onNavigate('services')} style={{
               display: 'flex', alignItems: 'center', gap: 14,
               padding: '12px 0', borderBottom: `1px solid ${V2.line}`, cursor: 'pointer',

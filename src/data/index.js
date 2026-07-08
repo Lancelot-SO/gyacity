@@ -249,6 +249,7 @@ export const SERVICE_IMGS = {
   lighting:     grWard,    // walk-in wardrobe, full amber LED strip lighting
   ffande:       solBed1,   // The Soleil — master bedroom, fully furnished
   joinery:      grKit1,    // The Grand kitchen — charcoal cabinetry detail
+  landscaping:  grTerr,    // The Grand — terrace, glass balustrade + slatted pergola
 };
 
 export const OFFICES = [

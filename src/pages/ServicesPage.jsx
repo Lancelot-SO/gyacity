@@ -13,6 +13,7 @@ const IMGS_BY_INDEX = [
   SERVICE_IMGS.lighting,
   SERVICE_IMGS.ffande,
   SERVICE_IMGS.joinery,
+  SERVICE_IMGS.landscaping,
 ];
 
 function ServiceRow({ service, img, index, accent }) {
