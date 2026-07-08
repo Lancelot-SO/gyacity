@@ -209,11 +209,11 @@
   "services_home": {
     "eyebrow": "Was wir anbieten",
     "title": "Was wir tun.",
-    "sub": "Sechs Disziplinen. Ein Studio. Architektur, Interieurs und Bau unter einem Dach.",
+    "sub": "Sieben Disziplinen. Ein Studio. Architektur, Interieurs und Bau unter einem Dach.",
     "view_all": "Alle Leistungen"
   },
   "services_page": {
-    "eyebrow": "Sechs Disziplinen. Ein Studio.",
+    "eyebrow": "Sieben Disziplinen. Ein Studio.",
     "title": "Leistungen.",
     "tagline": "Architektur, Interieurs und Bau — vom ersten Entwurf bis zur Übergabe.",
     "services": [
@@ -222,7 +222,8 @@
       { "name": "Bau & Ausführung",     "short": "Aus einer Hand, von Anfang bis Ende.", "desc": "Wir steuern die gesamte Bauausführung selbst. Kein Zeitverlust durch Dritte, keine Übergabelücken.",                                              "bullets": ["Vollständiges Baumanagement", "Keine Subunternehmer", "Termintreue Lieferung", "Nachbetreuung"] },
       { "name": "Lichtplanung",         "short": "Jede Ebene durchdacht.",          "desc": "Ambiente-, Akzent- und Arbeitsbeleuchtung für Atmosphäre. Jedes Lichtband, jede Pendelleuchte sorgfältig positioniert.",                              "bullets": ["Ambiente & Akzentlicht", "LED-Lichtbänder", "Pendelleuchten", "Lichtsteuerung"] },
       { "name": "Möbel & Ausstattung",  "short": "Beschafft und spezifiziert.",     "desc": "Möbel, Einrichtung und Ausstattung, ausgewählt für Ihren Raum, Ihren Lebensstil und Ihr Budget.",                                                     "bullets": ["Möbelbeschaffung", "Ausstattungsspezifikation", "Gerätebeschaffung", "Budgetmanagement"] },
-      { "name": "Maßschreinerei",       "short": "Im Studio gefertigt.",            "desc": "Maßgefertigte Küchen, Schränke, Einbaumöbel und Verkleidungen — im eigenen Atelier konzipiert und gebaut.",                                            "bullets": ["Maßküchen", "Schränke & Stauraum", "Einbaumöbel", "Türen & Paneele"] }
+      { "name": "Maßschreinerei",       "short": "Im Studio gefertigt.",            "desc": "Maßgefertigte Küchen, Schränke, Einbaumöbel und Verkleidungen — im eigenen Atelier konzipiert und gebaut.",                                            "bullets": ["Maßküchen", "Schränke & Stauraum", "Einbaumöbel", "Türen & Paneele"] },
+      { "name": "Landschaftsbau",       "short": "Gärten, Außenanlagen und Outdoor-Wohnen.", "desc": "Außenräume, die ebenso sorgfältig gestaltet werden wie die Innenräume — Bepflanzung, Hardscaping, Poolumrandungen, Terrassen und Außenbeleuchtung, die die Architektur in die Landschaft verlängern.", "bullets": ["Garten- & Pflanzgestaltung", "Hardscaping & Pflasterung", "Pool- & Terrassenumrandung", "Außenbeleuchtung"] }
     ],
     "process_eyebrow": "Unser Prozess",
     "process_title": "Wie wir arbeiten",

@@ -209,11 +209,11 @@
   "services_home": {
     "eyebrow": "Ce que nous offrons",
     "title": "Ce que nous faisons.",
-    "sub": "Six disciplines. Un studio. Architecture, intérieurs et construction, réunis sous un même toit.",
+    "sub": "Sept disciplines. Un studio. Architecture, intérieurs et construction, réunis sous un même toit.",
     "view_all": "Tous les services"
   },
   "services_page": {
-    "eyebrow": "Six disciplines. Un studio.",
+    "eyebrow": "Sept disciplines. Un studio.",
     "title": "Services.",
     "tagline": "Architecture, intérieurs et construction — du premier croquis à la remise des clés.",
     "services": [
@@ -222,7 +222,8 @@
       { "name": "Construction",         "short": "En interne, du début à la fin.",   "desc": "Nous gérons l'intégralité du chantier en interne. Pas de sous-traitants, pas de rupture à la livraison.",                                              "bullets": ["Gestion complète du chantier", "Sans sous-traitants", "Livraison dans les délais", "Suivi post-livraison"] },
       { "name": "Conception lumière",   "short": "Chaque couche pensée.",            "desc": "Éclairage ambiant, d'accentuation et de travail conçu pour l'atmosphère. Chaque bandeau, chaque suspension positionné au millimètre.",                  "bullets": ["Ambiance & accentuation", "Bandeaux LED", "Suspension", "Contrôle d'éclairage"] },
       { "name": "Mobilier & FF&E",      "short": "Sourcé et spécifié.",              "desc": "Mobilier, équipements et accessoires sélectionnés pour votre espace, votre mode de vie et votre budget.",                                              "bullets": ["Sourcing mobilier", "Spécification des équipements", "Procurement", "Gestion budgétaire"] },
-      { "name": "Menuiserie sur mesure","short": "Fabriqué au sein du studio.",      "desc": "Cuisines, dressings, menuiseries et agencements sur mesure conçus et fabriqués en interne. Sur mesure, fait pour durer.",                              "bullets": ["Cuisines sur mesure", "Dressings & rangements", "Agencements intégrés", "Portes & panneaux"] }
+      { "name": "Menuiserie sur mesure","short": "Fabriqué au sein du studio.",      "desc": "Cuisines, dressings, menuiseries et agencements sur mesure conçus et fabriqués en interne. Sur mesure, fait pour durer.",                              "bullets": ["Cuisines sur mesure", "Dressings & rangements", "Agencements intégrés", "Portes & panneaux"] },
+      { "name": "Aménagement paysager", "short": "Jardins, extérieurs et vie en plein air.", "desc": "Des espaces extérieurs conçus avec le même soin que les intérieurs — plantations, aménagements minéraux, abords de piscine, terrasses et éclairage extérieur, prolongeant l'architecture dans le paysage.", "bullets": ["Conception de jardins & plantations", "Aménagements minéraux & dallage", "Abords de piscine & terrasses", "Éclairage extérieur"] }
     ],
     "process_eyebrow": "Notre processus",
     "process_title": "Comment nous travaillons",
