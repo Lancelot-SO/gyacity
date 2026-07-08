@@ -10,7 +10,7 @@ import { fadeUp, fadeLeft, fadeRight, stagger, scaleIn } from '@/animations/vari
 
 /* TEAM — shelved until photography + bios are ready.
 const TEAM = [
-  { name: 'Brown Gyasi Sydney', role: 'Founding Principal', city: 'Kumasi', img: IMGS.hero },
+  { name: 'Sydney Gyasi Nimako', role: 'Founding Principal', city: 'Kumasi', img: IMGS.hero },
   { name: 'Ifeoma Okafor', role: 'Director, Hospitality', city: 'Lagos',  img: IMGS.arch },
   { name: 'Lukas Brandt',  role: 'Director, Europe',      city: 'Berlin', img: IMGS.kitchen },
   { name: 'Adwoa Asante',  role: 'Head of Interiors',     city: 'Accra',  img: IMGS.luxe },
@@ -157,7 +157,7 @@ export function AboutPage({ accent, onNavigate }) {
             </HCaps>
             <div style={{ marginTop: 32, display: 'flex', alignItems: 'center', gap: 14 }}>
               <div style={{ width: 36, height: 1, background: accent || V2.coral, flexShrink: 0 }} />
-              <span style={{ fontSize: 11.5, letterSpacing: '0.16em', textTransform: 'uppercase', color: V2.mute }}>Brown Gyasi Sydney — Berlin</span>
+              <span style={{ fontSize: 11.5, letterSpacing: '0.16em', textTransform: 'uppercase', color: V2.mute }}>Sydney Gyasi Nimako — Berlin</span>
             </div>
           </MotionSection>
         </div>
