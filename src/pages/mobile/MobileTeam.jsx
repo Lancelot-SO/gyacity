@@ -1,89 +1,9 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { V2 } from '@/tokens';
 import { HCaps, Eyebrow, CTA, StarField, ArrowUR } from '@/components/ui';
+import { LouverPhoto } from '@/components/LouverPhoto';
 import { TEAM } from '@/data';
 import { MobileFooter } from './MobileFooter';
-
-function MobileImageBlock({ src, hoverSrc, initials, accent }) {
-  const a = accent || V2.coral;
-  const [isHovered, setIsHovered] = useState(false);
-  const [hoveredOnce, setHoveredOnce] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-    setHoveredOnce(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
-
-  const handleClick = () => {
-    setIsHovered(!isHovered);
-    setHoveredOnce(true);
-  };
-
-  if (src) {
-    return (
-      <div 
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        onClick={handleClick}
-        style={{ width: '100%', aspectRatio: '3/2', overflow: 'hidden', background: V2.bg2, position: 'relative', cursor: 'pointer' }}
-      >
-        {/* Hover image (bottom layer) */}
-        {hoverSrc && (
-          <img
-            src={hoverSrc}
-            alt=""
-            loading="lazy"
-            style={{ 
-              position: 'absolute', 
-              inset: 0, 
-              width: '100%', 
-              height: '100%', 
-              objectFit: 'cover', 
-              display: 'block',
-              zIndex: 1
-            }}
-          />
-        )}
-        {/* Primary image (top layer) */}
-        <img
-          src={src}
-          alt=""
-          loading="lazy"
-          className={hoveredOnce ? (isHovered ? 'glitch-flicker-out' : 'glitch-flicker-in') : ''}
-          style={{ 
-            position: 'absolute',
-            inset: 0,
-            width: '100%', 
-            height: '100%', 
-            objectFit: 'cover', 
-            display: 'block',
-            zIndex: 2
-          }}
-        />
-      </div>
-    );
-  }
-
-  const C = 14;
-  return (
-    <div style={{ width: '100%', aspectRatio: '3/2', background: V2.bg3, position: 'relative', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      {[
-        { top: 10, left: 10, borderTop: `1px solid ${a}`, borderLeft: `1px solid ${a}` },
-        { top: 10, right: 10, borderTop: `1px solid ${a}`, borderRight: `1px solid ${a}` },
-        { bottom: 10, left: 10, borderBottom: `1px solid ${a}`, borderLeft: `1px solid ${a}` },
-        { bottom: 10, right: 10, borderBottom: `1px solid ${a}`, borderRight: `1px solid ${a}` },
-      ].map((s, i) => (
-        <div key={i} style={{ position: 'absolute', width: C, height: C, ...s }} />
-      ))}
-      <div style={{ fontFamily: V2.font, fontWeight: 800, fontSize: 48, letterSpacing: '-0.05em', lineHeight: 1, color: V2.cream, opacity: 0.04, userSelect: 'none' }}>{initials}</div>
-    </div>
-  );
-}
 
 function MobileContactBtn({ href, children, target }) {
   return (
@@ -136,8 +56,10 @@ export function MobileTeam({ accent, onNavigate }) {
           transition={{ duration: 0.6, delay: i * 0.1 }}
           style={{ border: `1px solid ${V2.line}`, marginBottom: 12, overflow: 'hidden' }}
         >
-          {/* Photo */}
-          <MobileImageBlock src={member.photo} hoverSrc={member.photoHover} initials={member.initials} accent={accent} />
+          {/* Photo — louver reveal on tap */}
+          <div style={{ width: '100%', aspectRatio: '3/2', overflow: 'hidden', position: 'relative' }}>
+            <LouverPhoto src={member.photo} hoverSrc={member.photoHover} initials={member.initials} accent={accent} toggleOnClick />
+          </div>
 
           <div style={{ padding: 24 }}>
             {/* Index chip + since */}

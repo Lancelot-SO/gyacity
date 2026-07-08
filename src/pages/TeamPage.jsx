@@ -1,110 +1,10 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { V2 } from '@/tokens';
 import { HCaps, Eyebrow, CTA, StarField, MotionSection, FloatingOrbs, ArrowUR } from '@/components/ui';
+import { LouverPhoto } from '@/components/LouverPhoto';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { TEAM } from '@/data';
 import { fadeUp, fadeLeft, fadeRight, stagger, EASE_OUT } from '@/animations/variants';
-
-/* ── Image block (photo or fallback placeholder) ───────────────────────────── */
-
-function ImageBlock({ src, hoverSrc, initials, accent }) {
-  const a = accent || V2.coral;
-  const [isHovered, setIsHovered] = useState(false);
-  const [hoveredOnce, setHoveredOnce] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-    setHoveredOnce(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
-
-  if (src) {
-    return (
-      <div 
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        style={{ position: 'absolute', inset: 0, overflow: 'hidden', background: V2.bg2 }}
-      >
-        {/* Hover image (bottom layer) */}
-        {hoverSrc && (
-          <img
-            src={hoverSrc}
-            alt=""
-            loading="lazy"
-            style={{ 
-              position: 'absolute', 
-              inset: 0, 
-              width: '100%', 
-              height: '100%', 
-              objectFit: 'cover', 
-              display: 'block',
-              zIndex: 1
-            }}
-          />
-        )}
-        {/* Primary image (top layer) */}
-        <motion.img
-          src={src}
-          alt=""
-          loading="lazy"
-          className={hoveredOnce ? (isHovered ? 'glitch-flicker-out' : 'glitch-flicker-in') : ''}
-          style={{ 
-            position: 'absolute',
-            inset: 0,
-            width: '100%', 
-            height: '100%', 
-            objectFit: 'cover', 
-            display: 'block',
-            zIndex: 2
-          }}
-          initial={{ scale: 1.06, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 1.3, ease: [0.0, 0.0, 0.2, 1] }}
-        />
-        {/* Subtle dark vignette at bottom so text overlay is readable if ever needed */}
-        <div style={{
-          position: 'absolute', inset: 0,
-          background: 'linear-gradient(to top, rgba(10,9,8,0.45) 0%, transparent 50%)',
-          pointerEvents: 'none',
-          zIndex: 3,
-        }} />
-      </div>
-    );
-  }
-
-  /* ── Fallback placeholder ── */
-  const C = 22;
-  return (
-    <div style={{
-      position: 'absolute', inset: 0, background: V2.bg2,
-      display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden',
-    }}>
-      <svg style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', opacity: 0.045 }} preserveAspectRatio="none">
-        <defs>
-          <pattern id={`g-${initials}`} width="32" height="32" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-            <line x1="0" y1="0" x2="0" y2="32" stroke={V2.cream} strokeWidth="0.6" />
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill={`url(#g-${initials})`} />
-      </svg>
-      {[
-        { top: 24, left: 24, borderTop: `1px solid ${a}`, borderLeft: `1px solid ${a}` },
-        { top: 24, right: 24, borderTop: `1px solid ${a}`, borderRight: `1px solid ${a}` },
-        { bottom: 24, left: 24, borderBottom: `1px solid ${a}`, borderLeft: `1px solid ${a}` },
-        { bottom: 24, right: 24, borderBottom: `1px solid ${a}`, borderRight: `1px solid ${a}` },
-      ].map((s, i) => (
-        <div key={i} style={{ position: 'absolute', width: C, height: C, ...s }} />
-      ))}
-      <div style={{ fontFamily: V2.font, fontWeight: 800, fontSize: 108, letterSpacing: '-0.05em', lineHeight: 1, color: V2.cream, opacity: 0.05, userSelect: 'none', pointerEvents: 'none' }}>{initials}</div>
-      <div style={{ position: 'absolute', bottom: 28, left: 0, right: 0, textAlign: 'center', fontFamily: V2.font, fontSize: 8.5, letterSpacing: '0.26em', textTransform: 'uppercase', color: V2.dim }}>Photography</div>
-    </div>
-  );
-}
 
 /* ── Contact button ─────────────────────────────────────────────────────────── */
 
@@ -167,7 +67,7 @@ function PrincipalSection({ member, accent, rowIndex }) {
           borderRight: !flipped ? `1px solid ${V2.line}` : 'none',
           borderLeft: flipped ? `1px solid ${V2.line}` : 'none',
         }}>
-          <ImageBlock src={member.photo} hoverSrc={member.photoHover} initials={member.initials} accent={a} />
+          <LouverPhoto src={member.photo} hoverSrc={member.photoHover} initials={member.initials} accent={a} />
         </div>
 
         {/* Text column */}
