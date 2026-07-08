@@ -1,8 +1,8 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { V2 } from '@/tokens';
 import { HCaps, Eyebrow, CTA, GhostCTA, Img, StarField, MotionSection, FloatingOrbs } from '@/components/ui';
+import { LouverPhoto } from '@/components/LouverPhoto';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { IMGS, TEAM } from '@/data';
 import { useCounter } from '@/hooks/useCounter';
@@ -36,72 +36,15 @@ function CounterStat({ n, l, accent, delay = 0 }) {
 }
 
 function TeamTeaserCard({ member, accent, onNavigate }) {
-  const [isHovered, setIsHovered] = useState(false);
-  const [hoveredOnce, setHoveredOnce] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-    setHoveredOnce(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
-
   return (
     <motion.div
       variants={fadeUp}
       onClick={() => onNavigate?.('team')}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
       style={{ background: V2.bg2, cursor: 'none', overflow: 'hidden', position: 'relative' }}
     >
-      {/* Photo */}
+      {/* Photo — louver reveal on hover */}
       <div style={{ width: '100%', aspectRatio: '1/1', overflow: 'hidden', position: 'relative' }}>
-        {/* Hover image (bottom layer) */}
-        {member.photoHover && (
-          <img
-            src={member.photoHover}
-            alt=""
-            loading="lazy"
-            style={{
-              position: 'absolute',
-              inset: 0,
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              display: 'block',
-              zIndex: 1,
-            }}
-          />
-        )}
-        {/* Primary image (top layer) */}
-        <motion.img
-          src={member.photo}
-          alt={member.name}
-          loading="lazy"
-          className={hoveredOnce ? (isHovered ? 'glitch-flicker-out' : 'glitch-flicker-in') : ''}
-          style={{
-            position: 'absolute',
-            inset: 0,
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            display: 'block',
-            zIndex: 2,
-          }}
-          initial={{ scale: 1.06, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          viewport={{ once: true, margin: '-40px' }}
-          transition={{ duration: 1.2, ease: [0.0, 0.0, 0.2, 1] }}
-        />
-        {/* Bottom gradient so text area transitions cleanly */}
-        <div style={{
-          position: 'absolute', bottom: 0, left: 0, right: 0, height: 64,
-          background: 'linear-gradient(to top, rgba(20,18,16,0.85), transparent)',
-          pointerEvents: 'none',
-          zIndex: 3,
-        }} />
+        <LouverPhoto src={member.photo} hoverSrc={member.photoHover} initials={member.initials} accent={accent} />
       </div>
 
       {/* Text content */}
