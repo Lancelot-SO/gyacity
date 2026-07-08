@@ -252,7 +252,7 @@ export const SERVICE_IMGS = {
 };
 
 export const OFFICES = [
-  { city:'Ghana',   tz:'GMT', principal:'Brown Gyasi Sydney',  addr:['Lakeside Estate','Kumasi'],          tel:'+233 50 599 8696', email:'accra@gyacity.com',  maps:'https://maps.google.com/?q=Lakeside+Estate,+Kumasi,+Ghana' },
+  { city:'Ghana',   tz:'GMT', principal:'Sydney Gyasi Nimako',  addr:['Lakeside Estate','Kumasi'],          tel:'+233 50 599 8696', email:'accra@gyacity.com',  maps:'https://maps.google.com/?q=Lakeside+Estate,+Kumasi,+Ghana' },
   { city:'Nigeria', tz:'WAT', principal:'Ifeoma Okafor',  addr:['Plot 7B, Bourdillon Road','Ikoyi'],       tel:'+234 1 271 4090',  email:'lagos@gyacity.com',  maps:'https://maps.google.com/?q=7B+Bourdillon+Road,+Ikoyi,+Lagos,+Nigeria' },
   { city:'Germany', tz:'CET', principal:'Lukas Brandt',   addr:['Linienstraße 154','10115 Berlin-Mitte'],  tel:'+49 30 235 928 12',email:'berlin@gyacity.com', maps:'https://maps.google.com/?q=Linienstraße+154,+10115+Berlin,+Germany' },
 ];
@@ -260,15 +260,15 @@ export const OFFICES = [
 export const TEAM = [
   {
     index: '01',
-    initials: 'BGS',
-    nameLine1: 'Brown Gyasi',
-    nameLine2: 'Sydney',
-    name: 'Brown Gyasi Sydney',
+    initials: 'SGN',
+    nameLine1: 'Sydney Gyasi',
+    nameLine2: 'Nimako',
+    name: 'Sydney Gyasi Nimako',
     role: 'Founding Principal',
     city: 'Kumasi · Berlin',
     since: '2019',
     focus: ['Architecture', 'Interiors', 'Build & Construction'],
-    bio: 'Brown founded Gyacity as a single-room atelier in Kumasi in 2019. Seven years on, he leads the studio\'s architectural direction across all three offices — bringing a restraint-first philosophy to every commission, from private residences to large-scale hospitality.',
+    bio: 'Sydney founded Gyacity as a single-room atelier in Kumasi in 2019. Seven years on, he leads the studio\'s architectural direction across all three offices — bringing a restraint-first philosophy to every commission, from private residences to large-scale hospitality.',
     quote: 'Every space carries the memory of the people who built it — our job is to make sure that memory is worth keeping.',
     email: 'accra@gyacity.com',
     tel: '+233 50 599 8696',
@@ -282,11 +282,11 @@ export const TEAM = [
     nameLine1: 'George',
     nameLine2: '',
     name: 'George',
-    role: 'Studio Manager & Site Overseer',
+    role: 'Studio Manager, Site Overseer & Accountant',
     city: 'Kumasi',
     since: '2021',
-    focus: ['Project Management', 'Site Operations', 'Construction Overseer'],
-    bio: 'George serves as the manager and overseer on the ground in Kumasi. He coordinates all daily site operations, manages sub-contractors, and ensures that Gyacity\'s designs are executed with structural precision and visual fidelity.',
+    focus: ['Project Management', 'Site Operations', 'Construction Overseer', 'Accounts & Finance'],
+    bio: 'George serves as the manager and overseer on the ground in Kumasi. He coordinates all daily site operations, manages sub-contractors, and ensures that Gyacity\'s designs are executed with structural precision and visual fidelity. He also keeps the studio\'s books — handling budgets, invoicing and project accounting across every commission.',
     quote: 'Quality execution is in the details — my job is to make sure every line drawn on paper is built perfectly in reality.',
     email: 'george@gyacity.com',
     tel: '+233 24 456 7890',

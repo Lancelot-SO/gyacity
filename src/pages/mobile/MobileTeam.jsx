@@ -145,7 +145,7 @@ export function MobileTeam({ accent, onNavigate }) {
         <div style={{ marginTop: 20, display: 'flex', alignItems: 'center', gap: 12 }}>
           <div style={{ width: 28, height: 1, background: a, flexShrink: 0 }} />
           <span style={{ fontFamily: V2.font, fontSize: 9.5, letterSpacing: '0.14em', textTransform: 'uppercase', color: V2.mute }}>
-            Brown Gyasi Sydney
+            Sydney Gyasi Nimako
           </span>
         </div>
       </div>

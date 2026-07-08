@@ -65,7 +65,7 @@ export function MobileAbout({ accent, onNavigate }) {
         <div style={{ marginTop: 24, display: 'flex', alignItems: 'center', gap: 10 }}>
           <div style={{ width: 20, height: 1, background: accent || V2.coral }} />
           <span style={{ fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: V2.mute }}>
-            Brown Gyasi Sydney — Berlin
+            Sydney Gyasi Nimako — Berlin
           </span>
         </div>
       </div>

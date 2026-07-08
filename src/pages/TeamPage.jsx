@@ -274,7 +274,7 @@ export function TeamPage({ accent, onNavigate }) {
             <div style={{ marginTop: 32, display: 'flex', alignItems: 'center', gap: 14 }}>
               <div style={{ width: 36, height: 1, background: a, flexShrink: 0 }} />
               <span style={{ fontFamily: V2.font, fontSize: 11, letterSpacing: '0.16em', textTransform: 'uppercase', color: V2.mute }}>
-                Brown Gyasi Sydney — Kumasi, 2019
+                Sydney Gyasi Nimako — Kumasi, 2019
               </span>
             </div>
           </MotionSection>
