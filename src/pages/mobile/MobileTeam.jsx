@@ -57,8 +57,8 @@ export function MobileTeam({ accent, onNavigate }) {
           style={{ border: `1px solid ${V2.line}`, marginBottom: 12, overflow: 'hidden' }}
         >
           {/* Photo — louver reveal on tap */}
-          <div style={{ width: '100%', aspectRatio: '3/2', overflow: 'hidden', position: 'relative' }}>
-            <LouverPhoto src={member.photo} hoverSrc={member.photoHover} initials={member.initials} accent={accent} toggleOnClick />
+          <div style={{ width: '100%', aspectRatio: '4/5', overflow: 'hidden', position: 'relative' }}>
+            <LouverPhoto src={member.photo} hoverSrc={member.photoHover} initials={member.initials} accent={accent} toggleOnClick objectPosition={member.mobilePhotoPos || 'center top'} />
           </div>
 
           <div style={{ padding: 24 }}>

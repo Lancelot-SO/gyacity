@@ -295,6 +295,7 @@ export const TEAM = [
     tel: '+233 24 574 9950',
     photo: georgePhoto,
     photoHover: georgePhoto,
+    photoPos: 'center top', // portrait — keep his head in frame on the tall desktop column
   },
   {
     index: '03',
@@ -312,6 +313,8 @@ export const TEAM = [
     tel: '+233 54 529 6150',
     photo: blaisePhoto,
     photoHover: blaisePhoto,
+    mobilePhotoPos: 'center 55%', // taller portrait — bias the crop down so his face fills the frame
+    photoPos: 'center 50%',       // desktop landscape column — waist-up framing, whole head still in frame
   },
 ];
 

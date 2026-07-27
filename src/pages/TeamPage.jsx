@@ -67,7 +67,7 @@ function PrincipalSection({ member, accent, rowIndex }) {
           borderRight: !flipped ? `1px solid ${V2.line}` : 'none',
           borderLeft: flipped ? `1px solid ${V2.line}` : 'none',
         }}>
-          <LouverPhoto src={member.photo} hoverSrc={member.photoHover} initials={member.initials} accent={a} />
+          <LouverPhoto src={member.photo} hoverSrc={member.photoHover} initials={member.initials} accent={a} objectPosition={member.photoPos || 'center'} />
         </div>
 
         {/* Text column */}

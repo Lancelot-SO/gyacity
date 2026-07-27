@@ -21,7 +21,7 @@ const STAGGER   = 55;    // delay between adjacent slats
 const TOTAL_MS  = BASE_MS + (SLATS - 1) * STAGGER;
 const EASE      = 'cubic-bezier(0.76, 0, 0.24, 1)';
 
-export function LouverPhoto({ src, hoverSrc, initials, accent, toggleOnClick = false }) {
+export function LouverPhoto({ src, hoverSrc, initials, accent, toggleOnClick = false, objectPosition = 'center' }) {
   const a = accent || V2.coral;
   const [open, setOpen] = useState(false);
   const canFlip = Boolean(src && hoverSrc);
@@ -77,7 +77,7 @@ export function LouverPhoto({ src, hoverSrc, initials, accent, toggleOnClick = f
           loading="lazy"
           style={{
             position: 'absolute', inset: 0, width: '100%', height: '100%',
-            objectFit: 'cover', display: 'block', zIndex: 0,
+            objectFit: 'cover', objectPosition, display: 'block', zIndex: 0,
             transform: open ? 'scale(1)' : 'scale(1.06)',
             transition: 'transform 1.3s ease',
           }}
@@ -111,7 +111,7 @@ export function LouverPhoto({ src, hoverSrc, initials, accent, toggleOnClick = f
                 style={{
                   position: 'absolute', top: 0, left: `${-i * 100}%`,
                   width: `${SLATS * 100}%`, height: '100%',
-                  objectFit: 'cover', objectPosition: 'center', display: 'block',
+                  objectFit: 'cover', objectPosition, display: 'block',
                   maxWidth: 'none',
                 }}
               />
