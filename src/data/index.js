@@ -198,6 +198,8 @@ import heroImg        from '@/assets/hero.jpg';
 import bannerImg      from '@/assets/banner.jpeg';
 import brownPhoto     from '@/assets/brown.jpg';
 import brownHoverPhoto from '@/assets/brown_hover.jpg';
+import georgePhoto    from '@/assets/george.jpg';
+import blaisePhoto    from '@/assets/blaise.jpg';
 
 export const PROJECTS = [
   { id:'emerald-lounge', no:'I',   title:'Emerald Lounge', place:'Kumasi', year:'2024', cat:'Residential', type:'Private residence', img:emHero  },
@@ -279,20 +281,20 @@ export const TEAM = [
   },
   {
     index: '02',
-    initials: 'G',
+    initials: 'GS',
     nameLine1: 'George',
-    nameLine2: '',
-    name: 'George',
+    nameLine2: 'Sutah',
+    name: 'George Sutah',
     role: 'Studio Manager, Site Overseer & Accountant',
     city: 'Kumasi',
     since: '2021',
     focus: ['Project Management', 'Site Operations', 'Construction Overseer', 'Accounts & Finance'],
     bio: 'George serves as the manager and overseer on the ground in Kumasi. He coordinates all daily site operations, manages sub-contractors, and ensures that Gyacity\'s designs are executed with structural precision and visual fidelity. He also keeps the studio\'s books — handling budgets, invoicing and project accounting across every commission.',
     quote: 'Quality execution is in the details — my job is to make sure every line drawn on paper is built perfectly in reality.',
-    email: 'george@gyacity.com',
-    tel: '+233 24 456 7890',
-    photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&q=85&auto=format&fit=crop&crop=top',
-    photoHover: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=900&q=85&auto=format&fit=crop&crop=top',
+    email: 'george.sutah@gmail.com',
+    tel: '+233 24 574 9950',
+    photo: georgePhoto,
+    photoHover: georgePhoto,
   },
   {
     index: '03',
@@ -306,10 +308,10 @@ export const TEAM = [
     focus: ['Web Development', 'Digital Branding', 'Media Production', 'Creative Technology'],
     bio: 'Blaise handles all things digital for Gyacity. From website creation and digital branding to media production and technology systems, he translates the studio\'s physical architectural language into premium digital experiences.',
     quote: 'A studio\'s digital presence is the portal to its physical creations — it should be as refined as the digital and physical spaces we build.',
-    email: 'blaise@gyacity.com',
-    tel: '+233 24 999 8888',
-    photo: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=900&q=85&auto=format&fit=crop&crop=top',
-    photoHover: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=900&q=85&auto=format&fit=crop&crop=top',
+    email: 'menniablaise@yahoo.com',
+    tel: '+233 54 529 6150',
+    photo: blaisePhoto,
+    photoHover: blaisePhoto,
   },
 ];
 
