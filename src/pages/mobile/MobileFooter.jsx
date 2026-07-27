@@ -1,5 +1,6 @@
 import { V2 } from '@/tokens';
 import { HCaps, StarField } from '@/components/ui';
+import { StudioCredit } from '@/components/StudioCredit';
 
 export function MobileFooter({ accent }) {
   return (
@@ -10,6 +11,9 @@ export function MobileFooter({ accent }) {
       </HCaps>
       <div style={{ position: 'relative', marginTop: 14, fontFamily: V2.font, fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: V2.mute }}>Accra · Lagos · Berlin</div>
       <div style={{ position: 'relative', marginTop: 6, fontFamily: V2.font, fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: V2.dim }}>© MMXXVI Gyacity Ltd.</div>
+      <div style={{ position: 'relative', marginTop: 16 }}>
+        <StudioCredit />
+      </div>
     </div>
   );
 }

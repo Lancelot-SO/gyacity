@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { V2 } from '@/tokens';
 import { HCaps, Eyebrow, StarField, ArrowUR, MotionSection } from '@/components/ui';
 import { V2Mark } from '@/components/Logo';
+import { StudioCredit } from '@/components/StudioCredit';
 import { fadeUp, stagger } from '@/animations/variants';
 
 const TIKTOK_URL = 'https://www.tiktok.com/@gyacity';
@@ -122,6 +123,10 @@ export function SiteFooter({ accent, onNavigate }) {
         <span>{t('footer.crafted')}</span>
         <span>{t('footer.legal')}</span>
       </motion.div>
+
+      <div style={{ position: 'relative', textAlign: 'center', marginTop: 28 }}>
+        <StudioCredit />
+      </div>
     </footer>
   );
 }
