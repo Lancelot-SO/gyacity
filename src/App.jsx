@@ -4,6 +4,7 @@ import { V2 } from '@/tokens';
 import { useIsMobile } from '@/hooks/useIsMobile';
 import { SiteNav } from '@/components/layout/SiteNav';
 import { WhatsAppBtn } from '@/components/layout/WhatsAppBtn';
+import { Loader } from '@/components/Loader';
 import { Cursor } from '@/components/ui';
 import { pageEnter } from '@/animations/variants';
 import { PROJECTS } from '@/data';
@@ -53,7 +54,34 @@ const ACCENT = '#d97757';
 export default function App() {
   const [route, setRoute] = useState(() => parseRoute(window.location.hash.replace('#', '')));
   const isMobile = useIsMobile();
+  const [loading, setLoading] = useState(true);
 
+  // Hold the skeleton until the app has painted and a graceful minimum has
+  // elapsed, then fade it out — whichever of the two finishes last.
+  useEffect(() => {
+    const MIN_MS = 1500;
+    const start = performance.now();
+    let done = false;
+
+    const finish = () => {
+      if (done) return;
+      done = true;
+      const wait = Math.max(0, MIN_MS - (performance.now() - start));
+      setTimeout(() => setLoading(false), wait);
+    };
+
+    if (document.readyState === 'complete') finish();
+    else window.addEventListener('load', finish, { once: true });
+
+    const fallback = setTimeout(finish, 4000); // never hang if `load` misfires
+    return () => {
+      clearTimeout(fallback);
+      window.removeEventListener('load', finish);
+    };
+  }, []);
+
+  // Internal navigation is instant — the skeleton only shows on a hard load
+  // (see the boot effect above). Existing page transitions cover route changes.
   const navigate = useCallback((target) => {
     const next = parseRoute(target);
     window.location.hash = routeToHash(next);
@@ -74,6 +102,20 @@ export default function App() {
 
   return (
     <>
+      <AnimatePresence>
+        {loading && (
+          <motion.div
+            key="loader"
+            initial={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.6, ease: 'easeInOut' }}
+            style={{ position: 'fixed', inset: 0, zIndex: 9999 }}
+          >
+            <Loader mobile={isMobile} route={route} />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {!isMobile && <Cursor />}
 
       <div style={{ background: V2.bg, color: V2.cream, minHeight: '100vh' }}>
