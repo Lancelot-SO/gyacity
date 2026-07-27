@@ -108,6 +108,32 @@ img { display: block; max-width: 100%; }
   pointer-events: none;
 }
 
+/* Skeleton loader — slow shimmer sweeping left → right across each block */
+@keyframes skeletonSweep {
+  0%   { background-position: -140% 0; }
+  100% { background-position: 240% 0; }
+}
+.skel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+  background-color: rgba(244, 220, 192, 0.05);
+  background-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(244, 220, 192, 0.03) 30%,
+    rgba(244, 220, 192, 0.13) 50%,
+    rgba(244, 220, 192, 0.03) 70%,
+    transparent 100%
+  );
+  background-size: 55% 100%;
+  background-repeat: no-repeat;
+  animation: skeletonSweep 2.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .skel { animation: none; }
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar { width: 3px; }
 ::-webkit-scrollbar-track { background: #0a0908; }
