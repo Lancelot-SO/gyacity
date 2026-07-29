@@ -37,6 +37,7 @@ export function ContactPage({ accent, onNavigate }) {
   const [location, setLocation]       = useState('');
   const [projectType, setProjectType] = useState('');
   const [message, setMessage]         = useState('');
+  const [nda, setNda]                 = useState(false);
   const [submitted, setSubmitted]     = useState(false);
   const [sending, setSending]         = useState(false);
   const [sendError, setSendError]     = useState('');
@@ -49,7 +50,7 @@ export function ContactPage({ accent, onNavigate }) {
       const res = await fetch(`${import.meta.env.VITE_API_URL ?? '/api'}/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, phone, location, projectType, message }),
+        body: JSON.stringify({ name, email, phone, location, projectType, message, nda }),
       });
       if (!res.ok) throw new Error('server');
       setSubmitted(true);
@@ -125,19 +126,24 @@ export function ContactPage({ accent, onNavigate }) {
                     </div>
 
                     <div style={{ marginTop: 28, display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: 16, borderTop: `1px solid ${V2.line}` }}>
-                      <span style={{ display: 'inline-flex', alignItems: 'center', gap: 10, fontFamily: V2.font, fontSize: 12, color: V2.mute }}>
-                        <span style={{ width: 14, height: 14, borderRadius: 3, border: `1px solid ${V2.line}`, display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
-                          <svg width="9" height="9" viewBox="0 0 9 9"><path d="M1 5l2 2 5-5" stroke={accent || V2.coral} strokeWidth="1.4" fill="none" strokeLinecap="round" /></svg>
+                      <button
+                        type="button"
+                        onClick={() => setNda(v => !v)}
+                        aria-pressed={nda}
+                        style={{ display: 'inline-flex', alignItems: 'center', gap: 10, background: 'none', border: 'none', padding: 0, fontFamily: V2.font, fontSize: 12, color: nda ? V2.cream : V2.mute, cursor: 'pointer', textAlign: 'left', transition: 'color 0.2s' }}
+                      >
+                        <span style={{ width: 15, height: 15, borderRadius: 3, flexShrink: 0, border: `1px solid ${nda ? (accent || V2.coral) : V2.line}`, background: nda ? (accent || V2.coral) : 'transparent', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.2s' }}>
+                          {nda && <svg width="9" height="9" viewBox="0 0 9 9"><path d="M1 5l2 2 5-5" stroke={V2.bg} strokeWidth="1.6" fill="none" strokeLinecap="round" strokeLinejoin="round" /></svg>}
                         </span>
                         {t('contact.nda')}
-                      </span>
+                      </button>
                       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 10 }}>
                         {sendError && (
                           <span style={{ fontFamily: V2.font, fontSize: 11, color: '#e07070', letterSpacing: '0.1em' }}>
                             {sendError}
                           </span>
                         )}
-                        <CTA accent={accent} style={sending ? { opacity: 0.55, pointerEvents: 'none' } : undefined}>
+                        <CTA type="submit" accent={accent} style={sending ? { opacity: 0.55, pointerEvents: 'none' } : undefined}>
                           {sending ? t('contact.sending') : t('contact.submit')}
                         </CTA>
                       </div>

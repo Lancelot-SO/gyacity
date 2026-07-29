@@ -3,7 +3,7 @@ import { motion, useMotionValue, useSpring } from 'framer-motion';
 import { V2 } from '@/tokens';
 import { ArrowUR } from './Icons';
 
-export function CTA({ children, accent, onClick, big, style }) {
+export function CTA({ children, accent, onClick, big, style, type = 'button' }) {
   const a = accent || V2.coral;
   const ref = useRef(null);
   const x = useMotionValue(0);
@@ -24,6 +24,7 @@ export function CTA({ children, accent, onClick, big, style }) {
   return (
     <motion.button
       ref={ref}
+      type={type}
       onClick={onClick}
       onMouseMove={onMouseMove}
       onMouseLeave={onMouseLeave}
