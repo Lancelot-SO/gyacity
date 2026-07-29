@@ -1,9 +1,9 @@
 import { V2 } from '@/tokens';
 
-export function Pill({ active, children, accent, onClick, style }) {
+export function Pill({ active, children, accent, onClick, style, type = 'button' }) {
   const a = accent || V2.coral;
   return (
-    <button onClick={onClick} style={{
+    <button type={type} onClick={onClick} style={{
       padding: '10px 18px', borderRadius: 999,
       border: `1px solid ${active ? a : V2.line}`,
       background: active ? `${a}22` : 'transparent',
